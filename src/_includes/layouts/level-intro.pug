@@ -1,0 +1,19 @@
+doctype html
+html
+    include _includes/layouts/head.pug
+    body
+        main#swup.container.large.padding
+            .columns
+                .level-image.animate-left
+                    img(src=image alt=`Illustratie over ${title}`)
+                .level-container.animate-right
+                    h3= 'Level ' + index
+                    h1= title
+
+                    .spacer
+
+                    | !{content}
+
+                    .spacer
+
+                    a(href=`/levels/${index}/play/`).button Start level

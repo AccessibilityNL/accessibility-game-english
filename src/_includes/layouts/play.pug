@@ -1,0 +1,14 @@
+doctype html
+html
+    include _includes/layouts/head.pug
+    body
+        main#swup
+            header
+                a(href=`/levels/${index}/intro/`).button.light.back Ga terug
+                a(href="/")#logo
+                    img(src='/assets/images/acc_logo.svg' alt='Logo van Stichting Accessibility')
+                    h2 Accessibility Game
+
+            .spacer
+
+            | !{content}

@@ -1,3 +1,42 @@
 // Page Transitions scss file
 // for Accessibility Game
 // author: Bas de Bruin
+
+// MAIN fade in and out
+
+main {
+    transition: opacity .5s;
+    opacity: 1;
+}
+html.is-animating main {
+    opacity: 0;
+}
+
+
+// play header
+header {
+    transition: transform 0.7s;
+    transform: none;
+}
+html.is-animating header {
+    transform: translateY(-100%);
+}
+
+
+// direction fades
+.animate-left {
+    transition: transform .5s;
+    transform: none;
+}
+html.is-animating .animate-left {
+    transform: translateX(-50%);
+}
+
+.animate-right {
+    transition: transform .5s;
+    transform: none;
+}
+
+html.is-animating .animate-right {
+    transform: translateX(50%);
+}
