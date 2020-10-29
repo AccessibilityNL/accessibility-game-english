@@ -1,0 +1,93 @@
+// MAIN scss file
+// for portfolio site
+// author: Bas de Bruin
+
+@import 'variables';
+@import 'head';
+@import 'animations';
+
+// containers
+.container {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: $breakSmall;
+    padding: 0 $padding;
+}
+
+.center {
+    text-align: center;
+}
+
+.large {
+    max-width: $breakLarge;
+}
+
+.columns {
+    display: flex;
+    flex-flow: row nowrap;
+    > * {
+        margin: 0 $padding*0.5;
+        width: 100%;
+
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.padding {
+    padding: $padding;
+}
+
+.spacer {
+    display: block;
+    height: $padding;
+    width: 100%;
+}
+
+// HOME PAGE
+.logo-title {
+    display: block;
+    margin-top: $topPadding;
+    margin-bottom: $padding * 2;
+}
+
+
+
+// BUTTONS
+.button {
+    display: inline-block;
+
+    margin: 0.5rem 0 0 0;
+    font-size: 1rem;
+
+    width: auto;
+
+    padding: 0.6rem 1.2rem;
+
+    color: $background;
+    background: $accent;
+
+    border-radius: 2rem;
+
+    &::after {
+        content: "->";
+        margin-left: 0.6rem;
+    }
+
+
+    transition: all .15s;
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    // light button
+    &.light {
+        color: $accent;
+        background: $light-accent;
+    }
+}

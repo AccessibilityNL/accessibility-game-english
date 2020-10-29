@@ -1,0 +1,70 @@
+// HEAD general styles
+// for Accessibility Game
+// author: Bas de Bruin
+
+:root {
+    font-size: $fontSize;
+}
+html, body {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body {
+    box-sizing: border-box;
+    * { box-sizing: border-box; }
+    width: 100%;
+
+    // style
+    background: $background;
+    color: $color;
+
+    //fonts
+    font-family: $fontFamily;
+    * { line-height: 1.5em }
+
+    &.loading {
+        position: fixed; 
+        overflow-y: hidden;
+        height: 100vh;
+    }
+}
+
+
+// Headings
+h1, h2, h3, h4, h5 { 
+    font-family: $fontFamilyHeadings; 
+    font-weight: normal;
+}
+h1 {
+    font-size: $fontSizeTitle;
+    font-weight: bold;
+}
+h2 {
+    font-size: $fontSizeLarge;
+    font-weight: bold;
+}
+h3 {
+    font-size: $fontSizeMedium;
+    color: $accent;
+}
+
+p {
+    line-height: 1.5em;
+    letter-spacing: 0.025rem;
+}
+
+a {
+    display: block;
+    color: $color;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-height: 90vh;
+    object-fit: cover;
+}

@@ -1,0 +1,27 @@
+// Eleventy Settings
+
+const sass = require("eleventy-plugin-sass");
+
+module.exports = function (eleventyConfig) {
+    // copy assets and style folder
+    eleventyConfig.addPassthroughCopy("assets");
+
+    // compile sass
+    eleventyConfig.addPlugin(sass, {
+        watch: ['styles/*.scss', '!node_modules/**'],
+        autoprefixer: true,
+        cleanCSS: false
+    });
+
+
+    return {
+        dir: {
+            input: "src",
+            includes: "/_includes",
+            layouts: "/_includes/_layouts",
+            output: "_site",
+
+            passthroughFileCopy: true
+        }
+    }
+};

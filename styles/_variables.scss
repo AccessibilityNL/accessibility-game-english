@@ -1,0 +1,26 @@
+// VARIABLES
+// for portfolio site
+// author: Bas de Bruin
+
+// colors
+$background: #fff;
+$color:      #101228;
+$accent:     #2B4FEB;
+$light-accent: rgba($accent, .1);
+$accent2:    #21CEA0;
+
+// font
+$fontFamily:         'Nunito', -apple-system, sans-serif;
+$fontFamilyHeadings: $fontFamily;
+$fontSize:           18px;
+$fontSizeMedium:     1rem;
+$fontSizeLarge:      1.2rem;
+$fontSizeTitle:      2.6rem;
+
+// breakpoints
+$breakSmall: 35rem;
+$breakLarge: 60rem;
+
+// padding
+$padding: 1.3rem;
+$topPadding: 10rem;  // Space before Accessibility Game logo

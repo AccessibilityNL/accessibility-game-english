@@ -1,0 +1,15 @@
+{
+    "name": "accessibility-game",
+    "description": "for Stichting Accessibility",
+    "version": "1.0.0",
+    "scripts": {
+        "first-time": "npm install",
+        "build": "eleventy",
+        "start": "eleventy --serve"
+    },
+    "dependencies": {
+        "@11ty/eleventy": "^0.5.4",
+        "eleventy-plugin-sass": "^1.0.0"
+    },
+    "license": "MIT"
+}
