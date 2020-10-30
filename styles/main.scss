@@ -126,6 +126,8 @@
 .background-images {
     width: 100%;
 
+    pointer-events: none;
+
     img {
         width: auto;
         height: auto;
@@ -141,7 +143,7 @@
     }
 
     img:nth-child(1) { left:  0;    top: 15vw }
-    img:nth-child(2) { right: 0;    top: 22vw }
+    img:nth-child(2) { right: -1vw; top: 22vw }
     img:nth-child(3) { right: 15vw; top: 5vw;   transform: rotate(-31deg) }
     img:nth-child(4) { left:  10vw; top: 32rem; transform: rotate(20deg); }
     img:nth-child(5) { right: 6vw;  top: 40rem; transform: rotate(-15deg); }
@@ -169,6 +171,11 @@
             width: 100%;
             height: 100%;
         }
+
+        position: fixed;
+        top: $padding;
+        left: $padding;
+        width: 50%;
     }
 }
 
@@ -179,8 +186,19 @@
     display: flex;
     flex-flow: column nowrap;
 
+    padding: $padding*2 0;
+
     justify-content: center;
     align-items: center;
+
+    @media (min-width: $breakSmall) {
+
+        margin-left: calc(50% + #{$padding*2});
+        min-height:calc(100vh - #{$padding*2});
+
+        padding: $padding*2 $padding;
+
+    }
 }
 
 // PLAYING A LEVEL
@@ -222,5 +240,16 @@ header {
             height: auto;
             margin-left: 1rem;
         }
+
+        @media (max-width: $breakSmall*0.7) {
+            *:not(img) {
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (max-width: $breakSmall) {
+        justify-content: flex-end;
+        padding-right: $padding;
     }
 }

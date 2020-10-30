@@ -23,20 +23,36 @@ html.is-animating header {
 }
 
 
-// direction fades
+// fade naar links en naar rechts
+//  omhoog en naar beneden op mobiel
 .animate-left {
     transition: transform .5s;
     transform: none;
 }
 html.is-animating .animate-left {
     transform: translateX(-50%);
+
+    @media (max-width: $breakSmall) {
+        transform: translateY(-50%);
+    }
 }
 
 .animate-right {
     transition: transform .5s;
     transform: none;
 }
-
 html.is-animating .animate-right {
     transform: translateX(50%);
+
+    @media (max-width: $breakSmall) {
+        transform: translateY(50%);
+    }
+}
+
+
+// Turn off animations for people that want reduced motion
+@media (prefers-reduced-motion) {
+    body * {
+        transition: none;
+    }
 }

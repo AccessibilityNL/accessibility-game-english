@@ -1,0 +1,24 @@
+doctype html
+html
+    include _includes/layouts/head.pug
+    body
+        main#swup.container.large.padding
+            .columns
+                .level-image.animate-left
+                    img(src=image alt=`Illustratie over ${title}`)
+                .level-container.animate-right
+                    h3= 'Level ' + index
+                    h1= title
+
+                    a(href=`/levels/${index}/play/`).button.light.back Probeer opnieuw
+
+                    .spacer
+
+                    | !{content}
+
+                    .spacer
+
+                    if collections.level[index+1]
+                        a(href=`/levels/${index+1}/intro/`).button Volgend level
+                    else
+                        a(href=`/einde/`).button Ga verder

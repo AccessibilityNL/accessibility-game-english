@@ -1,0 +1,24 @@
+<svg width="979" height="652" viewBox="0 0 979 652" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="48" y="49" width="882" height="525" rx="20" fill="white" stroke="#2B4FEB" stroke-width="16"/>
+<path d="M489.793 576V613H443H535" stroke="#2B4FEB" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="408" y="171" width="289" height="65" rx="8" fill="#D7DBF3"/>
+<rect x="408" y="340" width="289" height="65" rx="8" fill="#E2E5F4"/>
+<rect x="94" y="171" width="289" height="65" rx="8" fill="#D7DBF3"/>
+<rect x="94" y="340" width="289" height="65" rx="8" fill="#D7DBF3"/>
+<rect x="723" y="171" width="69" height="65" rx="8" fill="#C8CDE8"/>
+<rect x="723" y="340" width="69" height="65" rx="8" fill="#C8CDE8"/>
+<rect x="817" y="171" width="69" height="65" rx="8" fill="#E2E5F4"/>
+<rect x="817" y="340" width="69" height="65" rx="8" fill="#E2E5F4"/>
+<rect x="408" y="253" width="289" height="65" rx="8" fill="#D7DBF3"/>
+<rect x="408" y="422" width="289" height="65" rx="8" fill="#D7DBF3"/>
+<rect x="94" y="253" width="289" height="65" rx="8" fill="#E2E5F4" fill-opacity="0.64"/>
+<rect x="94" y="422" width="289" height="65" rx="8" fill="#D7DBF3"/>
+<rect x="723" y="253" width="69" height="65" rx="8" fill="#C8CDE8"/>
+<rect x="723" y="422" width="69" height="65" rx="8" fill="#C8CDE8"/>
+<rect x="817" y="253" width="69" height="65" rx="8" fill="#E2E5F4"/>
+<rect x="817" y="422" width="69" height="65" rx="8" fill="#E2E5F4"/>
+<path d="M515 388.009C539.161 430.074 688.773 406.237 745.459 466.063C773.09 495.226 789.245 530.728 798 560.009" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 10"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M498.757 353.861C498.488 353.64 498.16 353.502 497.814 353.465C497.468 353.429 497.119 353.494 496.809 353.654C496.5 353.814 496.245 354.061 496.075 354.365C495.905 354.669 495.827 355.016 495.853 355.363L497.239 374.467C497.264 374.809 497.387 375.137 497.594 375.41C497.801 375.684 498.082 375.892 498.405 376.009C498.727 376.126 499.076 376.148 499.41 376.071C499.744 375.995 500.049 375.823 500.288 375.577L504.115 371.646L507.601 378.391C507.818 378.81 508.192 379.126 508.642 379.269C509.092 379.412 509.579 379.37 509.998 379.153C510.417 378.936 510.733 378.562 510.876 378.112C511.019 377.663 510.977 377.175 510.76 376.756L507.272 370.01L512.693 369.161C513.032 369.107 513.347 368.957 513.603 368.729C513.858 368.5 514.041 368.203 514.131 367.872C514.222 367.542 514.214 367.193 514.111 366.866C514.007 366.54 513.811 366.25 513.547 366.032L498.757 353.861Z" fill="#101228"/>
+<circle cx="111.5" cy="112.5" r="20.5" fill="#E2E5F4"/>
+<circle cx="165.5" cy="112.5" r="20.5" fill="#C8CDE8"/>
+</svg>

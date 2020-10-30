@@ -1,8 +1,44 @@
 ---
-layout: layouts/play.pug
+layout: layouts/level-play.pug
 index: 1
-title: Centrale Visie
+title: Kleurenblind
 ---
 
-p.
-    het level
+
+// styles
+style(type="text/css").
+    #level {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        width: 100%;
+    }
+    #level .memory-card {
+        display: block;
+        width: calc(30% - 1rem);
+        height: 8rem;
+        background-color: black;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        border-radius: 0.5rem;
+
+        cursor: pointer;
+    }
+
+
+
+.container
+    // Het level
+    #level
+    // De code
+    script(src="/assets/js/level1.js" type="text/javascript")
+
+
+
+
+
+//- shortcut
+.container.center
+    a(href=`/levels/${index}/outro/`).button Speel level uit

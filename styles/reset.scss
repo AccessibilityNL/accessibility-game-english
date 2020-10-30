@@ -1,6 +1,9 @@
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
+
+   Modified by Bas de Bruin
+    to be slightly more Accessible
 */
 
 html, body, div, span, applet, object, iframe,
@@ -24,10 +27,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-/* make sure to set some focus styles for accessibility */
-:focus {
-    outline: 0;
-}
+// /* make sure to set some focus styles for accessibility */
+// :focus {
+//     outline: 0;
+// }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
