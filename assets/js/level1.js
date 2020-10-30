@@ -6,13 +6,10 @@
     for: Stichting Accessibility
 */
 
-console.log('Starting level1 script');
+const CARD_PAIRS = 4;
 
 // get elems
 let l = $('#level');
-
-// 
-let onFirstCard = true;
 
 // array of possible colors
 const colors = [
@@ -25,79 +22,166 @@ const colors = [
     '#94855A'
 ]
 let colorIndex = 0;
+const originalColor = '#21CEA0';
 
 // array where memory cards are stored
 let memoryCards = [];
 
+// state 
+let state = 'FIRST_CARD';
+// round
+let round = 1;
+// selected card
 let selectedCard;
+// points
+let points = 0;
 
 
-// Make the memory cards
-for (let i = 0; i < 4; i++) {
-    memoryCards[i] = new MemoryCardPair();
-}
+// Memory Card Class
+class MemoryCard {
 
+    constructor(color = 'black', icon = false) {
+        this.color = color;
+        this.icon  = icon;
 
+        this.correct = false;
 
-// MemoryCardPair class
-function MemoryCardPair(hasIcon = false) {
+        this.elem;
 
-    const id = colorIndex;
+        l.append(this.makeElem());
 
-    let correct = false;
-
-    let color;
-    if (colorIndex < colors.length) {
-        color = colors[colorIndex];
-        colorIndex++;
-    } else {
-        throw new Error('Memory Cards: no colors left');
+        this.elem.on('click', () => this.onClick());
     }
 
-    // make element
-    // start elem
-    let elem = `<div class="memory-card id-${id}">`;
-    // add icon if hasIcon
-    if (hasIcon) {
-        elem += '<img src="nothing" alt="icon">'
+    makeElem() {
+        // build memeory card element
+        let e = '<span class="memory-card">';
+        if (this.icon) {
+            e += '<img src="' + this.icon + '">';
+        }
+        e += '</span>';
+
+        // save in this.elem and return
+        this.elem = $(e);
+        return this.elem;
     }
-    // close elem
-    elem += '</div>';
-    // and make it a jquery elem
-    elem = $(elem);
 
-    // add to #level
-    l.append(elem);
-    l.append(elem);
+    onClick() {
 
-    // on click
-    elem.on('click', event => {
+        if (state === 'FIRST_CARD') {
 
-        if (onFirstCard) {
+            this.makeVisible();
+            console.log('first card');
 
             selectedCard = this;
-            console.log(this);
-            elem.css('background-color', color);
-
-            onFirstCard = false;
-
-        } else {
-
-            elem.css('background-color', color);
-            onFirstCard = true;
-            if (selectedCard == this && !correct) {
-
-                // correct
-                correct = true;
-                //give point
-
-            } else {
-
-                // incorrect
-
-            }
+            state = 'SECOND_CARD';
 
         }
+        else if (state === 'SECOND_CARD') {
 
+            // correct
+            if (selectedCard.color === this.color && selectedCard !== this) {
+
+                this.makeVisible();
+                this.correct = true;
+                state = 'FIRST_CARD';
+                addPoint();
+
+                console.log('second card, correct');
+                
+            } else {
+
+                this.makeVisible();
+                // change back in 1 sec
+                state = 'WAIT';
+                console.log('second card, incorrect');
+                setTimeout(() => this.makeInvisible(), 1000);
+                
+            }
+            
+        }
+    }
+
+    makeVisible() {
+        this.elem.css('background-color', this.color);
+    }
+
+    makeInvisible() {
+        this.elem.css('background-color', originalColor);
+        if (selectedCard) {
+            selectedCard.elem.css('background-color', originalColor);
+        }
+        state = 'FIRST_CARD';
+    }
+
+}
+
+
+// GO
+setupFirstRound();
+
+
+function setupFirstRound() {
+    // Make the memory cards
+    for (let i = 0; i < CARD_PAIRS; i++) {
+        memoryCards[i*2] =     new MemoryCard(colors[colorIndex]);
+        memoryCards[(i*2)+1] = new MemoryCard(colors[colorIndex++]);
+    }
+
+    // Shuffle elements
+    $( function() {
+        let divs = l.children();
+        while (divs.length) {
+            l.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+        }
     });
 }
+
+function setupSecondRound() {
+
+    points = 0;
+    round++;
+    console.log('Second Round');
+
+    l.empty();
+
+    colorIndex = 0;
+    // Make the memory cards
+    for (let i = 0; i < CARD_PAIRS; i++) {
+        let icon = '/assets/images/index/icon_eye.svg';
+
+        memoryCards[i*2] =     new MemoryCard(colors[colorIndex]  , icon);
+        memoryCards[(i*2)+1] = new MemoryCard(colors[colorIndex++], icon);
+    }
+
+    // Shuffle elements
+    $( function() {
+        let divs = l.children();
+        while (divs.length) {
+            l.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+        }
+    });
+
+}
+
+
+function addPoint() {
+    // add point
+    // end if all points counted
+    if (points < CARD_PAIRS-1) {
+
+        points++;
+
+    } else if (round == 1) {
+
+        setupSecondRound();
+
+    } else {
+
+        // redirect, end of level
+        window.location.href = window.location.href + '/potatoes-are-great/';
+
+    }
+}
+
+
