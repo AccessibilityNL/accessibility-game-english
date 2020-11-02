@@ -116,7 +116,6 @@ class MemoryCard {
 
 }
 
-
 // GO
 setupFirstRound();
 
@@ -162,6 +161,9 @@ function setupSecondRound() {
         }
     });
 
+    // update label above level
+    $('#title').html('Met iconen:')
+
 }
 
 
@@ -179,9 +181,17 @@ function addPoint() {
     } else {
 
         // redirect, end of level
-        window.location.href = window.location.href + '/potatoes-are-great/';
+        console.log("Redirecting to Outro page")
+        swup.loadPage({
+            url: window.location.href.replace('/play/', '/outro/')
+        });
 
     }
 }
 
+function unload() {
 
+    delete memoryCards;
+    delete MemoryCard;
+
+}

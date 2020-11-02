@@ -2,8 +2,8 @@
 layout: layouts/level-intro.pug
 tags: level
 index: 1
-title: Centrale Visie
-image: /assets/images/levels/illus_motorische_beperking.svg
+title: Kleurenblind
+image: /assets/images/levels/kleurenblind.svg
 icon: nothing
 ---
 

@@ -181,7 +181,6 @@
 
 .level-container {
     @extend .container;
-    @extend .center;
 
     display: flex;
     flex-flow: column nowrap;

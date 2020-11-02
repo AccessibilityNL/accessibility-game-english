@@ -7,6 +7,10 @@ title: Kleurenblind
 
 // styles
 style(type="text/css").
+    .play-container {
+        max-width: 60rem;
+        padding: 3rem 0;
+    }
     #level {
         display: flex;
         flex-flow: row wrap;
@@ -20,7 +24,7 @@ style(type="text/css").
         justify-content: center;
 
         width: calc(25% - 1rem);
-        height: 8rem;
+        height: 15rem;
         
         background-color: #21CEA0;
         margin-right: 0.5rem;
@@ -30,18 +34,31 @@ style(type="text/css").
 
         cursor: pointer;
     }
+    @media (max-width: 35rem) {
+        #level .memory-card { height: 8rem }
+    }
+
     .memory-card img {
         width: 50%;
         height: auto;
     }
 
+    #title {
+        text-align: center;
+        margin-bottom: 3rem;
+
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
 
 
-.container.large
+
+.container.play-container
+    h3#title Alleen kleurverschil:
     // Het level
     #level
     // De code
-    script(src="/assets/js/level1.js" type="text/javascript")
+    script(data-src="/assets/js/level1.js" type="text/javascript" data-load-script)
 
 
 
