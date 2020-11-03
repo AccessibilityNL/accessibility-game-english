@@ -8,7 +8,7 @@
 
 var memory = {
 
-    CARD_PAIRS: 4,
+    CARD_PAIRS: 6, // 12 card in total, pretty hard
 
     // get elems
     l: $('#level'),
@@ -25,6 +25,16 @@ var memory = {
     ],
     colorIndex: 0,
     originalColor: '#21CEA0',
+
+    // array of icons
+    icons: [
+        'icon_eye.svg',
+        'icon_hand.svg',
+        'icon_no_sound.svg',
+        'icon_star.svg',
+        'icon_stars.svg',
+        'icon_play.svg'
+    ],
 
     // array where memory cards are stored
     memoryCards: [],
@@ -80,21 +90,23 @@ var memory = {
             }
             else if (memory.state === 'SECOND_CARD') {
 
-                // correct
-                if (memory.selectedCard.color === this.color && memory.selectedCard !== this) {
+                if (!this.correct) {
+                    // correct
+                    if (memory.selectedCard.color === this.color && memory.selectedCard !== this) {
 
-                    this.makeVisible();
-                    this.correct = true;
-                    memory.state = 'FIRST_CARD';
-                    memory.addPoint();
-                    
-                } else {
+                        this.makeVisible();
+                        this.correct = true;
+                        memory.state = 'FIRST_CARD';
+                        memory.addPoint();
+                        
+                    } else {
 
-                    this.makeVisible();
-                    // change back in 1 sec
-                    memory.state = 'WAIT';
-                    setTimeout(() => this.makeInvisible(), 1000);
-                    
+                        this.makeVisible();
+                        // change back in 1 sec
+                        memory.state = 'WAIT';
+                        setTimeout(() => this.makeInvisible(), 1000);
+                        
+                    }
                 }
                 
             }
@@ -102,12 +114,22 @@ var memory = {
 
         makeVisible() {
             this.elem.css('background-color', this.color);
+            if (this.icon) {
+                this.elem.find('img').css('display', 'block');
+            }
         }
 
         makeInvisible() {
+            // make both this.elem and the selected card invisible
             this.elem.css('background-color', memory.originalColor);
+            if (this.icon) {
+                this.elem.find('img').css('display', 'none');
+            }
             if (memory.selectedCard) {
                 memory.selectedCard.elem.css('background-color', memory.originalColor);
+                if (this.icon) {
+                    memory.selectedCard.elem.find('img').css('display', 'none');
+                }
             }
             memory.state = 'FIRST_CARD';
         }
@@ -142,7 +164,7 @@ var memory = {
         this.colorIndex = 0;
         // Make the memory cards
         for (let i = 0; i < this.CARD_PAIRS; i++) {
-            let icon = '/assets/images/index/icon_eye.svg';
+            let icon = '/assets/images/levels/' + this.icons[this.colorIndex];
 
             this.memoryCards[i*2] =     new this.MemoryCard(this.colors[this.colorIndex]  , icon);
             this.memoryCards[(i*2)+1] = new this.MemoryCard(this.colors[this.colorIndex++], icon);
@@ -189,7 +211,6 @@ function unload() {
 
     console.log('Unloading Level 1');
     delete memory;
-    delete unload;
 
 }
 
