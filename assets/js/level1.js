@@ -6,188 +6,192 @@
     for: Stichting Accessibility
 */
 
-const CARD_PAIRS = 4;
+var memory = {
 
-// get elems
-let l = $('#level');
+    CARD_PAIRS: 4,
 
-// array of possible colors
-const colors = [
-    '#706231',
-    '#443D29',
-    '#615E51',
-    '#736F5E',
-    '#AB9D70',
-    '#322A1B',
-    '#94855A'
-]
-let colorIndex = 0;
-const originalColor = '#21CEA0';
+    // get elems
+    l: $('#level'),
 
-// array where memory cards are stored
-let memoryCards = [];
+    // array of possible colors
+    colors: [
+        '#706231',
+        '#443D29',
+        '#615E51',
+        '#736F5E',
+        '#AB9D70',
+        '#322A1B',
+        '#94855A'
+    ],
+    colorIndex: 0,
+    originalColor: '#21CEA0',
 
-// state 
-let state = 'FIRST_CARD';
-// round
-let round = 1;
-// selected card
-let selectedCard;
-// points
-let points = 0;
+    // array where memory cards are stored
+    memoryCards: [],
+
+    // state 
+    state: 'FIRST_CARD',
+    // round
+    round: 1,
+    // selected card
+    selectedCard: undefined,
+    // points
+    points: 0,
 
 
-// Memory Card Class
-class MemoryCard {
+    // Memory Card Class
+    MemoryCard: class {
 
-    constructor(color = 'black', icon = false) {
-        this.color = color;
-        this.icon  = icon;
+        constructor(color = 'black', icon = false) {
+            this.color = color;
+            this.icon  = icon;
 
-        this.correct = false;
+            this.correct = false;
 
-        this.elem;
+            this.elem;
 
-        l.append(this.makeElem());
+            memory.l.append(this.makeElem());
 
-        this.elem.on('click', () => this.onClick());
-    }
-
-    makeElem() {
-        // build memeory card element
-        let e = '<button class="memory-card">';
-        if (this.icon) {
-            e += '<img src="' + this.icon + '">';
+            this.elem.on('click', () => this.onClick());
         }
-        e += '</button>';
 
-        // save in this.elem and return
-        this.elem = $(e);
-        return this.elem;
-    }
+        makeElem() {
+            // build memeory card element
+            let e = '<button class="memory-card">';
+            if (this.icon) {
+                e += '<img src="' + this.icon + '">';
+            }
+            e += '</button>';
 
-    onClick() {
-
-        if (state === 'FIRST_CARD') {
-
-            this.makeVisible();
-
-            selectedCard = this;
-            state = 'SECOND_CARD';
-
+            // save in this.elem and return
+            this.elem = $(e);
+            return this.elem;
         }
-        else if (state === 'SECOND_CARD') {
 
-            // correct
-            if (selectedCard.color === this.color && selectedCard !== this) {
+        onClick() {
+
+            if (memory.state === 'FIRST_CARD') {
 
                 this.makeVisible();
-                this.correct = true;
-                state = 'FIRST_CARD';
-                addPoint();
-                
-            } else {
 
-                this.makeVisible();
-                // change back in 1 sec
-                state = 'WAIT';
-                setTimeout(() => this.makeInvisible(), 1000);
+                memory.selectedCard = this;
+                memory.state = 'SECOND_CARD';
+
+            }
+            else if (memory.state === 'SECOND_CARD') {
+
+                // correct
+                if (memory.selectedCard.color === this.color && memory.selectedCard !== this) {
+
+                    this.makeVisible();
+                    this.correct = true;
+                    memory.state = 'FIRST_CARD';
+                    memory.addPoint();
+                    
+                } else {
+
+                    this.makeVisible();
+                    // change back in 1 sec
+                    memory.state = 'WAIT';
+                    setTimeout(() => this.makeInvisible(), 1000);
+                    
+                }
                 
             }
-            
         }
-    }
 
-    makeVisible() {
-        this.elem.css('background-color', this.color);
-    }
-
-    makeInvisible() {
-        this.elem.css('background-color', originalColor);
-        if (selectedCard) {
-            selectedCard.elem.css('background-color', originalColor);
+        makeVisible() {
+            this.elem.css('background-color', this.color);
         }
-        state = 'FIRST_CARD';
-    }
 
-}
-
-// GO
-setupFirstRound();
-
-
-function setupFirstRound() {
-    // Make the memory cards
-    for (let i = 0; i < CARD_PAIRS; i++) {
-        memoryCards[i*2] =     new MemoryCard(colors[colorIndex]);
-        memoryCards[(i*2)+1] = new MemoryCard(colors[colorIndex++]);
-    }
-
-    // Shuffle elements
-    $( function() {
-        let divs = l.children();
-        while (divs.length) {
-            l.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+        makeInvisible() {
+            this.elem.css('background-color', memory.originalColor);
+            if (memory.selectedCard) {
+                memory.selectedCard.elem.css('background-color', memory.originalColor);
+            }
+            memory.state = 'FIRST_CARD';
         }
-    });
-}
 
-function setupSecondRound() {
+    },
 
-    points = 0;
-    round++;
-    console.log('Second Round');
 
-    l.empty();
-
-    colorIndex = 0;
-    // Make the memory cards
-    for (let i = 0; i < CARD_PAIRS; i++) {
-        let icon = '/assets/images/index/icon_eye.svg';
-
-        memoryCards[i*2] =     new MemoryCard(colors[colorIndex]  , icon);
-        memoryCards[(i*2)+1] = new MemoryCard(colors[colorIndex++], icon);
-    }
-
-    // Shuffle elements
-    $( function() {
-        let divs = l.children();
-        while (divs.length) {
-            l.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+    setupFirstRound: function() {
+        // Make the memory cards
+        for (let i = 0; i < this.CARD_PAIRS; i++) {
+            this.memoryCards[i*2] =     new this.MemoryCard(this.colors[this.colorIndex]);
+            this.memoryCards[(i*2)+1] = new this.MemoryCard(this.colors[this.colorIndex++]);
         }
-    });
 
-    // update label above level
-    $('#title').html('Met iconen:')
+        // Shuffle elements
+        $( function() {
+            let divs = memory.l.children();
+            while (divs.length) {
+                memory.l.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+            }
+        });
+    },
 
-}
+    setupSecondRound: function() {
 
+        this.points = 0;
+        this.round++;
+        console.log('Second Round');
 
-function addPoint() {
-    // add point
-    // end if all points counted
-    if (points < CARD_PAIRS-1) {
+        memory.l.empty();
 
-        points++;
+        this.colorIndex = 0;
+        // Make the memory cards
+        for (let i = 0; i < this.CARD_PAIRS; i++) {
+            let icon = '/assets/images/index/icon_eye.svg';
 
-    } else if (round == 1) {
+            this.memoryCards[i*2] =     new this.MemoryCard(this.colors[this.colorIndex]  , icon);
+            this.memoryCards[(i*2)+1] = new this.MemoryCard(this.colors[this.colorIndex++], icon);
+        }
 
-        setupSecondRound();
-
-    } else {
-
-        // redirect, end of level
-        console.log("Redirecting to Outro page")
-        swup.loadPage({
-            url: window.location.href.replace('/play/', '/outro/')
+        // Shuffle elements
+        $( function() {
+            let divs = memory.l.children();
+            while (divs.length) {
+                memory.l.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+            }
         });
 
-    }
-}
+        // update label above level
+        $('#title').html('Met iconen:')
+
+    },
+
+
+    addPoint: function() {
+        // add point
+        // end if all points counted
+        if (this.points < this.CARD_PAIRS-1) {
+
+            this.points++;
+
+        } else if (this.round == 1) {
+
+            this.setupSecondRound();
+
+        } else {
+
+            // redirect, end of level
+            console.log("Redirecting to Outro page")
+            swup.loadPage({
+                url: window.location.href.replace('/play/', '/outro/')
+            });
+
+        }
+    },
+}; // end of memory {}
 
 function unload() {
 
-    delete memoryCards;
-    delete MemoryCard;
+    console.log('Unloading Level 1');
+    delete memory;
+    delete unload;
 
 }
+
+// --- GO ---
+memory.setupFirstRound();

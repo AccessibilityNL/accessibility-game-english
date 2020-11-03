@@ -8,7 +8,7 @@ $(document).ready(()=>{
 
     // unload assets if in global scope
     swup.on('willReplaceContent', () => {
-        try { unload(); console.log('unloaded last script') } catch {}
+        try { unload(); console.log('unloaded last script') } catch { console.log('Cant find unload script') }
     })
 
     // look for script with data-load-script and exec
