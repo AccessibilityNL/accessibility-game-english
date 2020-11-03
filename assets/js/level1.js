@@ -55,11 +55,11 @@ class MemoryCard {
 
     makeElem() {
         // build memeory card element
-        let e = '<span class="memory-card">';
+        let e = '<button class="memory-card">';
         if (this.icon) {
             e += '<img src="' + this.icon + '">';
         }
-        e += '</span>';
+        e += '</button>';
 
         // save in this.elem and return
         this.elem = $(e);
@@ -71,7 +71,6 @@ class MemoryCard {
         if (state === 'FIRST_CARD') {
 
             this.makeVisible();
-            console.log('first card');
 
             selectedCard = this;
             state = 'SECOND_CARD';
@@ -86,15 +85,12 @@ class MemoryCard {
                 this.correct = true;
                 state = 'FIRST_CARD';
                 addPoint();
-
-                console.log('second card, correct');
                 
             } else {
 
                 this.makeVisible();
                 // change back in 1 sec
                 state = 'WAIT';
-                console.log('second card, incorrect');
                 setTimeout(() => this.makeInvisible(), 1000);
                 
             }

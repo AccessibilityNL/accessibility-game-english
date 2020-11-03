@@ -68,3 +68,11 @@ img {
     max-height: 90vh;
     object-fit: cover;
 }
+
+
+// link and button focus
+a:focus, button:focus {
+    outline-color: $accent;
+    outline-offset: 2px;
+    outline-width: 3px;
+}

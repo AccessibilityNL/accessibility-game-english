@@ -31,15 +31,23 @@ style(type="text/css").
         margin-bottom: 0.5rem;
 
         border-radius: 0.5rem;
+        border: none;
 
         cursor: pointer;
+        transition: transform .2s;
     }
     @media (max-width: 35rem) {
         #level .memory-card { height: 8rem }
     }
+    .memory-card:hover {
+        transform: scale(1.02);
+    }
+    .memory-card:active {
+        transform: scale(0.98);
+    }
 
     .memory-card img {
-        width: 50%;
+        width: 40%;
         height: auto;
     }
 

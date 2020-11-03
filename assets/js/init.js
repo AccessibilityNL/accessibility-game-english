@@ -12,10 +12,14 @@ $(document).ready(()=>{
     })
 
     // look for script with data-load-script and exec
-    swup.on('contentReplaced', () => {
-        console.log('looking for scripts');
-
-        if ($('body *[data-load-script]'))
-            $.getScript($('body *[data-load-script]').attr('data-src'));
-    })
+    swup.on('contentReplaced', loadScripts)
 });
+
+$(document).on('DOMContentLoaded', loadScripts);
+
+function loadScripts() {
+    console.log('looking for scripts');
+
+    if ($('body *[data-load-script]'))
+        $.getScript($('body *[data-load-script]').attr('data-src'));
+}
