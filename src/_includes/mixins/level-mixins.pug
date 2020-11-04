@@ -1,0 +1,16 @@
+//- Reusable components used in level intros and outros
+
+mixin level-bar(currentIndex)
+    - currentIndex--
+    - var nLevels = collections.level.length-1
+    #level-bar(style=`transform: translateX( ${((nLevels/2) - currentIndex) * 4}rem )`)
+        each level, i in collections.level
+            if i < currentIndex
+                a(href=level.url).level-number= i+1
+                .level-dash
+            else if i == currentIndex
+                .level-icon
+                    img(src=level.data.icon alt=`Icoon voor het ${level.data.title} level.`)
+            else if i > currentIndex
+                .level-dash
+                a(href=level.url).level-number= i+1

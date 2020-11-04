@@ -1,6 +1,6 @@
 ---
 layout: layouts/level-outro.pug
-index: 1
+index: 2
 title: Kleurenblind
 image: /assets/images/levels/kleurenblind_uitro.svg
 ---

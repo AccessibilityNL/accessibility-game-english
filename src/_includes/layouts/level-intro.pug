@@ -1,12 +1,17 @@
 doctype html
 html
     include _includes/layouts/head.pug
+    include _includes/mixins/level-mixins.pug
     body
         main#swup.container.large.padding
             .columns
                 .level-image.animate-left
                     img(src=image alt=`Illustratie over ${title}`)
                 .level-container.animate-right
+                    if icon
+                        .spacer
+                        +level-bar(index)
+
                     h3= 'Level ' + index
                     h1= title
 

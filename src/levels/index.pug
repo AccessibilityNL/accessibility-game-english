@@ -4,9 +4,15 @@ title: Level select
 ---
 
 .container.center
-    h1 Level select
-    p.
-        Hier komme de levels
+    .logo-title
+        h1 Level select
+    
+    each level in collections.level
+        a(href=level.url).level-list
+            .level-icon
+                img(src=level.data.icon alt=`Icoon voor ${level.data.title} level.`)
+            h3= level.data.index + '. '
+            h4= level.data.title
 
     .spacer
 
