@@ -1,20 +1,24 @@
 doctype html
 html
     include _includes/layouts/head.pug
+    include _includes/mixins/level-mixins.pug
     body
         main#swup.container.large.padding
             .columns
                 .level-image.animate-left
                     img(src=image alt=`Illustratie over ${title}`)
                 .level-container.animate-right
+                    // level score element
+                    +level-score(300)
+                        a(href=`/levels/${index}/play/`).button.light.back Probeer opnieuw
+
                     h3= 'Level ' + index
                     h1= title
 
-                    a(href=`/levels/${index}/play/`).button.light.back Probeer opnieuw
-
                     .spacer
 
-                    | !{content}
+                    article
+                        | !{content}
 
                     .spacer
 

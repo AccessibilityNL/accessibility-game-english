@@ -14,3 +14,25 @@ mixin level-bar(currentIndex)
             else if i > currentIndex
                 .level-dash
                 a(href=level.url).level-number= i+1
+
+
+
+mixin level-score(score)
+    - var maxScore = 400
+    - var starValues = [100, 200, 300]
+    #score
+        h2#score-title Level behaald
+        h4#score-subtitle Goed gedaan, maar het kan beter!
+
+        .score-columns
+            each i in starValues
+                img(src='/assets/images/levels/icon_star_blue.svg')
+        
+        label.hidden(for="process") Jouw score:
+        progress(id="process" min="0" max=maxScore value=score)= score + ' / ' +maxScore
+
+        .score-columns
+            each v in starValues
+                span= v
+
+        block

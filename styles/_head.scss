@@ -69,6 +69,11 @@ img {
     object-fit: cover;
 }
 
+// hidden element for accessibility
+.hidden {
+    display: none;
+}
+
 
 // link and button focus
 a:focus, button:focus {

@@ -1,7 +1,7 @@
 ---
 layout: layouts/level-outro.pug
 index: 2
-title: Kleurenblind
+title: ADHD
 image: /assets/images/levels/kleurenblind_uitro.svg
 ---
 
