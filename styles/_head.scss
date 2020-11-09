@@ -53,6 +53,7 @@ h3 {
 p {
     line-height: 1.5em;
     letter-spacing: 0.025rem;
+    margin: 1rem 0;
 }
 
 a {
@@ -80,4 +81,8 @@ a:focus, button:focus {
     outline-color: $accent;
     outline-offset: 2px;
     outline-width: 3px;
+}
+
+button {
+    border: none;
 }

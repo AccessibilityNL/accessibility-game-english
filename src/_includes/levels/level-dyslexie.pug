@@ -1,0 +1,67 @@
+---
+layout: layouts/level-play.pug
+---
+
+// The styles
+
+style(type="text/css").
+    #level #questions {
+        display: none;
+    }
+    #level span {
+        transition: all .5s;
+        text-align: center;
+    }
+    span.flip {
+        transition: all .5s;
+        display: inline-block;
+        transform: scaleX(-1);
+    }
+
+    /*  Question page  */
+
+    #level.on-questions #text      { display: none; }
+    #level.on-questions #questions { display: block; }
+
+    #questions .container {
+        margin: 3rem auto;
+    }
+    #questions .container.buttons {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        width: 100%;
+    }
+    #questions h2 {
+        margin: 2rem 0;
+    }
+
+// The page layout
+
+#level
+    #text
+        article#content.container
+            | !{content}
+        .container.center
+            button(onclick="dyslexie.changePage()").button= question.button_text
+
+    #questions
+        .container
+            h2= question.title
+
+            each q, i in questions
+                label(for='question_'+i)= q.Q
+                input(id='question_'+i type="field")
+            
+        .container.buttons
+            button(onclick="dyslexie.changePage()").button.back.light= question.button_back_text
+            button.button= question.button_send_text
+
+// Script
+script(data-src="/assets/js/level-dyslexie.js" type="text/javascript" data-load-script)
+
+
+//- shortcut
+.container.center
+    a(href=`/levels/${index}/outro/`).button Speel level uit

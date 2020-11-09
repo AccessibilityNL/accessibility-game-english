@@ -15,13 +15,13 @@ $(document).ready(()=>{
     swup.on('contentReplaced', loadScripts)
 });
 
-$(document).on('DOMContentLoaded', loadScripts);
 
+$(document).on('DOMContentLoaded', loadScripts);
 function loadScripts() {
     console.log('looking for scripts');
 
     if ($('body *[data-load-script]'))
         $.getScript($('body *[data-load-script]').attr('data-src'));
 
-    swup.scrollTo(document.body, 0);
+    try { swup.scrollTo(document.body, 0); } catch {}
 }

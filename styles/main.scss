@@ -56,6 +56,20 @@
 }
 
 
+p a:not(.button) {
+    color: $accent;
+    font-weight: bold;
+    display: inline;
+
+    border-bottom: solid 2px $light-accent;
+
+    transition: all .15s;
+    &:hover {
+        border-bottom-color: $accent;
+    }
+}
+
+
 
 // BUTTONS
 .button {
@@ -331,7 +345,8 @@ header {
 
     padding: $padding*2 $padding;
     padding-bottom: $padding;
-    margin: $padding 0;
+    margin: 0;
+    margin-bottom: $padding;
 
     text-align: center;
 
@@ -441,5 +456,31 @@ header {
     }
     &:active {
         transform: scale(0.98);
+    }
+}
+
+
+// Level form styles
+label {
+    display: block;
+    color: $accent;
+}
+input[type=field] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box !important;
+    border-radius: 0.5rem;
+    border: solid 2px rgba($accent, 0);
+
+    background: $light-accent;
+
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 1rem;
+
+    transition: all .2s;
+
+    &:focus {
+        outline: none;
+        border: solid 2px $accent;
     }
 }
