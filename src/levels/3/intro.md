@@ -3,7 +3,7 @@ layout: layouts/level-intro.pug
 tags: level
 index: 3
 title: Dyslexie
-image: /assets/images/levels/kleurenblind.svg
+image: /assets/images/levels/dyslexie.svg
 icon: /assets/images/levels/icon_dislexia_blue.svg
 ---
 

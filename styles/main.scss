@@ -11,7 +11,7 @@
     display: block;
     width: 100%;
     margin: 0 auto;
-    max-width: $breakSmall;
+    max-width: $containerSize;
     padding: 0 $padding;
 }
 
@@ -201,6 +201,10 @@ p a:not(.button) {
 
     display: flex;
     flex-flow: column nowrap;
+
+    width: 100%;
+    min-width: 0;
+    max-width: $breakSmall;
 
     padding: $padding*2 0;
 
@@ -393,6 +397,11 @@ header {
 
         &:last-of-type {
             margin-bottom: $padding;
+        }
+
+        @media (max-width: $breakSmall) {
+            padding: 0 $padding*5.5;
+            img:nth-child(2) { width: 3.5rem; }
         }
     }
 
