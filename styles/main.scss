@@ -221,6 +221,33 @@ p a:not(.button) {
     }
 }
 
+// List
+p ul, article ul {
+    margin: 1rem 0;
+
+    li {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 1rem 0;
+
+        background: rgba($accent3, .1);
+        border-radius: 1rem;
+        padding: 0.5rem 0.9rem;
+
+        //font-size: 1.1rem;
+
+        &::before {
+            content: '→';
+
+            font-size: 1.1rem;
+
+            display: block;
+            color: $accent3;
+            margin-right: 1rem;
+        }
+    }
+}
+
 #level-bar {
     display: flex;
     flex-flow: row nowrap;
