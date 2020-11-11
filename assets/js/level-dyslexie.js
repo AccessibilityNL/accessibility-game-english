@@ -50,8 +50,8 @@ var dyslexie = {
     },
 
     updateText: function() {
-        const CHANCE = 0.02;
-        const CHANCE_FLIP = 0.1;
+        const CHANCE = 0.03;
+        const CHANCE_FLIP = 0.2;
 
         // in each element in #content
         dyslexie.$content.children().each((_, elem) => {
@@ -87,6 +87,38 @@ var dyslexie = {
     changePage: function() {
         console.log('clicked');
         $('#level').toggleClass('on-questions');
+    },
+
+    checkQuestions: function() {
+        let correct = true;
+        // for each input field
+        $('#questions input[type=field]').each((_, q) => {
+
+            if (q.value.toLowerCase() !== reverse($(q).attr('data-correct')).toLowerCase()) {  // incorrect
+
+                correct = false;
+                $(q).addClass('incorrect');
+
+                // add incorrect class to corresponding label
+                $('#questions label[for=' + $(q).attr('id') + ']').addClass('incorrect');
+
+            } else { // correct
+
+                // remove incorrect class
+                $(q).removeClass('incorrect');
+                // remove incorrect class from corresponding label
+                $('#questions label[for=' + $(q).attr('id') + ']').removeClass('incorrect');
+
+            }
+
+        });
+
+        // go to next page if all questions are correct
+        if (correct) {
+            swup.loadPage({
+                url: window.location.href.replace('/play/', '/outro/')
+            });
+        }
     }
 
 }

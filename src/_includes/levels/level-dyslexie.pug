@@ -2,6 +2,9 @@
 layout: layouts/level-play.pug
 ---
 
+//- simple reverse function to make cheating harder ;)
+- const reverse = str => String(str).split("").reverse().join("");
+
 // The styles
 
 style(type="text/css").
@@ -9,11 +12,10 @@ style(type="text/css").
         display: none;
     }
     #level span {
-        transition: all .5s;
+        transition: all .4s;
         text-align: center;
     }
     span.flip {
-        transition: all .5s;
         display: inline-block;
         transform: scaleX(-1);
     }
@@ -52,11 +54,11 @@ style(type="text/css").
 
             each q, i in questions
                 label(for='question_'+i)= q.Q
-                input(id='question_'+i type="field")
+                input(id='question_'+i type="field" data-correct=reverse(q.A))
             
         .container.buttons
             button(onclick="dyslexie.changePage()").button.back.light= question.button_back_text
-            button.button= question.button_send_text
+            button(onclick="dyslexie.checkQuestions()").button= question.button_send_text
 
 // Script
 script(data-src="/assets/js/level-dyslexie.js" type="text/javascript" data-load-script)

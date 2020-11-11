@@ -25,3 +25,6 @@ function loadScripts() {
 
     try { swup.scrollTo(document.body, 0); } catch {}
 }
+
+// simple reverse string function
+const reverse = str => String(str).split("").reverse().join("");

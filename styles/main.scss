@@ -500,6 +500,8 @@ header {
 label {
     display: block;
     color: $accent;
+
+    &.incorrect { color: $accent3 }
 }
 input[type=field] {
     display: block;
@@ -518,5 +520,10 @@ input[type=field] {
     &:focus {
         outline: none;
         border: solid 2px $accent;
+    }
+
+    &.incorrect {
+        border-color: $accent3;
+        background: rgba($accent3, .1);
     }
 }

@@ -24,4 +24,6 @@ Al in 1881 werd de aandoening door Oswald Berkhan beschreven, maar het was Rudol
 
 ## Oorzaak
 
-Onderzoek heeft uitgewezen dat dyslexie een neurologische oorzaak heeft. Ook al zijn er talrijke varianten en oorzaken voor dyslexie, in veel gevallen zijn de hersenen niet goed in staat visuele of auditieve informatie te interpreteren. De hersenen kunnen dit op verschillende manieren deels, of in het geval van een milde vorm volledig compenseren door andere hersenfuncties te gebruiken. Dit is afhankelijk van de omvang van de aandoening. Op jonge leeftijd kan stimulering en training van de hersenen tot betere compensatie leiden. Dyslexie heeft voornamelijk invloed op de leesvaardigheid, spelling en woordenschat.
+Onderzoek heeft uitgewezen dat dyslexie een neurologische oorzaak heeft. Ook al zijn er talrijke varianten en oorzaken voor dyslexie, in veel gevallen zijn de hersenen niet goed in staat visuele of auditieve informatie te interpreteren. De hersenen kunnen dit op verschillende manieren deels, of in het geval van een milde vorm volledig compenseren door andere hersenfuncties te gebruiken. 
+
+Dit is afhankelijk van de omvang van de aandoening. Op jonge leeftijd kan stimulering en training van de hersenen tot betere compensatie leiden. Dyslexie heeft voornamelijk invloed op de leesvaardigheid, spelling en woordenschat.
