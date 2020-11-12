@@ -4,8 +4,8 @@ html(lang=lang?lang:'nl')
     body
         main#swup
             header
-                a(href=`/levels/${index}/intro/`).button.light.back Ga terug
-                a(href="/")#logo
+                a(href=`/levels/${index}/intro/` rel="prev").button.light.back Ga terug
+                a(href="/" title="Terug naar homepagina")#logo
                     img(src='/assets/images/acc_logo.svg' alt='Logo van Stichting Accessibility')
                     h2 Accessibility Game
 

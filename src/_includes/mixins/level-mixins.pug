@@ -26,9 +26,10 @@ mixin level-score(score)
 
         .score-columns
             each i in starValues
-                img(src='/assets/images/levels/icon_star_blue.svg')
+                img(src='/assets/images/levels/icon_star_blue.svg' alt='Ster')
         
-        label.hidden(for="process") Jouw score:
+        // Label for accessibility:
+        label.hidden(for="process")= 'Jouw score is ' + score + ' van de  ' + maxScore
         progress(id="process" min="0" max=maxScore value=score)= score + ' / ' +maxScore
 
         .score-columns

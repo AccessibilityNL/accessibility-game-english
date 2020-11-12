@@ -8,7 +8,7 @@ title: Level select
         h1 Level select
     
     each level in collections.level
-        a(href=level.url).level-list
+        a(href=level.url title=level.data.title).level-list
             .level-icon
                 img(src=level.data.icon alt=`Icoon voor ${level.data.title} level.`)
             h3= level.data.index + '. '
@@ -16,4 +16,4 @@ title: Level select
 
     .spacer
 
-    a(href="/").button.back Ga terug
+    a(href="/" rel="prev").button.back Ga terug
