@@ -23,12 +23,10 @@ body {
     //fonts
     font-family: $fontFamily;
     * { line-height: 1.5em }
+}
 
-    &.loading {
-        position: fixed; 
-        overflow-y: hidden;
-        height: 100vh;
-    }
+main {
+    margin-bottom: 1rem;
 }
 
 
