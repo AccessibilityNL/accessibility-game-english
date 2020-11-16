@@ -8,10 +8,6 @@ html(lang=lang?lang:'nl')
                 .level-image.animate-left
                     img(src=image alt=`Illustratie over ${title}`)
                 .level-container.animate-right
-                    // level score element
-                    +level-score(300)
-                        a(href=`/levels/${index}/play/`).button.light.back Probeer opnieuw
-
                     h3= 'Level ' + index
                     h1= title
 

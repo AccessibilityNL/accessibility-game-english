@@ -69,7 +69,7 @@ html.is-animating .animate-right {
     &:nth-child(4) { transition: all 2.5s; }
 }
 
-html.is-animating .score-columns * {
+#score.is-animating .score-columns * {
     transform: scale(0);
 }
 
@@ -85,10 +85,29 @@ progress::-webkit-progress-value {
     transition: transform 1.5s;
 }
 
-html.is-animating progress::-webkit-progress-value {
+#score.is-animating progress::-webkit-progress-value {
     transform: scaleX(0);
 }
 
-html.is-animating progress::-moz-progress-bar {
+#score.is-animating progress::-moz-progress-bar {
     transform: scaleX(0);
+}
+
+.score-label {
+    opacity: 1;
+
+    transition: all 1.5s;
+}
+#score.is-animating .score-label {
+    opacity: 0;
+}
+
+#score {
+    opacity: 1;
+    transform: none;
+    transition: all .6s ease-out;
+}
+#score.is-animating {
+    opacity: 0;
+    transform: translateY(40%);
 }

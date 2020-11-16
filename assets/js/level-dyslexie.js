@@ -24,7 +24,6 @@ var dyslexie = {
         // change each charater to it's own element
         this.$content.children().each((_, elem) => {
             let charArray = elem.innerHTML.split('');
-            console.log(elem);
             elem.innerHTML = '';
             charArray.forEach(c => {
                 elem.innerHTML += '<span>' + c + '</span>';
@@ -115,9 +114,7 @@ var dyslexie = {
 
         // go to next page if all questions are correct
         if (correct) {
-            swup.loadPage({
-                url: window.location.href.replace('/play/', '/outro/')
-            });
+            showScore(200);
         }
     }
 

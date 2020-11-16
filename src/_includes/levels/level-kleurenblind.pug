@@ -1,7 +1,5 @@
 ---
 layout: layouts/level-play.pug
-index: 1
-title: Kleurenblind
 ---
 
 
@@ -63,20 +61,20 @@ style(type="text/css").
         font-weight: bold;
         font-size: 1.2rem;
     }
+    #title span {
+        display: none;
+    }
+    #title span.active {
+        display: inline;
+    }
 
 
 
 .container.play-container
-    h3#title Alleen kleurverschil:
+    h3#title
+        span.active= stage_1_title
+        span= stage_2_title
     // Het level
     #level
     // De code
     script(data-src="/assets/js/level-kleurenblind.js" type="text/javascript" data-load-script)
-
-
-
-
-
-//- shortcut
-.container.center
-    a(href=`/levels/${index}/outro/`).button Speel level uit

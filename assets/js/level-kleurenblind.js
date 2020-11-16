@@ -179,7 +179,7 @@ var memory = {
         });
 
         // update label above level
-        $('#title').html('Met iconen:')
+        $('#title span').toggleClass('active')
 
     },
 
