@@ -179,7 +179,7 @@ p a:not(.button) {
 }
 
 
-// INTRO AND OUTRO
+// LEVEL INTRO AND OUTRO
 
 .level-image {
     width: 100%;
@@ -245,7 +245,7 @@ p ul, article ul {
         //font-size: 1.1rem;
 
         &::before {
-            content: '→';
+            content: '\2192'; // →
 
             font-size: 1.1rem;
 
@@ -253,6 +253,33 @@ p ul, article ul {
             color: $accent3;
             margin-right: 1rem;
         }
+    }
+}
+
+// Blockquote
+p blockquote, article blockquote {
+    display: flex;
+    flex-flow: row nowrap;
+
+    margin: 1rem 0;
+    padding: 0.5rem 0.9rem;
+
+    p { margin: 0; padding: 0; }
+
+    border-radius: 1rem;
+
+    //color: darken($accent2, 20);
+    background: rgba($accent2, .2);
+
+    &::before {
+        content: '\00BB'; // »
+
+        font-size: 1.7rem;
+        font-weight: normal;
+
+        display: block;
+        color: $accent2;
+        margin-right: 1rem;
     }
 }
 
@@ -372,7 +399,7 @@ header {
 }
 
 
-// OUTRO Star Score
+// STAR SCORE
 
 #score {
 

@@ -12,7 +12,3 @@ Wanneer je ontwerpt voor mensen met dyslexie is het belangrijk om de tekst zo si
 * Voeg afbeeldingen of diagrammen toe om de tekst te ondersteunen
 * Vermijdt lange blokken tekst en zorg voor een simpele, duidelijke structuur
 * Biedt alternatieven in de vorm van video's of gesproken tekst
-
-
-
-[Misschien hier nog een link naar meer info?]
