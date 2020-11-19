@@ -136,7 +136,7 @@ var memory = {
 
     },
 
-
+    // start the first round (start of level)
     setupFirstRound: function() {
         // Make the memory cards
         for (let i = 0; i < this.CARD_PAIRS; i++) {
@@ -153,6 +153,18 @@ var memory = {
         });
     },
 
+    // show stage 2 intro
+    setupInBetween: function() {
+        // remove cards
+        memory.l.empty();
+        // show stage 2 intro
+        $('#in-between').addClass('active');
+
+        // update label above level
+        $('#title span').toggleClass('active')
+    },
+
+    // start second stage
     setupSecondRound: function() {
 
         this.points = 0;
@@ -160,6 +172,7 @@ var memory = {
         console.log('Second Round');
 
         memory.l.empty();
+        $('#in-between').removeClass('active');
 
         this.colorIndex = 0;
         // Make the memory cards
@@ -178,9 +191,6 @@ var memory = {
             }
         });
 
-        // update label above level
-        $('#title span').toggleClass('active')
-
     },
 
 
@@ -193,7 +203,7 @@ var memory = {
 
         } else if (this.round == 1) {
 
-            this.setupSecondRound();
+            this.setupInBetween();
 
         } else {
 
