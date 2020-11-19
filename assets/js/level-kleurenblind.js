@@ -197,11 +197,8 @@ var memory = {
 
         } else {
 
-            // redirect, end of level
-            console.log("Redirecting to Outro page")
-            swup.loadPage({
-                url: window.location.href.replace('/play/', '/outro/')
-            });
+            // FINISH
+            showScore(323);
 
         }
     },
