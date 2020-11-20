@@ -38,7 +38,7 @@
         display: flex;
         flex-flow: row nowrap;
 
-        >* {
+        > * {
             margin: 0 $padding*0.5;
             width: 100%;
 
@@ -356,7 +356,7 @@ header {
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.4rem;
     margin: 0;
 
     align-items: center;
@@ -369,7 +369,7 @@ header {
     .button {
         position: absolute;
         left: 1rem;
-        top: 0.5rem;
+        top: 0.45rem;
     }
 
     #logo {
@@ -582,5 +582,71 @@ input[type=field] {
     &.incorrect {
         border-color: $accent3;
         background: rgba($accent3, .1);
+    }
+}
+
+$red: #F83939;
+// ADHD popup
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;
+    &.active {
+        display: flex;
+    }
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    padding: 1rem;
+
+    background: rgba($red, .9);
+
+    text-align: center;
+
+    z-index: 950;
+
+    .content {
+        display: block;
+        width: 100%;
+        max-width: 40rem;
+
+        background: $color;
+        color: $background;
+
+        padding: 2rem;
+
+        border-radius: 1rem;
+        box-shadow: 0px 20px 40px rgba($color, .1);
+
+        #time {
+            color: $red;
+            font-size: 2rem;
+            font-weight: bold;
+
+            animation: pulse .4s infinite;
+        }
+
+        button.secondary {
+            background: none;
+            color: $red;
+
+            margin-right: 2rem;
+
+            animation: pulse .5s infinite;
+        }
+
+        button.primary {
+            @extend .button;
+            background: darken($accent2, 10);
+
+            font-weight: bold;
+        }
     }
 }

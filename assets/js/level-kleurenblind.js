@@ -80,18 +80,19 @@ var memory = {
 
         onClick() {
 
-            if (memory.state === 'FIRST_CARD') {
+            if (!this.correct) {
+                
+                if (memory.state === 'FIRST_CARD') {
 
-                this.makeVisible();
+                    this.makeVisible();
 
-                memory.selectedCard = this;
-                memory.state = 'SECOND_CARD';
+                    memory.selectedCard = this;
+                    memory.state = 'SECOND_CARD';
 
-            }
-            else if (memory.state === 'SECOND_CARD') {
+                }
+                else if (memory.state === 'SECOND_CARD') {
 
-                if (!this.correct) {
-                    // correct
+                    
                     if (memory.selectedCard.color === this.color && memory.selectedCard !== this) {
 
                         this.makeVisible();
@@ -107,8 +108,8 @@ var memory = {
                         setTimeout(() => this.makeInvisible(), 1000);
                         
                     }
+                    
                 }
-                
             }
         }
 
@@ -171,6 +172,7 @@ var memory = {
         this.round++;
         console.log('Second Round');
 
+        // clean up previous stage
         memory.l.empty();
         $('#in-between').removeClass('active');
 
