@@ -23,6 +23,21 @@ var adhd = {
         setInterval(this.updateClock, 41);
         this.showPopUp('01:30');
 
+        this.createSecretCode(); // TODO
+
+    },
+
+    createSecretCode: function() {
+        const order = shuffle([0, 1, 2, 3, 4]);
+    },
+
+    shuffle: function(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
     },
 
     // methods

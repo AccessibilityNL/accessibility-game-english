@@ -211,9 +211,12 @@ style.
     #clock
         p 01:24:35
 
-
+    //- content page with order
     article.main-page
         | !{content}
+        span#order
+            each wire in wires
+                span= String(code[wire.style]).replace('null', '') + ' ' + String(code[wire.color]).replace('null', '') + ' ; '
 
     #note
         h4= note_title
