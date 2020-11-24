@@ -12,8 +12,18 @@ button_continue_text: Ga verder
 button_stop_text: Stop level
 
 fail_title: Je hebt gefaald!
-fail_text: De bom is geëxplodeert :(, probeer het nog een keer
+fail_text: De bom is geëxplodeerd :(, probeer het nog een keer
 fail_button_text: Probeer opnieuw
+
+# score popup tekst en knoppen
+level_score_win: Level behaald!
+level_score_fail: Level gefaald...
+level_score_bad: Helaas, probeer het nog een keer.
+level_score_good: Goed gedaan, maar het kan beter!
+level_score_perfect: Perfect! Heel goed.
+
+level_score_retry: Probeer opnieuw
+level_score_next: Ga verder
 ---
 
 ### HAVEN, ROTTERDAM    21:20

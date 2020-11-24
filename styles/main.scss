@@ -419,11 +419,15 @@ header {
 
     text-align: center;
 
+    #score-title * {
+        display: none;
+    }
     h2 {
         color: $accent;
         font-size: 2rem;
     }
-    h4 {
+    #score-subtitle * {
+        display: none;
         font-weight: bold;
         margin-bottom: $padding;
     }
@@ -489,11 +493,14 @@ header {
         }
     }
 
-    .score-label {
+    #score-label {
         margin: 0;
         margin-bottom: $padding;
 
         font-weight: bold;
+        text-align: left;
+
+        transform: translateX(-1rem);
     }
 
 }
@@ -506,7 +513,7 @@ header {
     width: 100%;
     height: 100vh;
 
-    display: flex;
+    display: none; // flex
     align-items: center;
     justify-content: center;
 

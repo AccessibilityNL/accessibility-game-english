@@ -19,23 +19,30 @@ mixin level-bar(currentIndex)
 
 
 
-//- mixin level-score(score)
-//-     - var maxScore = 400
-//-     - var starValues = [100, 200, 300]
-//-     #score
-//-         h2#score-title Level behaald
-//-         h4#score-subtitle Goed gedaan, maar het kan beter!
+mixin level-score(score)
+    - var starValues = [100, 200, 300]
+    - var maxScore = 400
+    #score-background
+        #score.is-animating
+            #score-title
+                h2= level_score_fail
+                h2= level_score_win
+            #score-subtitle
+                h4= level_score_bad
+                h4= level_score_good
+                h4= level_score_perfect
 
-//-         .score-columns
-//-             each i in starValues
-//-                 img(src='/assets/images/levels/icon_star_blue.svg' alt='Ster')
-        
-//-         // Label for accessibility:
-//-         label.hidden(for="process")= 'Jouw score is ' + score + ' van de  ' + maxScore
-//-         progress(id="process" min="0" max=maxScore value=score)= score + ' / ' +maxScore
+            .score-columns
+                each i in starValues
+                    .star
+                        img(src='/assets/images/levels/icon_star_blue.svg' alt='Ster #'+i)
+                        p= i
+            
+            // Label for accessibility:
+            label#process-label.hidden(for="process")
+            progress(id="process" min="0" max=maxScore value=score)
+            h3#score-label score
 
-//-         .score-columns
-//-             each v in starValues
-//-                 span= v
-
-//-         block
+            .container.buttons
+                button(onclick="reloadPage()").button.light.back= level_score_retry ? level_score_retry : 'Probeer Opnieuw'
+                button(onclick="loadNextPage()").button#score-next-button= level_score_next ? level_score_next : 'Ga verder'

@@ -5,54 +5,36 @@
 
 */
 
-function showScore(score, maxScore = 400, text = {
-            title: 'Level behaald!', 
-            subtitle: 'Goed gedaan.',
-            retry: 'Probeer opnieuw',
-            next: 'Ga verder'
-        }) {
+function showScore(score = 0) {
 
     console.log('showing score');
+    const maxScore = 400;
+    // limit score between 0 and maxScore
+    score = Math.max(Math.min(score, maxScore), 0);
 
-    // make elem
-    let elemStr = `
-        <div id="score-background">
+    // show title and subtitle based on how good the player did
+    let howWell = 0;
+    if (score >= 100) howWell = 1;
+    if (score >= 300) howWell = 2;
+    $('#score-title').children().eq(howWell == 0 ? 0 : 1).css('display', 'block');
+    $('#score-subtitle').children().eq(howWell).css('display', 'block');
 
-        <div id="score" class="is-animating">
-            <h2>${text.title}</h2>
-            <h4>${text.subtitle}</h4>
+    // update progress
+    $('#process-label').html('Score: ' + score + ' / ' + maxScore);
+    $('#process').attr('value', score);
+    // label below progress bar (update text and position)
+    $('#score-label').html(score);
+    $('#score-label').css( 'margin-left', score > 10 ? (score/maxScore)*100 + '%' : '1rem' );
 
-            <div class="score-columns">
-                ${ makeStars([ 100, 200, 300 ]) }
-            </div>
+    // hide next button if score too low
+    if (score < 100)
+        $('#score-next-button').css('display', 'none');
 
-            <label class="hidden"  for="process">Score: ${score}/${maxScore}</label>
-            <progress id="process" min="0" max=${maxScore} value=${score}>${score}</progress>
-            <h3 class="score-label" style="margin-left: ${score/maxScore*100}%; transform: translateX(-50%)">${score}</h3>
+    // show it
+    $('#score-background').css('display', 'flex');
 
-            <div class="container buttons">
-                <button class="button light back" onclick="reloadPage()">${text.retry}</button>
-                <button class="button" onclick="loadNextPage()">${text.next}</button>
-            </div>
-        </div>
-
-        </div>
-    `;
-
-    // add to webpage
-    $('main').append(elemStr);
+    // animate it (remove animation class)
     setTimeout(() => { $('#score').removeClass('is-animating') }, 100);
-
-    function makeStars(arr) {
-
-        return arr.map(a => `
-            <div class="star">
-                <img src='/assets/images/levels/icon_star_blue.svg' alt='Ster'>
-                <p>${a}</p>
-            </div>
-        `).join('\n');
-
-    }
 
 }
 
