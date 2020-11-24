@@ -8,7 +8,7 @@
 
 var memory = {
 
-    CARD_PAIRS: 6, // 12 card in total, pretty hard
+    CARD_PAIRS: 6, // 6: 12 card in total, pretty hard
 
     // get elems
     l: $('#level'),
@@ -47,6 +47,10 @@ var memory = {
     selectedCard: undefined,
     // points
     points: 0,
+
+    // SCORE
+    timer: new Timer(),
+    scoreVal: 420,
 
 
     // Memory Card Class
@@ -93,16 +97,18 @@ var memory = {
                 else if (memory.state === 'SECOND_CARD') {
 
                     
-                    if (memory.selectedCard.color === this.color && memory.selectedCard !== this) {
+                    if (memory.selectedCard.color === this.color && memory.selectedCard !== this) { // CORRECT
 
                         this.makeVisible();
                         this.correct = true;
                         memory.state = 'FIRST_CARD';
                         memory.addPoint();
                         
-                    } else {
+                    } else { // INCORRECT
 
                         this.makeVisible();
+                        memory.scoreVal -= 10;
+                        console.log(memory.scoreVal);
                         // change back in 1 sec
                         memory.state = 'WAIT';
                         setTimeout(() => this.makeInvisible(), 1000);
@@ -210,10 +216,21 @@ var memory = {
         } else {
 
             // FINISH
-            showScore(323);
+            showScore(this.calcScore());
 
         }
     },
+
+    // calculate the score based on timer and incorrect cardflips
+    calcScore: function() {
+        const timerVal = this.timer.stopAndGet();
+
+        console.log(this.score, timerVal);
+        // timer in minutes, if below 0.6 minutes, dont remove score
+        this.scoreVal -= timerVal > 0.6 ? timerVal * 100 : 0;
+
+        return Math.round(this.scoreVal);
+    }
 }; // end of memory {}
 
 function unload() {
