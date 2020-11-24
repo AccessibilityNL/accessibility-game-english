@@ -125,6 +125,48 @@ style.
         font-size: 1.5rem;
     }
 
+    #bomb {
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        margin: 0;
+        padding: 0;
+    }
+    #bomb-background {
+        width: 100%;
+        height: auto;
+        max-height: unset;
+        object-fit: unset;
+    }
+    #wires {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+    }
+    #wires button {
+        background: none;
+        position: absolute;
+        
+        top: 31%;
+        left: 0;
+
+        width: 9.8%;
+        height: auto;
+    }
+    #wires button:nth-child(1) { left: 20% }
+    #wires button:nth-child(2) { left: 30.5% }
+    #wires button:nth-child(3) { left: 41% }
+    #wires button:nth-child(4) { left: 52.5%; width: 18% }
+    #wires button:nth-child(5) { left: 72% }
+    #wires button img {
+        width: 100%;
+        height: auto;
+    }
+
     #fail {
         display: none;
         color: white;
@@ -177,6 +219,12 @@ style.
         h4= note_title
         p !{note_text}
 
+    #bomb
+        img#bomb-background(src="/assets/images/levels/bomb_body.png" alt="De Bom")
+        #wires
+            each wire, index in wires
+                button(onclick=`adhd.cutWire(${index})` title=wire.color+' '+wire.style)
+                    img(src='/assets/images/levels/'+wire.image alt=wire.color+' '+wire.style)
 
     #popup
         .content
@@ -184,6 +232,7 @@ style.
             p= popup_text
             button.secondary(onclick='adhd.hidePopUp()')= button_continue_text
             button.primary(onclick='adhd.stopGame()')= button_stop_text
+
 
 #fail
     .container.center

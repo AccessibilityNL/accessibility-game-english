@@ -20,8 +20,8 @@ var adhd = {
         console.log('initting adhd');
 
         // first clock set
-        setInterval(this.updateClock, 41);
-        this.showPopUp('01:30');
+        //setInterval(this.updateClock, 41);
+        //this.showPopUp('01:30');
 
     },
 
