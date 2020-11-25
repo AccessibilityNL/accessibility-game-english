@@ -60,7 +60,7 @@ style.
 
         animation: pulse_subtle .6s infinite;
     }
-    .main-page {
+    #main-page {
         max-width: 50rem;
         width: 100%;
 
@@ -78,10 +78,10 @@ style.
         font-family: 'Courier New', 'Courier', monospace;
         font-weight: bold;
     }
-    .main-page * {
+    #main-page * {
         line-height: 1.8rem;
     }
-    .main-page h3 {
+    #main-page h3 {
         color: black;
 
         font-family: 'Courier New', 'Courier', monospace;
@@ -212,11 +212,11 @@ style.
         p 01:24:35
 
     //- content page with order
-    article.main-page
+    article#main-page
         | !{content}
         span#order
-            each wire in wires
-                span= String(code[wire.style]).replace('null', '') + ' ' + String(code[wire.color]).replace('null', '') + ' ; '
+        //-     each wire in wires
+        //-         span= String(code[wire.style]).replace('null', '') + ' ' + String(code[wire.color]).replace('null', '') + ' ; '
 
     #note
         h4= note_title
@@ -226,7 +226,12 @@ style.
         img#bomb-background(src="/assets/images/levels/bomb_body.png" alt="De Bom")
         #wires
             each wire, index in wires
-                button(onclick=`adhd.cutWire(${index})` title=wire.color+' '+wire.style)
+                button(
+                    onclick=`adhd.cutWire(${index})` 
+                    data-color=code[wire.color]
+                    data-style=code[wire.style] 
+                    title=wire.color+' '+wire.style 
+                )
                     img(src='/assets/images/levels/'+wire.image alt=wire.color+' '+wire.style)
 
     #popup

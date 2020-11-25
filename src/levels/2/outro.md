@@ -13,3 +13,4 @@ Deze verbeteringen zijn niet alleen prettig voor mensen met ADHD; gewone gebruik
 
 * Vermijd complexe menu's en zorg voor een lineaire, logische vormgeving
 * Vermijd afleidende afbeeldingen en video's naast de inhoud van de pagina
+* Vermijd tijdslimieten, zorg dat iedereen genoeg tijd heeft om alles rustig in te vullen
