@@ -135,7 +135,7 @@ var adhd = {
         console.log('you win');
 
         clearInterval(this.clockInterval);
-        showScore(250 + (this.time.getMinutes() * 100));
+        showScore(100 + (this.time.getSeconds() + this.time.getMinutes()*60) * 3.3); // calc score based on time left
     },
 
     // hide game and show explosion

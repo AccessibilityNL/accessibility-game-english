@@ -10,7 +10,7 @@ function showScore(score = 0) {
     console.log('showing score');
     const maxScore = 400;
     // limit score between 0 and maxScore
-    score = Math.max(Math.min(score, maxScore), 0);
+    score = Math.round(Math.max(Math.min(score, maxScore), 0));
 
     // show title and subtitle based on how good the player did
     let howWell = 0;
