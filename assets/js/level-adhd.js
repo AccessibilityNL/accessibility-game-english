@@ -23,6 +23,9 @@ var adhd = {
     order: [],
     orderIndex: 0,
 
+    // sounds
+    sounds: {},
+
     // initialisation
     init() {
 
@@ -36,6 +39,9 @@ var adhd = {
         this.order = this.shuffle([0, 1, 2, 3, 4]);
         console.log(this.shuffle([0, 1, 2, 3, 4]));
         this.addOrder();
+
+        // sound
+        this.loadSounds();
 
     },
 
@@ -53,6 +59,8 @@ var adhd = {
 
     // function called by bomb wire buttons
     cutWire(index) {
+        this.sounds.snip.play();
+
         if (index == this.order[this.orderIndex]) {
 
             // CORRECT WIRE
@@ -72,8 +80,7 @@ var adhd = {
     },
 
 
-    // creating order
-
+    // creating order shuffle function
     shuffle(array) {
         for (var i = array.length - 1; i > 0; i--) {
             var j = Math.floor(Math.random() * (i + 1));
@@ -84,7 +91,8 @@ var adhd = {
         return array;
     },
 
-    // methods
+    // runs every 41 ms ~= 24 fps
+    // updates clock and stops game if time is up
     updateClock() {
 
         adhd.time = new Date(adhd.TOTAL_TIME - (new Date().getTime() - adhd.startTime));
@@ -120,14 +128,49 @@ var adhd = {
     },
 
     hidePopUp() {
+        // hide
         $('#popup').removeClass('active');
+        // play alarm if not yet playing
+        //if (!this.sounds.alarm.playing()) this.sounds.alarm.play();
+        this.sounds.alarm.mute(false);
     },
 
     showPopUp(time = '00:30') {
+        // show
         $('#popup').addClass('active');
         
         time = ' '+time+'!!';
         $('#time').text( $('#time').attr('data-original-text') + time);
+    },
+
+
+    // register SOUNDS
+    loadSounds() {
+        // load alarm sound: loop
+        this.sounds.alarm = new Howl({
+            src: '/assets/sounds/alarm.mp3',
+            loop: true,
+            autoplay: true
+        });
+
+        // explosion: one-shot
+        this.sounds.explosion = new Howl({
+            src: '/assets/sounds/explosion.mp3',
+            loop: false,
+            autoplay: false
+        });
+
+        // wire cut: one-shot
+        this.sounds.snip = new Howl({
+            src: '/assets/sounds/snip.mp3',
+            loop: false,
+            autoplay: false
+        });
+    },
+
+    // quickly stop all sounds
+    stopSounds() {
+        this.sounds.alarm.stop();
     },
 
     // WIN GAME
@@ -136,6 +179,8 @@ var adhd = {
 
         clearInterval(this.clockInterval);
         showScore(100 + (this.time.getSeconds() + this.time.getMinutes()*60) * 3.3); // calc score based on time left
+
+        adhd.stopSounds();
     },
 
     // hide game and show explosion
@@ -143,6 +188,9 @@ var adhd = {
         clearInterval(this.clockInterval);
         $('#in-game').empty();
         $('#fail').addClass('active');
+
+        this.stopSounds();
+        this.sounds.explosion.play();
     },
 
     retry() {
@@ -155,5 +203,6 @@ var adhd = {
 adhd.init();
 
 function unload() {
+    adhd.stopSounds();
     delete adhd;
 }

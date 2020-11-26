@@ -33,6 +33,12 @@ function showScore(score = 0) {
     // show it
     $('#score-background').css('display', 'flex');
 
+    // play it
+    if (score < 100) 
+        globalSounds.fail.play();
+    else
+        globalSounds.win.play();
+
     // animate it (remove animation class)
     setTimeout(() => { $('#score').removeClass('is-animating') }, 100);
 
