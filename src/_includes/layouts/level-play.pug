@@ -17,7 +17,6 @@ html(lang=lang?lang:'nl')
 
             
             //- DEBUG shortcut
-            .container.center
-                button.button(onclick="showScore(250)") Speel level uit
+            button#skip-level(onclick="showScore(250)" title="Sla level over")
 
             +level-score(0)

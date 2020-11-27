@@ -399,6 +399,24 @@ header {
 }
 
 
+#skip-level {
+    @extend .button;
+    @extend .light;
+    background: rgba($background, .6);
+
+    position: fixed;
+    bottom: $padding;
+    right: $padding;
+
+    padding: 0.5rem 0.7rem;
+
+    box-shadow: 0px 5px 10px rgba($accent, 0.2);
+
+    z-index: 1000;
+    &::after { margin: 0; padding: 0;}
+}
+
+
 // STAR SCORE
 
 #score {

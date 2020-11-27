@@ -1,0 +1,75 @@
+---
+layout: layouts/level-play.pug
+---
+
+style.
+    #overlay {
+        position: fixed;
+        top: 4.5rem; left: 0;
+        width: 100vw; height: 100vh;
+
+        object-fit: cover;
+        pointer-events: none;
+
+        opacity: .5;
+        z-index: 800;
+    }
+    .background {
+        position: fixed;
+        top: 4.5rem; left: 0;
+
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        align-items: center; justify-content: center;
+
+        background: #101228;
+    }
+    #content {
+        overflow: scroll;
+        width: 80vh;
+        height: 80vh;
+
+        margin: 0 auto;
+        padding: 10%;
+
+        background: white;
+        border-radius: 40vh;
+        cursor: grab;
+    }
+    #content > * {
+        font-size: 5rem;
+        width: 300vw;
+        max-width: unset;
+    }
+    @media (max-width: 40rem) {
+        .background {
+            top: 0;
+        }
+        #content {
+            width: 90vw; height: 90vw;
+            border-radius: 45vw;
+        }
+        #content > * {
+            width: 500vw;
+        }
+    }
+
+    #content * {
+        user-select: none;
+    }
+    .grabbing {
+        cursor: grabbing;
+        user-select: none;
+    }
+
+//img(src='/assets/images/levels/cut_out.svg')#overlay
+.background
+    #content
+        .container
+            | !{content}
+
+
+// Script
+script(data-src="/assets/js/level-kokervisie.js" type="text/javascript" data-load-script)
