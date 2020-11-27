@@ -56,6 +56,7 @@ style.
         }
     }
 
+    /* Hide user select, grabbing cursor */
     #content * {
         user-select: none;
     }
@@ -63,6 +64,9 @@ style.
         cursor: grabbing;
         user-select: none;
     }
+    /* Hide scrollbar  */
+    #content::-webkit-scrollbar { display: none; }
+    #content { -ms-overflow-style: none;  /* IE and Edge */ scrollbar-width: none;  /* Firefox */ }
 
 //img(src='/assets/images/levels/cut_out.svg')#overlay
 .background
