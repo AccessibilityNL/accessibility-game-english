@@ -169,6 +169,37 @@ style.
         height: auto;
     }
 
+    /* SWITCH */
+
+    #switches {
+        display: flex; flex-flow: row nowrap;
+        align-items: center; justify-content: center;
+        width: 100%;
+        max-width: 40rem;
+        margin: 4rem auto 0 auto;
+    }
+    #switches label {
+        font-family: 'Covered By Your Grace', cursive;
+        font-size: 2rem;
+        background: linear-gradient(151.41deg, #F8F6F2 1.54%, #D7D3C7 105%);
+        color: #333;
+        box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.25);
+        transform: rotate(-9.38deg);
+        padding: 0rem 1rem;
+    }
+    #switches button {
+        display: block;
+        width: 12rem;
+        height: 12rem;
+        background: url('/assets/images/levels/switched.png'); /* preload */
+        background: url('/assets/images/levels/switch.png');
+        background-size: contain;
+    }
+    #switches button.switched {
+        background: url('/assets/images/levels/switched.png');
+        background-size: contain;
+    }
+
     #fail {
         display: none;
         color: white;
@@ -233,6 +264,15 @@ style.
     #note
         h4= note_title
         p !{note_text}
+
+    #switches
+        each letter, index in ['A', 'B']
+            label(for="switch"+letter)= letter
+            button(
+                id="switch"+letter 
+                title="switch "+letter 
+                onclick=`adhd.toggleSwitch(this,${index})`
+            )
 
     #bomb
         img#bomb-background(src="/assets/images/levels/bomb_body.png" alt="De Bom")

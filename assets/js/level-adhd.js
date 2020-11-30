@@ -23,6 +23,9 @@ var adhd = {
     order: [],
     orderIndex: 0,
 
+    // switches
+    switchStates: [true, true],
+
     // sounds
     sounds: {},
 
@@ -37,7 +40,6 @@ var adhd = {
 
         // add clues in order
         this.order = this.shuffle([0, 1, 2, 3, 4]);
-        console.log(this.shuffle([0, 1, 2, 3, 4]));
         this.addOrder();
 
         // sound
@@ -46,6 +48,9 @@ var adhd = {
     },
 
     addOrder() {
+        // empty just in case
+        $('#order').empty();
+
         for (let i of this.order) {
             // lookup color and style from wires
             const $wire = $('#wires').children().eq(i);
@@ -68,8 +73,15 @@ var adhd = {
 
             this.orderIndex++;
             // if all snipped, win game
-            if (this.orderIndex > this.order.length - 1)
-                this.endGame()
+            if (this.orderIndex >= this.order.length) { // snipped all the correct wires
+                console.log(this.switchStates);
+                if (JSON.stringify(this.switchStates) === "[false,true]") { // correct switches
+                    this.endGame();
+                } else {
+                    this.stopGame();
+                }
+            }
+                
 
         } else {
 
@@ -77,6 +89,16 @@ var adhd = {
             this.stopGame();
 
         }
+    },
+
+    // switch toggle called by switch button
+    toggleSwitch(elem, index) {
+        // set state
+        this.switchStates[index] = elem.classList.contains("switched") ? true : false;
+        // change class
+        elem.classList.toggle("switched");
+        // sound
+        this.sounds.switch.play();
     },
 
 
@@ -155,16 +177,18 @@ var adhd = {
 
         // explosion: one-shot
         this.sounds.explosion = new Howl({
-            src: '/assets/sounds/explosion.mp3',
-            loop: false,
-            autoplay: false
+            src: '/assets/sounds/explosion.mp3'
         });
 
         // wire cut: one-shot
         this.sounds.snip = new Howl({
-            src: '/assets/sounds/snip.mp3',
-            loop: false,
-            autoplay: false
+            src: '/assets/sounds/snip.mp3'
+        });
+
+        // switch: one-shot
+        this.sounds.switch = new Howl({
+            src: '/assets/sounds/switch.mp3',
+            volume: 0.5
         });
     },
 

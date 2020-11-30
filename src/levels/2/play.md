@@ -50,7 +50,7 @@ Bertus: "Henk, makker, hoe gaat het?"
 
 Bertus: "Henk, voor de zekerheid, als er wat mis gaat, wat is ook al weer de volgorde om de bom te ontmantelen?"
 
-Henk: "Bertus, je klinkt als een informant, de code krijg je later te horen...maar vergeet niet niet de zwarte het laatste te knippen, tenzij je een poel van bloed wil worden."
+Henk: "Bertus, je klinkt als een informant, de code krijg je later te horen...maar vergeet niet A op uit te zetten en B op aan, tenzij je een poel van bloed wil worden."
 
 Bertus: "Ja ja Henk, laten we dit gewoon doen."
 
