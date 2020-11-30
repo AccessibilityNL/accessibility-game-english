@@ -47,6 +47,7 @@ var adhd = {
 
     },
 
+    // adds order text to main-page
     addOrder() {
         // empty just in case
         $('#order').empty();
@@ -149,20 +150,21 @@ var adhd = {
         return str + input;
     },
 
-    hidePopUp() {
-        // hide
-        $('#popup').removeClass('active');
-        // play alarm if not yet playing
-        //if (!this.sounds.alarm.playing()) this.sounds.alarm.play();
-        this.sounds.alarm.mute(false);
-    },
-
+    // show time popup
     showPopUp(time = '00:30') {
         // show
         $('#popup').addClass('active');
-        
+        // add time to popup title
         time = ' '+time+'!!';
         $('#time').text( $('#time').attr('data-original-text') + time);
+    },
+
+    // hide time popup
+    hidePopUp() {
+        // hide
+        $('#popup').removeClass('active');
+        // make alarm audible (needs to happen on click because browsers don't support autoplay)
+        this.sounds.alarm.mute(false);
     },
 
 
