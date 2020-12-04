@@ -2,7 +2,7 @@
 layout: layouts/level-outro.pug
 index: 3
 title: Dyslexie
-image: /assets/images/levels/dyslexie.svg
+image: /assets/images/levels/dyslexie_uitro.svg
 ---
 
 Wanneer je ontwerpt voor mensen met dyslexie is het belangrijk om de tekst zo simpel mogelijk te houden en een duidelijke structuur te hanteren.

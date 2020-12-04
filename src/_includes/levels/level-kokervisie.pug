@@ -26,7 +26,7 @@ style.
 
         background: #101228;
     }
-    #content {
+    #koker-content {
         overflow: scroll;
         width: 80vh;
         height: 80vh;
@@ -38,7 +38,7 @@ style.
         border-radius: 40vh;
         cursor: grab;
     }
-    #content > * {
+    #koker-content > * {
         font-size: 5rem;
         width: 300vw;
         max-width: unset;
@@ -47,17 +47,17 @@ style.
         .background {
             top: 0;
         }
-        #content {
+        #koker-content {
             width: 90vw; height: 90vw;
             border-radius: 45vw;
         }
-        #content > * {
+        #koker-content > * {
             width: 500vw;
         }
     }
 
     /* Hide user select, grabbing cursor */
-    #content * {
+    #koker-content * {
         user-select: none;
     }
     .grabbing {
@@ -65,12 +65,12 @@ style.
         user-select: none;
     }
     /* Hide scrollbar  */
-    #content::-webkit-scrollbar { display: none; }
-    #content { -ms-overflow-style: none;  /* IE and Edge */ scrollbar-width: none;  /* Firefox */ }
+    #koker-content::-webkit-scrollbar { display: none; }
+    #koker-content { -ms-overflow-style: none;  /* IE and Edge */ scrollbar-width: none;  /* Firefox */ }
 
 //img(src='/assets/images/levels/cut_out.svg')#overlay
 .background
-    #content
+    #koker-content
         .container
             | !{content}
 

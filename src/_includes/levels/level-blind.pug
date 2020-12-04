@@ -2,10 +2,21 @@
 layout: layouts/level-play.pug
 ---
 
-// Content
+// Style
+style.
+    #blind-background {
+        background: #101228;
+        color: white;
 
-#content.container
-    | !{content}
+        width: 100%;
+        min-height: 100vh;
+    }
+
+// Content
+#blind-background
+    p.container Gebruik de tabtoetsen!
+    #content.container.hidden
+        | !{content}
 
 
 // Script
