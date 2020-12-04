@@ -1,0 +1,68 @@
+---
+layout: layouts/level-play.pug
+---
+
+//- Compile Time Scripts
+-
+    // string reverser
+    const reverse = str => String(str).split("").reverse().join("");
+    // array shuffler
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        return array;
+    };
+
+
+// Style
+style.
+    #slechthorend .container {
+        margin: 2rem auto;
+    }
+    #slechthorend .container.large {
+        max-width: 60rem;
+    }
+    #video {
+        border: solid #2B4FEB 3px;
+        border-radius: 1rem;
+    }
+
+// Content
+#slechthorend
+    .container.large
+        video#video(controls)
+            source(src="/assets/videos/doof-video.mp4")
+            img(src='/assets/images/index/media.svg' alt="video icoon, loading video")
+
+    .container.center
+        | !{content}
+
+    .container
+        //- Loop through questions
+        form#questions
+            each q in questions
+                //- if multiple choice
+                if q.choices
+                    label(for=q.Q)= q.Q
+                    //- select needs to be wrapped in div to allow custom styling
+                    .select-wrapper
+                        select(name=q.Q data-correct=reverse(q.A))
+                            - let randomChoices = shuffle(q.choices) // randomise the answer order
+                            each choice in shuffle(randomChoices)
+                                option(value=choice)= choice
+                //- not mc
+                else
+                    label(for=q.Q)= q.Q
+                    input(name=q.Q type="field" data-correct=reverse(q.A))
+
+    //- Buttons
+    .container.center
+        button.button(onclick="doof.checkQuestions()")= button_submit_questions
+
+
+// Script
+script(data-src="/assets/js/level-slechthorend.js" type="text/javascript" data-load-script)

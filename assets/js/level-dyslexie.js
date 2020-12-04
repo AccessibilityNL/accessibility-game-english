@@ -114,7 +114,7 @@ var dyslexie = {
 
         // go to next page if all questions are correct
         if (correct) {
-            showScore(200);
+            showScore(200); // TODO: calc score
         }
     }
 
