@@ -1,8 +1,8 @@
 ---
 layout: layouts/level-outro.pug
-index: 4
-title: Kokervisie
-image: /assets/images/levels/kokervisie.svg
+index: 5
+title: Blind
+image: /assets/images/levels/dyslexie.svg
 ---
 
 Wanneer je ontwerpt voor mensen met dyslexie is het belangrijk om de tekst zo simpel mogelijk te houden en een duidelijke structuur te hanteren.

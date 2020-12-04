@@ -211,7 +211,6 @@ p a:not(.button) {
     flex-flow: column nowrap;
 
     width: 100%;
-    min-width: 0;
     max-width: $breakSmall;
 
     padding: $padding*2 0;
@@ -225,6 +224,8 @@ p a:not(.button) {
         min-height:calc(100vh - #{$padding*2});
 
         padding: $padding*2 $padding;
+
+        overflow-x: hidden;
 
     }
 }
