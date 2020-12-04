@@ -2,6 +2,7 @@
 layout: layouts/level-play.pug
 ---
 
+// Styles for ADHD level:
 style.
     /* load script font */
     @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
@@ -249,6 +250,9 @@ style.
         50% { background: #191A2F }
     }
 
+
+// Content
+
 #in-game
     #title
         h1 Warning
@@ -302,5 +306,7 @@ style.
         .spacer
         button.button.back(onclick='adhd.retry()')= fail_button_text
 
+
+// Script
 
 script(data-src="/assets/js/level-adhd.js" type="text/javascript" data-load-script)

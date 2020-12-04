@@ -229,6 +229,8 @@ var adhd = {
 adhd.init();
 
 function unload() {
+    // stop sounds, clear timer and delete
     adhd.stopSounds();
+    clearInterval(adhd.clockInterval);
     delete adhd;
 }

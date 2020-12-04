@@ -41,6 +41,7 @@ var kokervisie = {
 
         // based on method found in:
         // https://stackoverflow.com/questions/19743228/scroll-the-page-on-drag-with-jquery/19743358
+        // LIGHT BUG: safari doesn't want to show grabbing cursor
     }
 }
 
