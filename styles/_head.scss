@@ -93,3 +93,18 @@ button {
     border: none;
     font-family: $fontFamily;
 }
+
+// docs styles
+code {
+    font-family: menlo, Consolas, Courier, monospace;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+    background: rgba($accent, .08);
+    color: $accent;
+}
+
+hr {
+    border-color: $light-accent;
+    margin: 2rem 0;
+}
