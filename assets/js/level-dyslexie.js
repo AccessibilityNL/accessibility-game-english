@@ -7,11 +7,19 @@
 
 var dyslexie = {
 
+    // jquery vars
     $text: undefined,
     $content: undefined,
     $questions: undefined,
 
-    setup: function() {
+    // interval object
+    updateTextInterval: undefined,
+
+    // score vars
+    timer: new Timer(),
+    score: 400,
+
+    init() {
         this.$text = $('#text');
         this.$content = $('#content');
         this.$questions = $('#questions');
@@ -19,8 +27,8 @@ var dyslexie = {
         this.setupText();
     },
 
-
-    setupText: function() {
+    // make a <span> out of each character to allow transformations
+    setupText() {
         // change each charater to it's own element
         this.$content.children().each((_, elem) => {
             let charArray = elem.innerHTML.split('');
@@ -45,10 +53,12 @@ var dyslexie = {
         });
 
         // trigger update every x ms
-        setInterval(this.updateText, 700);
+        this.updateTextInterval = setInterval(this.updateText, 700);
     },
 
-    updateText: function() {
+    // do dyslexia to the text
+    updateText() {
+        console.log('updating text');
         const CHANCE = 0.03;
         const CHANCE_FLIP = 0.2;
 
@@ -83,20 +93,25 @@ var dyslexie = {
         })
     },
 
-    changePage: function() {
+    // change page between questions and text
+    changePage() {
         console.log('clicked');
         $('#level').toggleClass('on-questions');
     },
 
-    checkQuestions: function() {
+    // check correctness of questions
+    checkQuestions() {
         let correct = true;
         // for each input field
         $('#questions input[type=field]').each((_, q) => {
 
-            if (q.value.toLowerCase() !== reverse($(q).attr('data-correct')).toLowerCase()) {  // incorrect
+            if (this.filterText(q.value) !== this.filterText(reverse($(q).attr('data-correct')))) {  // incorrect
 
                 correct = false;
                 $(q).addClass('incorrect');
+
+                // decrease score
+                this.score -= 10;
 
                 // add incorrect class to corresponding label
                 $('#questions label[for=' + $(q).attr('id') + ']').addClass('incorrect');
@@ -112,10 +127,28 @@ var dyslexie = {
 
         });
 
-        // go to next page if all questions are correct
+        // if all questions are correct: calc score and end level
         if (correct) {
-            showScore(200); // TODO: calc score
+            this.calcScore();
         }
+    },
+
+    // filter out characters and capitalisation
+    filterText(str) {
+        str = str.toLowerCase();
+        // filter out non letters
+        if ( str!=="" ) str = str.match(/\w/g).join('');
+        return str;
+    },
+
+    // calculate score at end of level
+    calcScore() {
+        console.log('calculating score');
+        const time = this.timer.stopAndGet();
+        this.score -= time * 100; // remove 100 points per minute taken
+
+        // push popup
+        showScore(this.score);
     }
 
 }
@@ -123,8 +156,8 @@ var dyslexie = {
 // Delete after level is complete
 function unload() {
     delete dyslexie;
-    dyslexie.clearInterval(updateText);
+    clearInterval(dyslexie.updateTextInterval);
 }
 
 // GO
-dyslexie.setup();
+dyslexie.init();
