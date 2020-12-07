@@ -4,7 +4,7 @@ let swup;
 let globalSounds = {};
 $(document).ready(()=>{
     swup = new Swup({
-        plugins: [new SwupScrollPlugin()]
+        plugins: [new SwupScrollPlugin(), new SwupA11YPlugin()]
     });
 
     // unload assets if in global scope

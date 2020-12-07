@@ -207,6 +207,8 @@ p a:not(.button) {
 .level-container {
     @extend .container;
 
+    position: relative;
+
     display: flex;
     flex-flow: column nowrap;
 
@@ -284,15 +286,30 @@ p blockquote, article blockquote {
     }
 }
 
+#level-bar-gradient {
+    display: block;
+    width: calc(100% + #{$padding*2});
+    height: 6rem;
+    margin-bottom: -6rem;
+    background: linear-gradient(to right, #fff 0%, #fff0 20%, #fff0 80%, #fff 100%);
+    z-index: 999;
+    pointer-events: none;
+}
+
 #level-bar {
     display: flex;
     flex-flow: row nowrap;
 
     align-items: center;
     justify-content: center;
+    transform: translateX(6%);
 
     min-width: 100%;
     margin: $padding auto;
+
+    @media (max-width: $breakSmall) {
+        transform: translateX(-15%) !important;
+    }
 }
 .level-icon {
     width: 4rem;

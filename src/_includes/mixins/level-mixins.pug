@@ -2,8 +2,9 @@
 
 mixin level-bar(currentIndex)
     - currentIndex--
-    - var nLevels = collections.level.length-1
-    #level-bar(style=`transform: translateX( ${((nLevels/2) - currentIndex) * 4}rem )`)
+    - var nLevels = collections.level.length
+    #level-bar-gradient
+    #level-bar(style=`margin-left: ${((nLevels/2) - (currentIndex+1)) * 4}rem`)
         each level, i in collections.level
             if i < currentIndex
                 a(href=level.url).level-number= i+1
