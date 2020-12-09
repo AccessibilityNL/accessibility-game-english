@@ -4,6 +4,11 @@ layout: levels/level-kokervisie.pug
 index: 4
 title: Kokervisie
 
+# tekst
+
+brand_title: Janssen Furniture
+brand_subtitle: Live in Luxury
+
 button_text_next: Lees meer
 button_text_back: Terug
 

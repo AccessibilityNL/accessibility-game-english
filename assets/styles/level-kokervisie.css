@@ -208,3 +208,22 @@
     font-size: 1.5em;
     border-bottom: solid #8FAEC2 5px;
 }
+
+#kokervisie #dots {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center; justify-content: center;
+    min-width: 100%;
+    margin-bottom: 1em;
+}
+#kokervisie #dots .dot {
+    display: block;
+    background: #8FAEC2;
+    width: 0.5em; height: 0.5em;
+    border-radius: 0.5em;
+
+    opacity: 0.6;
+}
+#kokervisie #dots .dot.selected {
+    opacity: 1;
+}

@@ -10,8 +10,8 @@ style.
 .background
     #kokervisie
         .brand-title
-            h1 Janssen Furniture
-            h2 Live in Luxury
+            h1= brand_title
+            h2= brand_subtitle
         #carrousel
             for item in furniture
                 .item-container
@@ -38,6 +38,9 @@ style.
                                             p= choice.label
 
                         button.confirm-button= order_confirm_text
+        #dots
+            for item in furniture
+                .dot
 
 
 // Script
