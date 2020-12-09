@@ -641,6 +641,8 @@ input[type=field], select {
         top: 0.45rem;
         right: 1rem;
 
+        pointer-events: none;
+
         &.incorrect {
             color: $accent3;
         }
