@@ -16,7 +16,7 @@ var kokervisie = {
 
     setupMouseDrag() {
         var clicked = false, clickY, clickX;
-        const content = $('#koker-content');
+        const content = $('#kokervisie');
         $(document).on({
             'mousemove': function(e) {
                 clicked && updateScrollPos(e);

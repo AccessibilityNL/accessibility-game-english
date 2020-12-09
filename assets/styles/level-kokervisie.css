@@ -1,0 +1,210 @@
+/*
+
+    Content Styles for Kokervisie level
+
+*/
+
+.background {
+    position: fixed;
+    top: 4.5rem;
+    left: 0;
+
+    width: 100%;
+    height: calc(100vh - 4.5rem);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #101228;
+}
+
+#kokervisie {
+    overflow: scroll;
+    width: 80vh;
+    height: 80vh;
+
+    margin: 0 auto;
+    padding: 10%;
+
+    background: white;
+    border-radius: 40vh;
+    cursor: grab;
+
+    font-size: 4rem;
+}
+
+#kokervisie>* {
+    font-size: 4rem;
+    width: 300vw;
+    min-width: 50rem;
+    max-width: unset;
+}
+
+@media (max-width: 40rem) {
+    .background {
+        top: 0;
+    }
+
+    #kokervisie {
+        width: 90vw;
+        height: 90vw;
+        border-radius: 45vw;
+    }
+
+    #kokervisie>* {
+        width: 500vw;
+    }
+}
+
+/* Hide user select, grabbing cursor */
+#kokervisie * {
+    user-select: none;
+}
+
+.grabbing {
+    cursor: grabbing;
+    user-select: none;
+}
+
+/* Hide scrollbar  */
+#kokervisie::-webkit-scrollbar {
+    display: none;
+}
+
+#kokervisie {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+
+/* 
+    --- Content Styles --- 
+        using 1em as base size, everything scales with it
+*/
+
+
+
+
+#kokervisie h1 {
+    font-family: 'Optician Sans', serif;
+    font-size: 3em;
+}
+#kokervisie h2 {
+    font-family: 'Optician Sans', serif;
+    color: #8FAEC2;
+    font-size: 1.5em;
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+}
+#kokervisie h3 {
+    font-family: 'Optician Sans', serif;
+    font-size: 3em;
+    color: white;
+}
+
+/* when opened, move title to center top and remove subtitle h2 */
+#kokervisie.open .brand-title h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+#kokervisie.open .brand-title h2 {
+    display: none;
+}
+
+/* Carrousel item */
+
+#kokervisie .item {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end; align-content: flex-start;
+    padding: 2em;
+    width: 100%; height: 20em;
+
+    margin-bottom: 1em;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+}
+#kokervisie .item .title * {
+    color: white;
+    margin: -1em 0 0 0;
+}
+
+#kokervisie button {
+    background: none;
+}
+
+#kokervisie .button {
+    font-family: 'Optician Sans', serif;
+    font-size: 1em;
+    color: #8FAEC2;
+    background: white;
+    border-radius: 1em;
+
+    padding: 0.2em 1em;
+
+    transition: all .2s;
+    z-index: 0;
+}
+#kokervisie button:hover {
+    opacity: 0.7;
+}
+#kokervisie button::after {
+    content: none;
+}
+
+#kokervisie .item button {
+    position: absolute;
+    right: 2em; bottom: 2em;
+}
+#kokervisie .item .close-button {
+    top: 2em; left: 2em;
+    width: 5em; height: 2em;
+    display: none;
+}
+#kokervisie .item-container.open .close-button { display: inline-block }
+
+/* .item page content */
+
+#kokervisie .content {
+    display: none;
+}
+#kokervisie .item-container.open .content { display: block }
+
+#kokervisie .option {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    align-content: center; justify-content: space-between;
+
+    margin: 1em 0;
+}
+#kokervisie .choices {
+    display: flex;
+    flex-flow: row nowrap;
+}
+#kokervisie .choice {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 0 1em;
+}
+#kokervisie .color-circle {
+    display: block;
+    width: 3em; height: 3em;
+    border-radius: 1.5em;
+}
+#kokervisie .confirm-button {
+    font-family:'Optician Sans', serif;
+    padding: 0.2em 0;
+    font-size: 1.5em;
+    border-bottom: solid #8FAEC2 5px;
+}

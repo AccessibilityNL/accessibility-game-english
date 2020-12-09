@@ -1,0 +1,13 @@
+/*
+
+    Include Optician Sans font
+    for Accessibility Game
+
+*/
+
+@font-face {
+    font-family:  'Optician Sans';
+    font-weight: normal;
+    src: url("/assets/fonts/optician-sans/Optician-Sans.woff2") format("woff2"),
+         url("/assets/fonts/optician-sans/Optician-Sans.otf") format("otf");
+}

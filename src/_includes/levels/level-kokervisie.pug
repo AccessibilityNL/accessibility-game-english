@@ -3,65 +3,41 @@ layout: layouts/level-play.pug
 ---
 
 style.
-    .background {
-        position: fixed;
-        top: 4.5rem; left: 0;
-
-        width: 100%;
-        height: calc(100vh - 4.5rem);
-
-        display: flex;
-        align-items: center; justify-content: center;
-
-        background: #101228;
-    }
-    #koker-content {
-        overflow: scroll;
-        width: 80vh;
-        height: 80vh;
-
-        margin: 0 auto;
-        padding: 10%;
-
-        background: white;
-        border-radius: 40vh;
-        cursor: grab;
-    }
-    #koker-content > * {
-        font-size: 5rem;
-        width: 300vw;
-        max-width: unset;
-    }
-    @media (max-width: 40rem) {
-        .background {
-            top: 0;
-        }
-        #koker-content {
-            width: 90vw; height: 90vw;
-            border-radius: 45vw;
-        }
-        #koker-content > * {
-            width: 500vw;
-        }
-    }
-
-    /* Hide user select, grabbing cursor */
-    #koker-content * {
-        user-select: none;
-    }
-    .grabbing {
-        cursor: grabbing;
-        user-select: none;
-    }
-    /* Hide scrollbar  */
-    #koker-content::-webkit-scrollbar { display: none; }
-    #koker-content { -ms-overflow-style: none;  /* IE and Edge */ scrollbar-width: none;  /* Firefox */ }
+    @import url("/assets/fonts/font-includer.css");
+    @import url("/assets/styles/level-kokervisie.css");
 
 
 .background
-    #koker-content
-        .container
-            | !{content}
+    #kokervisie
+        .brand-title
+            h1 Janssen Furniture
+            h2 Live in Luxury
+        #carrousel
+            for item in furniture
+                .item-container
+                    .item(style=`background-image: url(/assets/images/levels/photos/${item.image})`)
+                        .title
+                            h3= item.title
+                            p= item.subtitle
+                        button.button= button_text_next
+                        button.button.close-button= button_text_back
+                        //- furniture specific page
+                    .content
+                        h1= order_text
+                        //- all options for this furniture
+                        for option in item.options
+                            .option
+                                p= option.label
+                                .choices
+                                    //- selectable choices
+                                    for choice in option.choices
+                                        button.choice
+                                            //- show color circle if has color attribute
+                                            if choice.color
+                                                .color-circle(style='background-color: '+choice.color)
+                                            p= choice.label
+
+                        button.confirm-button= order_confirm_text
 
 
 // Script
