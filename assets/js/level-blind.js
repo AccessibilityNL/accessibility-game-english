@@ -18,9 +18,24 @@ var blind = {
         // for each in content
         this.$content.find('*').each( (index, elem) => { 
 
-            $(elem).focus(() => blind.onFocus(elem));
+            const $elem = $(elem);
+
+            // make focussable and attach handler
+            if ($elem.children().length === 0)  {
+                $elem.attr('tabindex', '0');
+                $elem.focus(() => blind.onFocus($elem));
+            }
+            else {
+                const child = $elem.children().eq(0);
+                child.attr('tabindex', '0');
+                child.focus(() => blind.onFocus(child));
+                console.log('Added child: ', child);
+            }
 
         });
+
+        // attach onKey function
+        $(document).on('keydown', this.onKey);
 
         // TODO: detect swipes on mobile
         // for now:
@@ -29,12 +44,21 @@ var blind = {
                 showScore('100');
             }
         }
+
+        // welcome player
+        this.speak('Welkom bij het Blind level, gebruik de Tab-toetsen om te beginnen');
     },
 
     // Handle focus
     onFocus(elem) {
-        console.log('focus');
-        this.speak($(elem).html());
+        console.log('focus', elem);
+        speechSynthesis.cancel();
+        if (elem.html() !== "") {
+            this.speak(elem.html());
+        }
+        else {
+            this.speak(elem.attr('title'));
+        }
     },
 
     onSwipe(event) {
@@ -42,9 +66,23 @@ var blind = {
         $('#blind-background').css('background', 'red');
     },
 
+    // speak every key pressed
+    onKey(key) {
+        let keyName = key.key;
+        switch(keyName) {
+            case ' ': keyName = 'Spatie';    break
+            case '.': keyName = 'punt';      break
+            case ',': keyName = 'comma';     break
+            case ';': keyName = 'puntcomma'; break
+        }
+        console.log('Pressed key: ', keyName);
+        blind.speak(String(keyName));
+    },
+
     // Speaks string using SpeechSynthesis
     speak(str) {
         const utterance = new SpeechSynthesisUtterance(str);
+        utterance.lang = 'nl';
         speechSynthesis.speak(utterance);
     }
 };
@@ -53,5 +91,4 @@ blind.init();
 
 function unload() {
     delete blind;
-    delete Hammer;
 }

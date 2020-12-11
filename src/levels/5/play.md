@@ -16,8 +16,14 @@ level_score_next: Ga verder
 
 ---
 
-<h1 tabindex="0">Titel</h1>
+# Kop: Test
 
-<p tabindex="0">Paragraaf met wat tekst</p>
+Bewijs dat je geen robot bent om verder te gaan.
 
-<h2 tabindex="0">Kop nummero 2</h2>
+Hoeveel stoplichten zie je in de onderstaande afbeelding?
+
+Afbeelding: IMG19062020_FOTO.jpg
+
+<input type="field" title="Vul hier de beschrijving in" id="page1--discription"></input>
+
+<a title="Verzenden" onclick="blind.speak('verzonden')"></a>
