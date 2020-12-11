@@ -84,9 +84,11 @@ style(type="text/css").
     // Het level
     #level
 
-    #in-between.container.center
-        p= stage_2_intro
-        button.button(onclick="memory.setupSecondRound()")= stage_2_intro_button
+    #in-between
+        .container
+            | !{content}
+        .conatainer.center
+            button.button(onclick="memory.setupSecondRound()")= stage_2_intro_button
 
     // De code
     script(data-src="/assets/js/level-kleurenblind.js" type="text/javascript" data-load-script)

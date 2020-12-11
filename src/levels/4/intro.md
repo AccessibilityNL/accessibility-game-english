@@ -7,6 +7,8 @@ image: /assets/images/levels/kokervisie.svg
 icon: /assets/images/levels/icon_visie_blue.svg
 ---
 
-Hier komt het kokervisie level, is nog een ruwe test...
+Mensen met kokervisie zien maar een klein deel van hun blikveld, alsof ze door een koker kijken.
 
-> In dit level ga je iets doen met een zeer gelimiteerd blikveld
+> In dit level ga je een een stoel bestellen met een zeer gelimiteerd blikveld.
+
+> Doel: Koop een groene stoel!
