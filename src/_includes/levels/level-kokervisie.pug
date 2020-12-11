@@ -13,6 +13,10 @@ style.
             h1= brand_title
             h2= brand_subtitle
         #carrousel
+            //- Arrow left
+            button(onclick="kokervisie.previousItem()" title="previous item")
+                img(src="/assets/images/levels/arrow-box-right.svg")
+            // FURNITURE ITEMS
             for item, index in furniture
                 .item-container(id= index==0?'active':'')
                     .item(style=`background-image: url(/assets/images/levels/photos/${item.image})`)
@@ -38,6 +42,9 @@ style.
                                             p= choice.label
 
                         button.confirm-button= order_confirm_text
+            //- Arrow Right
+            button(onclick="kokervisie.nextItem()" title="next item")
+                img(src="/assets/images/levels/arrow-box-right.svg").right
         #dots
             for item,index in furniture
                 .dot(id=index==0?'active':'')

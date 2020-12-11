@@ -49,11 +49,33 @@ var kokervisie = {
         $('.item-container').eq(index).addClass('open');
         $('#kokervisie').addClass('open');
     },
-
     closePage(index) {
         $('.item-container').eq(index).removeClass('open');
         $('#kokervisie').removeClass('open');
-    }
+    },
+    // move between pages; called by arrow buttons
+    previousItem() {
+        const itemContainers = $('.item-container');
+        let currentIndex = 0;
+        // set all containers to not active
+        itemContainers.each((index, item) => {
+            if (item.id == 'active') currentIndex = index;
+            item.id = '';
+        });
+        // set new item container to active
+        itemContainers.eq(currentIndex-1).attr('id', 'active');
+    },
+    nextItem(){
+        const itemContainers = $('.item-container');
+        let currentIndex = 0;
+        // set all containers to not active
+        itemContainers.each((index, item) => {
+            if (item.id == 'active') currentIndex = index;
+            item.id = '';
+        });
+        // set new item container to active
+        itemContainers.eq((currentIndex+1) % (itemContainers.length)).attr('id', 'active');
+    },
 }
 
 kokervisie.init();

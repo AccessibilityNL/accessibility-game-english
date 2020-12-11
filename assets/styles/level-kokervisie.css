@@ -117,10 +117,31 @@
     display: none;
 }
 
+/* Carrousel */
+#kokervisie #carrousel {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+/* Button next to the items */
+#kokervisie #carrousel > button {
+    padding: 0 0.3em;
+}
+#kokervisie button>img {
+    width: 1em; height: 1em;
+}
+#kokervisie img.right {
+    transform: scaleX(-1);
+}
+#kokervisie.open #carrousel > button {
+    display: none;
+}
+
 /* Carrousel item */
 
 #kokervisie .item-container {
     display: none;
+    width: 100%;
 }
 #kokervisie .item-container#active {
     display: block;
@@ -145,6 +166,7 @@
     margin: -1em 0 0 0;
 }
 
+/* Button within item page */
 #kokervisie button {
     background: none;
 }
