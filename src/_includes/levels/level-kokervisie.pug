@@ -13,14 +13,14 @@ style.
             h1= brand_title
             h2= brand_subtitle
         #carrousel
-            for item in furniture
-                .item-container
+            for item, index in furniture
+                .item-container(id= index==0?'active':'')
                     .item(style=`background-image: url(/assets/images/levels/photos/${item.image})`)
                         .title
                             h3= item.title
                             p= item.subtitle
-                        button.button= button_text_next
-                        button.button.close-button= button_text_back
+                        button.button.open-button(onclick=`kokervisie.openPage(${index})`)= button_text_next
+                        button.button.close-button(onclick=`kokervisie.closePage(${index})`)= button_text_back
                         //- furniture specific page
                     .content
                         h1= order_text
@@ -39,8 +39,8 @@ style.
 
                         button.confirm-button= order_confirm_text
         #dots
-            for item in furniture
-                .dot
+            for item,index in furniture
+                .dot(id=index==0?'active':'')
 
 
 // Script

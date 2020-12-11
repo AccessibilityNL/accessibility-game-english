@@ -119,6 +119,13 @@
 
 /* Carrousel item */
 
+#kokervisie .item-container {
+    display: none;
+}
+#kokervisie .item-container#active {
+    display: block;
+}
+
 #kokervisie .item {
     position: relative;
     display: flex;
@@ -171,6 +178,7 @@
     display: none;
 }
 #kokervisie .item-container.open .close-button { display: inline-block }
+#kokervisie .item-container.open .open-button { display: none !important }
 
 /* .item page content */
 
@@ -222,8 +230,10 @@
     width: 0.5em; height: 0.5em;
     border-radius: 0.5em;
 
-    opacity: 0.6;
+    margin-right: 0.5em;
+
+    opacity: 0.5;
 }
-#kokervisie #dots .dot.selected {
+#kokervisie #dots .dot#active {
     opacity: 1;
 }

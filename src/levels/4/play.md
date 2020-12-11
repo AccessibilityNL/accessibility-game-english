@@ -19,7 +19,7 @@ order_confirm_text: Plaats bestelling
 furniture:
   - title: Fjorgen
     subtitle: De active stoel voor elke eetkamer
-    image: /interior.jpg
+    image: interior.jpg
     options:
       - label: Kleur
         choices:
@@ -31,6 +31,28 @@ furniture:
             color: '#A8D6E3'
           - label: Kiezel
             color: '#CECED7'
+      - label: Maat
+        choices:
+          - label: 'M: 35cm'
+          - label: 'L: 45cm'
+  - title: Övrigt
+    subtitle: Verlichtend
+    image: lamp.jpg
+    options:
+      - label: Kleur
+        choices: 
+          - label: Kiezel
+            color: '#CECED7'
+          - label: Basalt
+            color: '#303038'
+  - title: Störtade
+    subtitle: Ontspanning na een drukke dag
+    image: leather-sofa.jpg
+    options:
+      - label: Maat
+        choices: 
+          - label: 'Groots: 1.75m'
+          - label: 'Royaal: 2.5m'
 
 # score popup tekst en knoppen
 level_score_win: Level behaald!

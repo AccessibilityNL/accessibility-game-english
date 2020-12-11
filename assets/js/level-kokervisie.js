@@ -42,6 +42,17 @@ var kokervisie = {
         // based on method found in:
         // https://stackoverflow.com/questions/19743228/scroll-the-page-on-drag-with-jquery/19743358
         // SMALL BUG: safari doesn't want to show grabbing cursor
+    },
+
+    // open and close furniture page functions; called by buttons
+    openPage(index) {
+        $('.item-container').eq(index).addClass('open');
+        $('#kokervisie').addClass('open');
+    },
+
+    closePage(index) {
+        $('.item-container').eq(index).removeClass('open');
+        $('#kokervisie').removeClass('open');
     }
 }
 
