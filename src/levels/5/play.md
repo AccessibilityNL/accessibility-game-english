@@ -26,4 +26,4 @@ Afbeelding: IMG19062020_FOTO.jpg
 
 <input type="field" title="Vul hier de beschrijving in" id="page1--discription"></input>
 
-<a title="Verzenden" onclick="blind.speak('verzonden')"></a>
+<p title="Verzenden" data-confirm="blind.speak('verzonden')">Verzenden</p>

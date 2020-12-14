@@ -12,6 +12,9 @@ var blind = {
     // swipe detector
     //hammer: new Hammer($('#blind-background')[0]),
 
+    // keep track of focussed element
+    $focusElem: undefined,
+
     // Methods
     // Init
     init() {
@@ -21,6 +24,7 @@ var blind = {
             const $elem = $(elem);
 
             // make focussable and attach handler
+            // checks if just text or html element parent
             if ($elem.children().length === 0)  {
                 $elem.attr('tabindex', '0');
                 $elem.focus(() => blind.onFocus($elem));
@@ -29,7 +33,7 @@ var blind = {
                 const child = $elem.children().eq(0);
                 child.attr('tabindex', '0');
                 child.focus(() => blind.onFocus(child));
-                console.log('Added child: ', child);
+                // add Enter click handler
             }
 
         });
@@ -51,7 +55,7 @@ var blind = {
 
     // Handle focus
     onFocus(elem) {
-        console.log('focus', elem);
+        // speak
         speechSynthesis.cancel();
         if (elem.html() !== "") {
             this.speak(elem.html());
@@ -59,6 +63,9 @@ var blind = {
         else {
             this.speak(elem.attr('title'));
         }
+        // set current elem
+        this.$focusElem = $(elem);
+        console.log(this.$focusElem);
     },
 
     onSwipe(event) {
@@ -68,6 +75,7 @@ var blind = {
 
     // speak every key pressed
     onKey(key) {
+        // speak
         let keyName = key.key;
         switch(keyName) {
             case ' ': keyName = 'Spatie';    break
@@ -75,8 +83,12 @@ var blind = {
             case ',': keyName = 'comma';     break
             case ';': keyName = 'puntcomma'; break
         }
-        console.log('Pressed key: ', keyName);
         blind.speak(String(keyName));
+
+        // check for Enter input handler and exec
+        if (keyName === "Enter" && blind.$focusElem.attr('data-confirm')) {
+            eval( blind.$focusElem.attr('data-confirm') );
+        }
     },
 
     // Speaks string using SpeechSynthesis
