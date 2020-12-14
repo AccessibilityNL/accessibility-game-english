@@ -40,5 +40,38 @@ function loadGlobalSounds() {
     }
 }
 
+// Utility functions used by all levels
+
 // simple reverse string function
 const reverse = str => String(str).split("").reverse().join("");
+
+
+// fade in and out transition functions
+function fadeOut(elem, callback = undefined, className = 'animating animating-out', time = 500) {
+    const $elem = $(elem);
+
+    console.log('fading out: ', elem);
+
+    $elem.addClass(className);
+    setTimeout(() => {
+        $elem.css('display', 'none');
+        // callback for when transition is done
+        if (callback) callback();
+    }, time);
+}
+
+function fadeIn(elem, callback = undefined, displayType = 'block', className = 'animating animating-in', time = 500) {
+    const $elem = $(elem);
+
+    console.log('fading in: ', elem);
+
+    $elem.css('display', displayType);
+    $elem.addClass(className);
+    setTimeout(() => {
+        $elem.removeClass(className + ' animating-out');
+        console.log('fadeIn: removing animating class');
+        // callback for when transition is done
+        if (callback) setTimeout(callback, time);
+    }, 50);
+    
+}

@@ -8,10 +8,10 @@ layout: layouts/level-play.pug
 // The styles
 
 style(type="text/css").
-    #level #questions {
+    #dyslexie #questions {
         display: none;
     }
-    #level span {
+    #dyslexie span {
         transition: all .4s;
         text-align: center;
     }
@@ -22,8 +22,14 @@ style(type="text/css").
 
     /*  Question page  */
 
-    #level.on-questions #text      { display: none; }
-    #level.on-questions #questions { display: block; }
+    #dyslexie > * { opacity: 1; transform: none }
+    #dyslexie #text.animating      { opacity: 0; transform: translate(-20%) }
+    #dyslexie #questions.animating { opacity: 0; transform: translate(20%) }
+
+    /*
+    #dyslexie.on-questions #text      { display: none; }
+    #dyslexie.on-questions #questions { display: block; }
+    */
 
     #questions .container {
         margin: 3rem auto;
@@ -32,9 +38,18 @@ style(type="text/css").
         margin: 2rem 0;
     }
 
+    /* Animations */
+
+    #dyslexie > * {
+        opacity: 1;
+        transform: none;
+        transition: all .5s;
+    }
+
+
 // The page layout
 
-#level
+#dyslexie
     #text
         article#content.container
             | !{content}

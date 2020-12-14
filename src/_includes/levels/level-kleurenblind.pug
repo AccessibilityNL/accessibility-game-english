@@ -9,14 +9,14 @@ style(type="text/css").
         max-width: 60rem;
         padding: 1.5rem 0;
     }
-    #level {
+    #kleurenblind {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
 
         width: 100%;
     }
-    #level .memory-card {
+    #kleurenblind .memory-card {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -35,7 +35,7 @@ style(type="text/css").
         transition: transform .2s;
     }
     @media (max-width: 35rem) {
-        #level .memory-card { 
+        #kleurenblind .memory-card { 
             width: calc(33% - 1rem);
             height: 8rem;
         }
@@ -68,11 +68,22 @@ style(type="text/css").
         display: inline;
     }
 
+    /* Animations */
+
+    #kleurenblind, #in-between {
+        transition: all .5s;
+    }
+    #kleurenblind.animating-out, #in-between.animating-out  { 
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    #kleurenblind.animating-in, #in-between.animating-in  { 
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
     #in-between {
         display: none;
-    }
-    #in-between.active {
-        display: block;
     }
 
 
@@ -82,7 +93,7 @@ style(type="text/css").
         span.active= stage_1_title
         span= stage_2_title
     // Het level
-    #level
+    #kleurenblind
 
     #in-between
         .container

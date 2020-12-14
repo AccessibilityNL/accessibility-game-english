@@ -96,7 +96,16 @@ var dyslexie = {
     // change page between questions and text
     changePage() {
         console.log('clicked');
-        $('#level').toggleClass('on-questions');
+
+        const $dyslexie = $('#dyslexie');
+        // transition
+        const isOnQuestions = $dyslexie.hasClass('on-questions');
+        // fade in and out
+        fadeOut(isOnQuestions ? '#questions' : '#text', () => {
+            fadeIn(isOnQuestions ? '#text' : '#questions');
+            // remove class
+            $dyslexie.toggleClass('on-questions');
+        });
     },
 
     // check correctness of questions

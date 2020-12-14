@@ -11,7 +11,7 @@ var memory = {
     CARD_PAIRS: 6, // 6: 12 card in total, pretty hard
 
     // get elems
-    l: $('#level'),
+    l: $('#kleurenblind'),
 
     // array of possible colors
     colors: [
@@ -163,12 +163,13 @@ var memory = {
     // show stage 2 intro
     setupInBetween: function() {
         // remove cards
-        memory.l.empty();
-        // show stage 2 intro
-        $('#in-between').addClass('active');
-
-        // update label above level
-        $('#title span').toggleClass('active')
+        fadeOut(memory.l, () => {
+            memory.l.empty();
+            // show explaination text bewteen rounds
+            fadeIn('#in-between');
+            // update label above level
+            $('#title span').toggleClass('active')
+        });
     },
 
     // start second stage
@@ -178,9 +179,9 @@ var memory = {
         this.round++;
         console.log('Second Round');
 
-        // clean up previous stage
-        memory.l.empty();
-        $('#in-between').removeClass('active');
+        fadeOut('#in-between', () => {
+            fadeIn(memory.l, undefined, 'flex');
+        });
 
         this.colorIndex = 0;
         // Make the memory cards
