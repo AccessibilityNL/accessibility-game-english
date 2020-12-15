@@ -227,6 +227,9 @@
     align-items: center;
     margin: 0 1em;
 }
+#kokervisie .choice.selected {
+    border-bottom: solid #8FAEC2 5px;
+}
 #kokervisie .color-circle {
     display: block;
     width: 3em; height: 3em;
@@ -256,6 +259,6 @@
 
     opacity: 0.5;
 }
-#kokervisie #dots .dot#active {
+#kokervisie #dots .dot.active {
     opacity: 1;
 }

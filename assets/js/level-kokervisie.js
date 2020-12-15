@@ -7,6 +7,9 @@
 
 var kokervisie = {
 
+    // keep track of selected options
+    selectedOptions: {},
+
     // INIT
     init() {
         console.log('init kokervisie');
@@ -52,6 +55,8 @@ var kokervisie = {
     closePage(index) {
         $('.item-container').eq(index).removeClass('open');
         $('#kokervisie').removeClass('open');
+        // clear selected items
+        this.selectedOptions = {};
     },
     // move between pages; called by arrow buttons
     previousItem() {
@@ -64,8 +69,13 @@ var kokervisie = {
         });
         // set new item container to active
         itemContainers.eq(currentIndex-1).attr('id', 'active');
+
+        // dots:
+        const dots = $('#dots .dot');
+        dots.removeClass('active');
+        dots.eq(currentIndex-1).addClass('active');
     },
-    nextItem(){
+    nextItem() {
         const itemContainers = $('.item-container');
         let currentIndex = 0;
         // set all containers to not active
@@ -75,7 +85,57 @@ var kokervisie = {
         });
         // set new item container to active
         itemContainers.eq((currentIndex+1) % (itemContainers.length)).attr('id', 'active');
+
+        // dots:
+        const dots = $('#dots .dot');
+        dots.removeClass('active');
+        dots.eq((currentIndex+1) % (itemContainers.length)).addClass('active');
     },
+
+    // choice selector; called by .choice buttons
+    selectOption(elem, option, choice) {
+        const $elem = $(elem);
+
+        // remove .selected class from siblings and add to this elem
+        $elem.siblings().removeClass('selected');
+        $elem.addClass('selected');
+
+        // save selected choice
+        this.selectedOptions[option] = choice;
+    },
+    // check options; called by confirm button
+    checkOptions() {
+        // get correct info from #correct-options and compare to selected options
+        const correctOptions = JSON.parse($('#correct-options').html());
+        const isCorrect = this.compare(correctOptions, this.selectedOptions);
+        
+        if (isCorrect) {
+            showScore(300) // TODO: calc score
+        } else {
+            alert('incorrect order'); // TODO: make popup
+        }
+    },
+    // compare JSON objects
+    compare(a, b){
+        let flag = true;
+
+        if(Object.keys(a).length == Object.keys(b).length){
+            for(let key in a) { 
+                if(a[key] == b[key]) {
+                    continue;
+                }
+                else {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        else {
+            flag = false;
+        }
+
+        return flag;
+    }
 }
 
 kokervisie.init();
