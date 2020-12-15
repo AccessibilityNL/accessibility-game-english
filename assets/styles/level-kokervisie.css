@@ -215,7 +215,7 @@
     flex-flow: row nowrap;
     align-content: center; justify-content: space-between;
 
-    margin: 1em 0;
+    margin: 2em 0;
 }
 #kokervisie .choices {
     display: flex;
@@ -239,6 +239,7 @@
     font-family:'Optician Sans', serif;
     padding: 0.2em 0;
     font-size: 1.5em;
+    margin: 1em 0;
     border-bottom: solid #8FAEC2 5px;
 }
 
