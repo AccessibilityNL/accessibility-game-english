@@ -2,7 +2,7 @@
 layout: layouts/level-outro.pug
 index: 5
 title: Blind
-image: /assets/images/levels/dyslexie.svg
+image: /assets/images/levels/blind_uitro.svg
 ---
 
 Hier komen tips over ontwerpen voor screenreaders
@@ -11,4 +11,4 @@ Hier komen tips over ontwerpen voor screenreaders
 
 * Alt teksten
 * Koppen
-* Elementen gebruik
+* Labels

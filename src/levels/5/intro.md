@@ -3,7 +3,7 @@ layout: layouts/level-intro.pug
 tags: level
 index: 5
 title: Blind
-image: /assets/images/levels/kokervisie.svg
+image: /assets/images/levels/blind.svg
 icon: /assets/images/levels/icon_blind_blue.svg
 ---
 

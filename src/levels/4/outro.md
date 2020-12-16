@@ -2,7 +2,7 @@
 layout: layouts/level-outro.pug
 index: 4
 title: Kokervisie
-image: /assets/images/levels/kokervisie.svg
+image: /assets/images/levels/kokervisie_uitro.svg
 ---
 
 Wanneer je ontwerpt voor mensen met dyslexie is het belangrijk om de tekst zo simpel mogelijk te houden en een duidelijke structuur te hanteren.
