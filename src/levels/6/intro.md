@@ -7,6 +7,6 @@ image: /assets/images/levels/doof.svg
 icon: /assets/images/levels/icon_no_sound_blue.svg
 ---
 
-Hier komt het 'Slechthorend' level, is nu nog een ruwe test...
+Mensen die slechthorend of doof zijn kunnen video of audio niet begrijpen als er geen ondertiteling of tekst aanwezig is. In dit level ga je ervaren hoe het is om een video te kijken die moeilijk te begrijpen is.
 
 > Je gaat een video kijken waar de verteller moeilijk te verstaan is. Er is automatisch gegenereerde ondertiteling maar die is niet heel betrouwbaar...
