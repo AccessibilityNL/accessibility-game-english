@@ -23,11 +23,28 @@ style.
         display: block;
     }
 
+    #blind-background #overlay {
+        position: fixed;
+        top: 4.5rem; left: 0;
+        width: 100vw;
+        height: calc(100vh - 4.5rem);
+
+        display: flex;
+        align-content: center; justify-content: center;
+    }
+    #blind-background #overlay img {
+        width: auto; height: auto;
+        object-fit: contain;
+    }
+
+
 // Content
 #blind-background
-    p.container Gebruik de Tab-toetsen!
     #content.container.hidden
         | !{content}
+
+    #overlay(aria-hidden="true")
+        img(src="/assets/images/levels/blind-overlay.svg")
     
 //- Info elements, read by javascript to be spoken
 #blind-info(style="display: none")
