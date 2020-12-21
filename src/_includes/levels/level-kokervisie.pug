@@ -7,7 +7,7 @@ style.
     @import url("/assets/styles/level-kokervisie.css");
 
 
-.background
+.kokervisie-background
     #kokervisie
         .brand-title
             h1= brand_title
@@ -50,6 +50,14 @@ style.
                 div(class='dot ' + (index==0?'active':''))
     //- element that contains correct answer, read by script
     #correct-options.hidden(aria-hidden='true')= JSON.stringify(correct_options)
+
+    // POPUP
+    #popup.active
+        .content
+            h2= popup_title
+            p= popup_text
+            button.button(onclick="kokervisie.closePopUp()")= popup_button_text
+
 
 
 // Script

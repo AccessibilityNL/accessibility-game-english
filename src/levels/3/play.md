@@ -15,6 +15,8 @@ questions:
     A: 1887
   - Q: Waar heeft dyslexie voornamelijk invloed op?
     A: leesvaardigheid, spelling en woordenschat
+  - Q: 'Vul in: Dyslexie heeft een __ oorzaak.'
+    A: neurologische
 
 # score popup tekst en knoppen
 level_score_win: Level behaald!

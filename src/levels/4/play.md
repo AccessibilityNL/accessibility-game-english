@@ -17,24 +17,6 @@ order_confirm_text: Plaats bestelling
 
 # meubulair lijst:
 furniture:
-  - title: Fjorgen
-    subtitle: De active stoel voor elke eetkamer
-    image: interior.jpg
-    options:
-      - label: Kleur
-        choices:
-          - label: Zee
-            color: '#8FAEC2'
-          - label: Zand
-            color: '#D9D0CB'
-          - label: Lucht
-            color: '#A8D6E3'
-          - label: Kiezel
-            color: '#CECED7'
-      - label: Maat
-        choices:
-          - label: 'M: 35cm'
-          - label: 'L: 45cm'
   - title: Övrigt
     subtitle: Verlichtend
     image: lamp.jpg
@@ -53,9 +35,32 @@ furniture:
         choices: 
           - label: 'Groots: 1.75m'
           - label: 'Royaal: 2.5m'
+  - title: Fjorgen
+    subtitle: De active stoel voor elke eetkamer
+    image: interior.jpg
+    options:
+      - label: Kleur
+        choices:
+          - label: Zee
+            color: '#8FAEC2'
+          - label: Zand
+            color: '#D9D0CB'
+          - label: Lucht
+            color: '#A8D6E3'
+          - label: Kiezel
+            color: '#CECED7'
+      - label: Maat
+        choices:
+          - label: 'M: 35cm'
+          - label: 'L: 45cm'
 
 #correct:
 correct_options: {Kleur: 'Lucht', Maat: 'M: 35cm'}
+
+#popup
+popup_title: 'Boodschappenlijstje:'
+popup_text: Een lichtblauwe stoel die niet te groot is.
+popup_button_text: Begin
 
 # score popup tekst en knoppen
 level_score_win: Level behaald!

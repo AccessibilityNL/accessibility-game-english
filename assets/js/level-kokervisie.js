@@ -15,8 +15,11 @@ var kokervisie = {
         console.log('init kokervisie');
 
         this.setupMouseDrag();
+    },
 
-        alert('Boodschappenlijstje: \n Een blauwe stoel, niet al te groot \n\n Je hebt een zeer gelimiteerd blikveld, succes!');
+    // close popup
+    closePopUp() {
+        $('#popup').removeClass('active');
     },
 
     setupMouseDrag() {
