@@ -15,6 +15,8 @@ var kokervisie = {
         console.log('init kokervisie');
 
         this.setupMouseDrag();
+
+        alert('Boodschappenlijstje: \n Een blauwe stoel, niet al te groot \n\n Je hebt een zeer gelimiteerd blikveld, succes!');
     },
 
     setupMouseDrag() {
@@ -112,7 +114,7 @@ var kokervisie = {
         if (isCorrect) {
             showScore(300) // TODO: calc score
         } else {
-            alert('incorrect order'); // TODO: make popup
+            alert('Verkeerde order'); // TODO: make popup
         }
     },
     // compare JSON objects

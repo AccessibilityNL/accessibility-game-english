@@ -9,6 +9,6 @@ icon: /assets/images/levels/icon_visie_blue.svg
 
 Mensen met kokervisie zien maar een klein deel van hun blikveld, alsof ze door een koker kijken.
 
-> In dit level ga je een een stoel bestellen met een zeer gelimiteerd blikveld.
+> In dit level ga je een een stoel bestellen met een zeer gelimiteerd blikveld. Scroll door de pagina of sleep met de muis.
 
 > Doel: Koop een groene stoel!

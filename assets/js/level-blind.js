@@ -50,18 +50,79 @@ var blind = {
         }
 
         // welcome player
-        this.speak('Welkom bij het Blind level, gebruik de Tab-toetsen om te beginnen');
+        this.speak($('#page1_intro_text').html());
+    },
+
+    // functions for page2:
+    page2: {
+        // setting up page 2
+        init() {
+            blind.speak($('#page1_submit_text').html());
+            $('#page1').removeClass('active');
+            $('#page2').addClass('active');
+        },
+
+        radioButton: true,
+        // emulating radio buttons
+        setRadio(value) {
+            this.radioButton = value;
+        },
+
+        // unlabeled confirm button
+        confirm() {
+            if (this.checkQuestions()) {
+                blind.speak($("#page2_submit_text").html());
+                blind.page3.init();
+                console.log('correct');
+            }
+            else {
+                blind.speak($('#page2_submit_incorrect_text').html());
+                console.log('incorrect');
+            }
+        },
+
+        //check inputs
+        checkQuestions() {
+            let correct = true;
+            $('#page2 input').each( (_, e) => {
+                if (e.value === "") correct = false;
+            });
+            return correct;
+        },
+
+        // unlabeled clear button
+        clearForm() {
+            // set input to empty
+            $('#page2 input').val('');
+            this.radioButton = true;
+
+            blind.speak($("#page2_clear_text").html());
+        }
+
+    },
+
+    page3: {
+        init() {
+            // show page 3
+            $('#page2').removeClass('active');
+            $('#page3').addClass('active');
+        }
     },
 
     // Handle focus
     onFocus(elem) {
         // speak
+        // if no html content, read title attribute
         speechSynthesis.cancel();
         if (elem.html() !== "") {
             this.speak(elem.html());
         }
         else {
-            this.speak(elem.attr('title'));
+            // if input, also read value
+            if (elem.prop('tagName') === 'INPUT')
+                this.speak(elem.attr('title') + '' + elem.val())
+            else
+                this.speak(elem.attr('title'));
         }
         // set current elem
         this.$focusElem = $(elem);

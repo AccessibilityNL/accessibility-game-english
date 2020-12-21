@@ -15,12 +15,28 @@ style.
         min-height: 100vh;
     }
 
+    #blind-background #content > * {
+        display: none;
+    }
+
+    #blind-background #content > *.active {
+        display: block;
+    }
+
 // Content
 #blind-background
-    p.container Gebruik de tabtoetsen!
-    #content.container
+    p.container Gebruik de Tab-toetsen!
+    #content.container.hidden
         | !{content}
-
+    
+//- Info elements, read by javascript to be spoken
+#blind-info(style="display: none")
+    #page1_intro_text=  page1_intro_text
+    #page1_submit_text= page1_submit_text
+    #page2_intro_text=  page2_intro_text
+    #page2_submit_text= page2_submit_text
+    #page2_clear_text=  page2_clear_text
+    #page2_submit_incorrect_text= page2_submit_incorrect_text
 
 // Script
 script(data-src="/assets/js/level-blind.js" type="text/javascript" data-load-script)
