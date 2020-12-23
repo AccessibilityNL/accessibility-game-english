@@ -10,6 +10,10 @@ var kokervisie = {
     // keep track of selected options
     selectedOptions: {},
 
+    // keep time
+    timer: new Timer(),
+    score: 400,
+
     // INIT
     init() {
         console.log('init kokervisie');
@@ -115,11 +119,21 @@ var kokervisie = {
         const isCorrect = this.compare(correctOptions, this.selectedOptions);
         
         if (isCorrect) {
-            showScore(300) // TODO: calc score
+            showScore(this.calcScore());
         } else {
             alert('Verkeerde order'); // TODO: make popup
+            this.score -= 50;
         }
     },
+    // calculate score; used in checkOptions()
+    calcScore() {
+        const time = this.timer.stopAndGet();
+        // reduce for each minute played
+        this.score -= time * 150;
+
+        return this.score;
+    },
+
     // compare JSON objects
     compare(a, b){
         let flag = true;
