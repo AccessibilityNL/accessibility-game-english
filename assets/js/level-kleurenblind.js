@@ -84,7 +84,7 @@ var memory = {
 
         onClick() {
 
-            if (!this.correct) {
+            if (this.correct !== true) {
                 
                 if (memory.state === 'FIRST_CARD') {
 
@@ -144,7 +144,7 @@ var memory = {
     },
 
     // start the first round (start of level)
-    setupFirstRound: function() {
+    setupFirstRound() {
         // Make the memory cards
         for (let i = 0; i < this.CARD_PAIRS; i++) {
             this.memoryCards[i*2] =     new this.MemoryCard(this.colors[this.colorIndex]);
@@ -161,7 +161,7 @@ var memory = {
     },
 
     // show stage 2 intro
-    setupInBetween: function() {
+    setupInBetween() {
         // remove cards
         fadeOut(memory.l, () => {
             memory.l.empty();
@@ -173,7 +173,7 @@ var memory = {
     },
 
     // start second stage
-    setupSecondRound: function() {
+    setupSecondRound() {
 
         this.points = 0;
         this.round++;
@@ -203,7 +203,7 @@ var memory = {
     },
 
 
-    addPoint: function() {
+    addPoint() {
         // add point
         // end if all points counted
         if (this.points < this.CARD_PAIRS-1) {
@@ -223,7 +223,7 @@ var memory = {
     },
 
     // calculate the score based on timer and incorrect cardflips
-    calcScore: function() {
+    calcScore() {
         const timerVal = this.timer.stopAndGet();
 
         console.log(this.score, timerVal);
@@ -235,10 +235,7 @@ var memory = {
 }; // end of memory {}
 
 function unload() {
-
-    console.log('Unloading Level 1');
     delete memory;
-
 }
 
 // --- GO ---
