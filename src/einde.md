@@ -3,9 +3,19 @@ layout: layouts/end-page.pug
 title: Bedankt voor het spelen!
 ---
 
+Mocht je meer willen weten over digitale toegankelijkheid en hoe dit het beste toe te passen is in de praktijk. Dan kan je terecht op de website van Accessibility: [www.accessibility.nl](https://www.accessibility.nl). Naast informatie bieden wij ook trainingen en e-learning modules aan om jou verder te helpen met het toegankelijk maken van je site. Ook kan Accessibility jou helpen door middel van consultancy, audits of gebruikersonderzoek.
 
-Bekijk de website van Stichting Accessibility voor meer over toegankelijk op het web!
 
-[Stichting Accessibility](https://www.accessibility.nl)
+<hr>
+
+
+De Accessibility Game is tot stand gekomen uit een samenwerking tussen Stichting Accessibility en Hogeschool Windesheim en is verder ontwikkeld door Bas de Bruin van de Hogeschool van de Kunsten Utrecht
 
 [Ga terug naar home](/index.html)
+
+
+
+
+
+
+<div class="spacer"></div>
