@@ -9,7 +9,7 @@ Mocht je meer willen weten over digitale toegankelijkheid en hoe dit het beste t
 <hr>
 
 
-De Accessibility Game is tot stand gekomen uit een samenwerking tussen Stichting Accessibility en Hogeschool Windesheim en is verder ontwikkeld door Bas de Bruin van de Hogeschool van de Kunsten Utrecht
+De Accessibility Game is tot stand gekomen uit een samenwerking tussen Stichting Accessibility en Hogeschool Windesheim en is verder ontwikkeld door Bas de Bruin van de Hogeschool van de Kunsten Utrecht.
 
 [Ga terug naar home](/index.html)
 
