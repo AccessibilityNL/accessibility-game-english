@@ -7,14 +7,14 @@ mixin level-bar(currentIndex)
     #level-bar(style=`margin-left: ${((nLevels/2) - (currentIndex+1)) * 4}rem`)
         each level, i in collections.levels
             if i < currentIndex
-                a(href=level.url).level-number= i+1
+                a(href=level.url title=`Ga naar het ${level.data.title} level`).level-number= i+1
                 .level-dash
             else if i == currentIndex
                 .level-icon
                     img(src=level.data.icon alt=`Icoon voor het ${level.data.title} level.`)
             else if i > currentIndex
                 .level-dash
-                a(href=level.url).level-number= i+1
+                a(href=level.url title=`Ga naar het ${level.data.title} level`).level-number= i+1
 
         
 

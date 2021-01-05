@@ -228,7 +228,7 @@ var memory = {
 
         console.log(this.score, timerVal);
         // timer in minutes, if below 0.6 minutes, dont remove score
-        this.scoreVal -= timerVal > 0.6 ? timerVal * 100 : 0;
+        this.scoreVal -= timerVal > 0.6 ? timerVal * 50 : 0;
 
         return Math.round(this.scoreVal);
     }
