@@ -2,11 +2,11 @@
 layout: layouts/level-intro.pug
 tags: level
 index: 6
-title: Slechthorend
-image: /assets/images/levels/doof.svg
-icon: /assets/images/levels/icon_no_sound_blue.svg
+title: Dyslexie
+image: /assets/images/levels/dyslexie.svg
+icon: /assets/images/levels/icon_dislexia_blue.svg
 ---
 
-Mensen die slechthorend of doof zijn kunnen video of audio niet begrijpen als er geen ondertiteling of tekst aanwezig is. In dit level ga je ervaren hoe het is om een video te kijken die moeilijk te begrijpen is.
+Mensen met Dyslexie hebben vaak moeite met lezen, letters lijken soms in de verkeerde volgorde te staan of lijken omgekeerd.
 
-> Je gaat een video kijken waar de verteller moeilijk te verstaan is. Er is automatisch gegenereerde ondertiteling maar die is niet heel betrouwbaar...
+> In dit level ga je een stuk tekst lezen, de letters van deze tekst zijn onstabiel om dyslexie te simuleren. Als je het gelezen hebt druk je op "Volgende pagina" en beantwoord je een aantal vragen over de tekst.

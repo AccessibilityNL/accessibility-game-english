@@ -2,12 +2,11 @@
 layout: layouts/level-intro.pug
 tags: level
 index: 5
-title: Blind
-image: /assets/images/levels/blind.svg
-icon: /assets/images/levels/icon_blind_blue.svg
+title: ADHD
+image: /assets/images/levels/adhd.svg
+icon: /assets/images/levels/icon_stars_blue.svg
 ---
 
-Mensen die blind of slechtziend zijn, moeten met een toetsenbord door een website navigeren. Een screenreader wordt gebruikt om voor te lezen wat op het scherm staat. Bij het maken van websites en apps kan hier rekening mee worden gehouden door tekst-alternatieven te bieden voor afbeeldingen en andere elementen.
+Mensen met ADHD hebben vaak moeite met concentreren en raken snel afgeleid.
 
-> Je gaat je door een pagina navigeren met alleen toetsenbord.
-> Gebuik de Tab toets om door elementen te navigeren en de pijltjes om keuzes te selecteren
+> In dit level ga je een bom ontmantelen! Ontcijfer de code en knip de draden door voor het te laat is.

@@ -1,63 +1,24 @@
 ---
-layout: levels/level-adhd.pug
+layout: levels/level-kleurenblind.pug
 index: 2
-title: ADHD
+title: Kleurenblind
 
-note_title: super geheime code
-note_text:  adelaar = rood <br> buizerd = zwart <br> groot = gestreept <br> die groene is de kleinste
+stage_1_title: Alleen kleuren
+stage_2_title: Met iconen
 
-popup_intro: Je hebt nog maar
-popup_text: Wil je stoppen? Het kan nu nog. Loop gewoon weg en blijf gespaard.
-button_continue_text: Ga verder
-button_stop_text: Stop level
-
-wires:
-  - { color: 'rood',  style: 'egaal',       image: 'wire1.png' }
-  - { color: 'zwart', style: 'egaal',       image: 'wire2.png' }
-  - { color: 'zwart', style: 'gestreept',   image: 'wire3.png' }
-  - { color: 'groen', style: 'lichtgevend', image: 'wire4.png' }
-  - { color: 'rood',  style: 'gestreept',   image: 'wire5.png' }
-
-code:
-  rood: adelaar
-  zwart: buizerd
-  groen:  
-  egaal:  
-  gestreept: grote
-  lichtgevend: kleinste
-
-fail_title: Je hebt gefaald!
-fail_text: De bom is geëxplodeerd :(, probeer het nog een keer
-fail_button_text: Probeer opnieuw
+stage_2_intro_button: Begin
 
 # score popup tekst en knoppen
 level_score_win: Level behaald!
 level_score_fail: Level gefaald...
 level_score_bad: Helaas, probeer het nog een keer.
-level_score_good: Goed gedaan, maar het kan sneller!
+level_score_good: Goed gedaan, maar het kan beter!
 level_score_perfect: Perfect! Heel goed.
 
 level_score_retry: Probeer opnieuw
 level_score_next: Ga verder
 ---
 
-### HAVEN 21:20
+Je hebt vast gemerkt dat veel kleuren op elkaar leken. Kleurenblinden lopen hier vaak tegenaan omdat zij het verschil tussen kleuren niet goed kunnen zien. Dit valt op te lossen door kleuren te gebruiken die een groter contrast met elkaar hebben maar ook door het toevoegen van een icoon of een ander visueel kenmerk waardoor je op twee manieren kan zien wat bij elkaar hoort.
 
-### BERICHT TUSSEN “BOZE BERTUS” EN “SNELLE HENKIE”:
-
-Henk: "Hé Bertus, lang niet gezien"
-Bertus: "Henk, makker, hoe gaat het?"
-
-Bertus: "Henk, voor de zekerheid, als er wat mis gaat, wat is ook al weer de volgorde om de bom te ontmantelen?"
-
-Henk: "Bertus, je klinkt als een informant, de code krijg je later te horen...maar vergeet niet A op uit te zetten en B op aan, tenzij je een poel van bloed wil worden."
-
-Bertus: "Ja ja Henk, laten we dit gewoon doen."
-
-### VRACHTWAGEN, A23 21:34
-
-Telefoon: "Oke Bertus, maak de bom klaar. Verbind de kabels in de goede volgorde, om de bom te ontmantelen moet je de draden knippen in dezelfde volgorde."
-
-Bertus: "Klaar!"
-
-Telefoon: "Oke! De volgorde: 
+Je gaat nu hetzelfde spel spelen met een set iconen op de plaatjes.

@@ -13,6 +13,13 @@ module.exports = function (eleventyConfig) {
         cleanCSS: false
     });
 
+    // sort levels by index number
+    // creates 'levels' collection
+    eleventyConfig.addCollection('levels', function(collectionApi) {
+        return collectionApi.getFilteredByTag('level').sort(
+            (a, b) => a.data.index - b.data.index
+        );
+    });
 
     return {
         dir: {

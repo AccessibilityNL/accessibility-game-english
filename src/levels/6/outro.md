@@ -1,13 +1,14 @@
 ---
 layout: layouts/level-outro.pug
 index: 6
-title: Slechthorend
-image: /assets/images/levels/doof_uitro.svg
+title: Dyslexie
+image: /assets/images/levels/dyslexie_uitro.svg
 ---
 
-Bij een auditieve beperking is het gehoor in enige mate beperkt. Onder meer slechthorendheid en doofheid zijn auditieve beperkingen. Sommige mensen met een auditieve beperking kunnen geluid horen, maar zij horen niet altijd genoeg om spraak te begrijpen. Vooral wanneer er (veel) achtergrondgeluid is, kan dit voor problemen zorgen. 
+Wanneer je ontwerpt voor mensen met dyslexie is het belangrijk om de tekst zo simpel mogelijk te houden en een duidelijke structuur te hanteren. Dit maakt de tekst daarnaast prettiger leesbaar voor iedereen.
 
-Hulpmiddelen als ondertiteling kunnen ook nuttig zijn voor mensen met een normaal gehoor, als je bijvoorbeeld in een drukke trein zit en de speaker van je telefoon niet kan horen.
+## Tips
 
-* Zorg altijd voor kloppende ondertiteling of transcriptie bij video of audio
-* Zorg dat video/audio spelers functies hebben om te pauzeren en om het volume harder of zachter te zetten
+* Voeg afbeeldingen of diagrammen toe om de tekst te ondersteunen
+* Vermijd lange blokken tekst en zorg voor een simpele, duidelijke structuur
+* Biedt alternatieven in de vorm van video's of gesproken tekst

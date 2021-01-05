@@ -1,12 +1,13 @@
 ---
 layout: layouts/level-outro.pug
 index: 1
-title: Kleurenblind
-image: /assets/images/levels/kleurenblind_uitro.svg
+title: Kokervisie
+image: /assets/images/levels/kokervisie_uitro.svg
 ---
 
-Zoals je misschien gemerkt hebt, is het veel makkelijker om duidelijkheid te krijgen wanneer je op meer manieren het verschil kan zien. Wanneer je kleur wilt gebruiken om te verduidelijken, zorg dan dat je ook een alternatief hebt, zoals bijvoorbeeld een icoontje.
+Wanneer je ontwerpt voor mensen met kokervisie is het belangrijk om te zorgen dat elementen niet te ver uit elkaar staan. Zorg er ook voor dat elementen niet tijdelijk op het scherm staan, het duurt voor iemand met kokervisie langer om een pagina te "scannen".
 
-[Lees meer over kleurgebruik](https://www.accessibility.nl/blog/zorg-voor-voldoende-kleurcontrast)
 
-* Het is belangrijk om te zorgen dat je genoeg contrast aanbrengt in je app of website, zodat alle gebruikers de tekst kunnen lezen en zonder probleem kunnen navigeren
+* Zorg dat bijbehorende elementen dicht bij elkaar staan
+* Zet elementen op een voorspelbare plek, bijvoorbeeld het logo linksboven en navigatie rechtsbovenaan de pagina
+* Zorg voor voldoende contrast tussen tekst en achtergrond en tussen verschillende secties van de pagina

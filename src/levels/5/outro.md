@@ -1,17 +1,16 @@
 ---
 layout: layouts/level-outro.pug
 index: 5
-title: Blind
-image: /assets/images/levels/blind_uitro.svg
+title: ADHD
+image: /assets/images/levels/adhd_uitro.svg
 ---
 
-Zoals je gemerkt heb is niet makkelijk om door een pagina te navigeren zonder hem te kunnen zien. 
+Mensen met ADHD zijn makkelijk afgeleid. Drukke website designs en overvolle navigatiemogelijkheden zijn daarom heel vervelend.
 
-In de eerste pagina waren er 4 afbeeldingen zonder "Alt Text", zonder tekst alternatieven kan een blind persoon deze vraag niet beantwoorden.
-
-In de tweede pagina waren de invoervelden slecht gelabeld, hierdoor is het moeilijker om uit te vogelen waar je je info moet schrijven. Doordat de knoppen ook geen label hebben weet je niet wat de knoppen doen voor ze geactiveerd worden.
+Deze verbeteringen zijn niet alleen prettig voor mensen met ADHD; gewone gebruikers profiteren hier ook van.
 
 ## Tips
 
-* Gebruik Alt teksten als alternatief voor afbeeldingen
-* Label je knoppen met duidelijke tekst (teksten als "Lees meer" of "Klik hier" zijn vaak niet duidelijk)
+* Vermijd complexe menu's en zorg voor een lineaire, logische vormgeving
+* Vermijd afleidende afbeeldingen en video's naast de inhoud van de pagina
+* Vermijd tijdslimieten, zorg dat iedereen genoeg tijd heeft om alles rustig in te vullen

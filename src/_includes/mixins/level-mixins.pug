@@ -2,10 +2,10 @@
 
 mixin level-bar(currentIndex)
     - currentIndex--
-    - var nLevels = collections.level.length
+    - var nLevels = collections.levels.length
     #level-bar-gradient
     #level-bar(style=`margin-left: ${((nLevels/2) - (currentIndex+1)) * 4}rem`)
-        each level, i in collections.level
+        each level, i in collections.levels
             if i < currentIndex
                 a(href=level.url).level-number= i+1
                 .level-dash
