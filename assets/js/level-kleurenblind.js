@@ -8,7 +8,7 @@
 
 var memory = {
 
-    CARD_PAIRS: 6, // 6: 12 card in total, pretty hard
+    CARD_PAIRS: 6, // 6: 12 cards in total, pretty hard
 
     // get elems
     l: $('#kleurenblind'),

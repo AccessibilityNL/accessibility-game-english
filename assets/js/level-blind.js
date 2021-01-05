@@ -155,7 +155,6 @@ var blind = {
     // Speaks string using SpeechSynthesis
     speak(str) {
         const utterance = new SpeechSynthesisUtterance(str);
-        utterance.lang = 'nl';
         speechSynthesis.speak(utterance);
     }
 };
