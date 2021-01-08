@@ -1,75 +1,41 @@
 ---
 
-layout: levels/level-kokervisie.pug
+layout: levels/level-dyslexie.pug
 index: 1
-title: Kokervisie
+title: Dyslexie
 
-# tekst
+question:
+  title: Beantwoordt nu de vragen over dyslexie
+  button_text: Ga naar de vragen
+  button_back_text: Terug naar de tekst
+  button_send_text: Verzenden
 
-brand_title: Janssen Furniture
-brand_subtitle: Live in Luxury
-
-button_text_next: Lees meer
-button_text_back: Terug
-
-order_text: Bestellen
-order_confirm_text: Plaats bestelling
-
-# meubulair lijst:
-furniture:
-  - title: Övrigt
-    subtitle: Verlichtend
-    image: lamp.jpg
-    options:
-      - label: Kleur
-        choices: 
-          - label: Kiezel
-            color: '#CECED7'
-          - label: Basalt
-            color: '#303038'
-  - title: Störtade
-    subtitle: Ontspanning na een drukke dag
-    image: leather-sofa.jpg
-    options:
-      - label: Maat
-        choices: 
-          - label: 'Groots: 1.75m'
-          - label: 'Royaal: 2.5m'
-  - title: Fjorgen
-    subtitle: De active stoel voor elke eetkamer
-    image: interior.jpg
-    options:
-      - label: Kleur
-        choices:
-          - label: Zee
-            color: '#8FAEC2'
-          - label: Zand
-            color: '#D9D0CB'
-          - label: Lucht
-            color: '#A8D6E3'
-          - label: Kiezel
-            color: '#CECED7'
-      - label: Maat
-        choices:
-          - label: 'M: 35cm'
-          - label: 'L: 45cm'
-
-#correct:
-correct_options: {Kleur: 'Lucht', Maat: 'M: 35cm'}
-
-#popup
-popup_title: 'Boodschappenlijstje:'
-popup_text: Een kleine, lichtblauwe stoel.
-popup_button_text: Begin
+questions:
+  - Q: Wanneer is de term dyslexie bedacht?
+    A: 1887
+  - Q: Waar heeft dyslexie voornamelijk invloed op?
+    A: leesvaardigheid, spelling en woordenschat
+  - Q: 'Vul in: Dyslexie heeft een __ oorzaak.'
+    A: neurologische
 
 # score popup tekst en knoppen
 level_score_win: Level behaald!
 level_score_fail: Level gefaald...
 level_score_bad: Helaas, probeer het nog een keer.
-level_score_good: Goed gedaan, maar probeer het nog sneller te doen!
+level_score_good: Goed gedaan, maar het kan beter!
 level_score_perfect: Perfect! Heel goed.
 
 level_score_retry: Probeer opnieuw
 level_score_next: Ga verder
 
 ---
+
+# Dyslexie
+
+Al in 1881 werd de aandoening door Oswald Berkhan beschreven, maar het was Rudolf Berlin die in 1887 hiervoor de term 'dyslexie' bedacht. De term werd gebruikt om het geval van een jongen te beschrijven die ernstige moeite had met het leren lezen en schrijven, terwijl hij buiten deze gebieden wel over een normale intelligentie leek te beschikken.
+
+## Oorzaak
+
+Onderzoek heeft uitgewezen dat dyslexie een neurologische oorzaak heeft. Ook al zijn er talrijke varianten en oorzaken voor dyslexie, in veel gevallen zijn de hersenen niet goed in staat visuele of auditieve informatie te interpreteren. De hersenen kunnen dit op verschillende manieren deels, of in het geval van een milde vorm volledig compenseren door andere hersenfuncties te gebruiken. 
+
+Dit is afhankelijk van de omvang van de aandoening. Op jonge leeftijd kan stimulering en training van de hersenen tot betere compensatie leiden. Dyslexie heeft voornamelijk invloed op de leesvaardigheid, spelling en woordenschat.

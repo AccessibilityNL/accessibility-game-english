@@ -59,5 +59,5 @@ doof.init();
 
 // Delete after level is complete
 function unload() {
-    delete doof;
+    doof = undefined;
 }

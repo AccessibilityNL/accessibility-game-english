@@ -9,7 +9,7 @@ $(document).ready(()=>{
 
     // unload assets if in global scope
     swup.on('willReplaceContent', () => {
-        try { unload(); delete unload } catch {}
+        try { unload(); delete unload } catch { }
     });
 
     // look for script with data-load-script and exec

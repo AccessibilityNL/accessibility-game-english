@@ -1,13 +1,14 @@
 ---
 layout: layouts/level-outro.pug
 index: 1
-title: Kokervisie
-image: /assets/images/levels/kokervisie_uitro.svg
+title: Dyslexie
+image: /assets/images/levels/dyslexie_uitro.svg
 ---
 
-Wanneer je ontwerpt voor mensen met kokervisie is het belangrijk om te zorgen dat elementen niet te ver uit elkaar staan. Zorg er ook voor dat elementen niet tijdelijk op het scherm staan, het duurt voor iemand met kokervisie langer om een pagina te "scannen".
+Wanneer je ontwerpt voor mensen met dyslexie is het belangrijk om de tekst zo simpel mogelijk te houden en een duidelijke structuur te hanteren. Dit maakt de tekst daarnaast prettiger leesbaar voor iedereen.
 
+## Tips
 
-* Zorg dat bijbehorende elementen dicht bij elkaar staan
-* Zet elementen op een voorspelbare plek, bijvoorbeeld het logo linksboven en navigatie rechtsbovenaan de pagina
-* Zorg voor voldoende contrast tussen tekst en achtergrond en tussen verschillende secties van de pagina
+* Voeg afbeeldingen of diagrammen toe om de tekst te ondersteunen
+* Vermijd lange blokken tekst en zorg voor een simpele, duidelijke structuur
+* Biedt alternatieven in de vorm van video's of gesproken tekst

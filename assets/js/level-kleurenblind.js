@@ -235,7 +235,7 @@ var memory = {
 }; // end of memory {}
 
 function unload() {
-    delete memory;
+    memory = undefined;
 }
 
 // --- GO ---

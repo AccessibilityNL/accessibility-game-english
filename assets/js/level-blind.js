@@ -162,5 +162,6 @@ var blind = {
 blind.init();
 
 function unload() {
-    delete blind;
+    $(document).off('keydown');
+    blind = undefined;
 }

@@ -1,13 +1,16 @@
 ---
 layout: layouts/level-outro.pug
 index: 4
-title: Slechthorend
-image: /assets/images/levels/doof_uitro.svg
+title: ADHD
+image: /assets/images/levels/adhd_uitro.svg
 ---
 
-Bij een auditieve beperking is het gehoor in enige mate beperkt. Onder meer slechthorendheid en doofheid zijn auditieve beperkingen. Sommige mensen met een auditieve beperking kunnen geluid horen, maar zij horen niet altijd genoeg om spraak te begrijpen. Vooral wanneer er (veel) achtergrondgeluid is, kan dit voor problemen zorgen. 
+Mensen met ADHD zijn makkelijk afgeleid. Drukke website designs en overvolle navigatiemogelijkheden zijn daarom heel vervelend.
 
-Hulpmiddelen als ondertiteling kunnen ook nuttig zijn voor mensen met een normaal gehoor, als je bijvoorbeeld in een drukke trein zit en de speaker van je telefoon niet kan horen.
+Deze verbeteringen zijn niet alleen prettig voor mensen met ADHD; gewone gebruikers profiteren hier ook van.
 
-* Zorg altijd voor kloppende ondertiteling of transcriptie bij video of audio
-* Zorg dat video/audio spelers functies hebben om te pauzeren en om het volume harder of zachter te zetten
+## Tips
+
+* Vermijd complexe menu's en zorg voor een lineaire, logische vormgeving
+* Vermijd afleidende afbeeldingen en video's naast de inhoud van de pagina
+* Vermijd tijdslimieten, zorg dat iedereen genoeg tijd heeft om alles rustig in te vullen

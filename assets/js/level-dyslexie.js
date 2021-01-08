@@ -58,7 +58,6 @@ var dyslexie = {
 
     // do dyslexia to the text
     updateText() {
-        console.log('updating text');
         const CHANCE = 0.03;
         const CHANCE_FLIP = 0.2;
 
@@ -152,7 +151,6 @@ var dyslexie = {
 
     // calculate score at end of level
     calcScore() {
-        console.log('calculating score');
         const time = this.timer.stopAndGet();
         this.score -= time * 100; // remove 100 points per minute taken
 
@@ -163,9 +161,9 @@ var dyslexie = {
 }
 
 // Delete after level is complete
-function unload() {
-    delete dyslexie;
+function unload() {;
     clearInterval(dyslexie.updateTextInterval);
+    dyslexie = undefined;
 }
 
 // GO

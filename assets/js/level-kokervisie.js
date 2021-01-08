@@ -160,5 +160,5 @@ var kokervisie = {
 kokervisie.init();
 
 function unload() {
-    delete kokervisie;
+    kokervisie = undefined;
 }
