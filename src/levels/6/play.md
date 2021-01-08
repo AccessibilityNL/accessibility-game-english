@@ -6,8 +6,8 @@ title: Dyslexie
 
 question:
   title: Beantwoordt nu de vragen over dyslexie
-  button_text: Volgende pagina
-  button_back_text: Vorige pagina
+  button_text: Ga naar de vragen
+  button_back_text: Terug naar de tekst
   button_send_text: Verzenden
 
 questions:

@@ -19,7 +19,7 @@ var blind = {
     // Init
     init() {
         // for each in content
-        this.$content.find('*').each( (index, elem) => { 
+        this.$content.find('*').each( (_, elem) => { 
 
             const $elem = $(elem);
 
