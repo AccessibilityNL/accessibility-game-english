@@ -51,7 +51,7 @@ mixin drop-down(text = 'drop-down-label')
 .container.large
     h1 Documentatie: Hoe het systeem werkt
     h2 Accessibility Game 2.0
-    h3 Laatste update: 30 Nov. 2020
+    h3 Laatste update: 8 Jan. 2021
     p.
         Gemaakt door Bas de Bruin in opdracht van Stichting Accessibility
 
@@ -76,23 +76,46 @@ mixin drop-down(text = 'drop-down-label')
 
     hr
 
-.container.large
-    h2 Structuur, code en inhoud
+    h2 De inhoud wijzigen
     p.
-        ...
+        Als je alleen de inhoud wilt wijzigen kan dat makkelijkelijk door naar de #[code src/level] map te gaan en dan het nummer te openen van het level. Hierin zijn 3 bestanden die de tekst inhoud van de levels bevat:
+    p Het #[code intro.md] bestand met de inhoud van de pagina die voor het level komt. Dit is ook waar je de titel, illustratie en het icoon van het level kan verranderen;
+    p Het #[code play.md] bestand met alle tekst die zichtbaar is tijdens het spelen van het level;
+    p Het #[code outro.md] bestand met de inhoud van de pagina die je ziet als je het level hebt gehaald.
+
+    p Na het bewerken van de tekst moet je de website bouwen zoals hierboven staat beschreven.
 
     hr
 
+
+.container.large
     h2 Code en levels
     p.
-        Om de code herbruikbaar te maken en te laten werken heeft elk level de volgende bestanden: 
+        Om de code herbruikbaar te maken en te laten werken met meerdere talen heeft elk level de volgende bestanden: 
+
+        
     +drop-down('level-naam.pug bestand met layout en stijlen')
-        p stijlen
+        p.
+            In de #[code src/_includes/levels] map staan de layout #[code .pug] bestanden voor elk level, deze worden gebruikt door de #[code play.md] bestanden van elk level. Deze layouts zijn te gebruiken in elke taal (als er later meer talen moeten worden toegevoegd).
+        p.
+            Stijlen staan meestal bovenaan in een style. tag maar kunnen ook in #[code assets/styles] staan, omdat de layout bestanden anders te vol worden.
+
+
     +drop-down('een level-naam.js bestand met de javascript logica voor het level') 
-        p scripts uitleg
+        p.
+            In de #[code assets/js/] map staan alle javascript bestanden voor de levels. Hierin is de logica van elk level geprogrammeerd.
+        p.
+            Elk script heeft een level-naam variabele waar alle functies van dat level in staan, dit is zo gedaan zodat na elk level alle functies kunnen worden verwijderd met de unload() functie die eronder staat.
+
+
     +drop-down('3 markdown bestanden')
         p.
             In elke #[code src/levels/nummer/] map staan 3 markdown(.md) bestanden: 
         p.
-            intro.md en outro.md met de inhoud van 
+            intro.md en outro.md met de inhoud van de intro en uitro pagina's voor en na het level.
     
+
+
+
+
+.spacer(style="height: 5rem")
