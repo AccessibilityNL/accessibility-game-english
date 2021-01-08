@@ -59,14 +59,14 @@ correct_options: {Kleur: 'Lucht', Maat: 'M: 35cm'}
 
 #popup
 popup_title: 'Boodschappenlijstje:'
-popup_text: Een lichtblauwe stoel die niet te groot is.
+popup_text: Een kleine, lichtblauwe stoel.
 popup_button_text: Begin
 
 # score popup tekst en knoppen
 level_score_win: Level behaald!
 level_score_fail: Level gefaald...
 level_score_bad: Helaas, probeer het nog een keer.
-level_score_good: Goed gedaan, maar het kan beter!
+level_score_good: Goed gedaan, maar probeer het nog sneller te doen!
 level_score_perfect: Perfect! Heel goed.
 
 level_score_retry: Probeer opnieuw

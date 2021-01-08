@@ -9,6 +9,10 @@ var doof = {
 
     init() {},
 
+    //score
+    score: 400,
+    timer: new Timer(),
+
     checkQuestions() {
         let correct = true;
         // check each input field and select
@@ -18,6 +22,9 @@ var doof = {
 
                 correct = false;
                 $(q).addClass('incorrect');
+
+                // reduce score for each wrong answer
+                this.score -= 40;
 
                 // add incorrect class to corresponding label
                 $('#questions label[for=' + $(q).attr('id') + ']').addClass('incorrect');
@@ -35,8 +42,14 @@ var doof = {
 
         // go to next page if all questions are correct
         if (correct) {
-            showScore(200); // TODO: calc score
+            showScore(this.calcScore()); 
         }
+    },
+
+    // calculate score
+    calcScore() {
+        this.score -= this.timer.stopAndGet() * 70;
+        return this.score;
     }
 
 }
