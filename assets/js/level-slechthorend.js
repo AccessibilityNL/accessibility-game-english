@@ -24,7 +24,7 @@ var doof = {
                 $(q).addClass('incorrect');
 
                 // reduce score for each wrong answer
-                this.score -= 40;
+                this.score -= 10;
 
                 // add incorrect class to corresponding label
                 $('#questions label[for=' + $(q).attr('id') + ']').addClass('incorrect');

@@ -24,6 +24,9 @@ questions:
   - Q: Hoeveel procent van zijn visie heeft Marco nog over?
     A: 3%
     choices: ['3%', '30%', '14%', '2%']
+  - Q: Waar gebruikt Marco zijn navigatie app voor terwijl hij in de trein zit?
+    A: Om te kijken op welk station hij is
+    choices: ['Om te kijken op welk station hij is', 'Om te zien aan welke kant van de trein hij moet uitstappen', 'Om zijn reis naar de apotheek te plannen', 'Om te kijken welke bus hij moet nemen']
 
 button_submit_questions: Ga verder
 button_give_up: Ik geef het op :(
