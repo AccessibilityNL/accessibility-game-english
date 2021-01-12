@@ -138,6 +138,10 @@ var dyslexie = {
         // if all questions are correct: calc score and end level
         if (correct) {
             this.calcScore();
+        } else {
+
+            //play incorrect buzzer sound
+            globalSounds.incorrect.play();
         }
     },
 

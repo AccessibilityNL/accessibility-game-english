@@ -43,6 +43,10 @@ var doof = {
         // go to next page if all questions are correct
         if (correct) {
             showScore(this.calcScore()); 
+
+        } else {
+            // play incorrect buzzer if incorrect
+            globalSounds.incorrect.play();
         }
     },
 

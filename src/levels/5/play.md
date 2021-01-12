@@ -21,6 +21,9 @@ questions:
   - Q: Welke vervoersmiddelen gebruikt Marco om bij de apotheek te komen?
     A: Lopen, Bus, Trein, Lopen
     choices: ['Lopen, Bus, Trein, Lopen', 'Bus, Lopen, Trein, Lopen', 'Lopen, Trein, Bus, Lopen']
+  - Q: Hoeveel procent van zijn visie heeft Marco nog over?
+    A: 3%
+    choices: ['3%', '30%', '14%', '2%']
 
 button_submit_questions: Ga verder
 button_give_up: Ik geef het op :(

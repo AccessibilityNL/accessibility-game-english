@@ -37,6 +37,9 @@ function loadGlobalSounds() {
         globalSounds.fail = new Howl({ 
             src: '/assets/sounds/fail.mp3'
         });
+        globalSounds.incorrect = new Howl({
+            src: '/assets/sounds/incorrect.mp3'
+        })
     }
 }
 
