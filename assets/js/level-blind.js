@@ -9,11 +9,13 @@
 var blind = {
     // Vars
     $content: $('#content'),
-    // swipe detector
-    //hammer: new Hammer($('#blind-background')[0]),
 
     // keep track of focussed element
     $focusElem: undefined,
+
+    // score and timer
+    score: 400,
+    timer: new Timer(),
 
     // Methods
     // Init
@@ -106,6 +108,23 @@ var blind = {
             // show page 3
             $('#page2').removeClass('active');
             $('#page3').addClass('active');
+        },
+
+        // radio button, chooses between retry or end level
+        radioButton: true,
+        setRadio(value) {
+            this.radioButton = value;
+        },
+
+        // activated confirm button
+        confirm() {
+            if (this.radioButton) {
+                // refresh if chosen to retry
+                location.reload();
+            } else {
+                // end level and show score
+                showScore(blind.calcScore());
+            }
         }
     },
 
@@ -127,11 +146,6 @@ var blind = {
         // set current elem
         this.$focusElem = $(elem);
         console.log(this.$focusElem);
-    },
-
-    onSwipe(event) {
-        console.log('swipe', event);
-        $('#blind-background').css('background', 'red');
     },
 
     // speak every key pressed
@@ -156,6 +170,11 @@ var blind = {
     speak(str) {
         const utterance = new SpeechSynthesisUtterance(str);
         speechSynthesis.speak(utterance);
+    },
+
+    // calculate score
+    calcScore() {
+        return this.score - (this.timer.stopAndGet() * 50);
     }
 };
 

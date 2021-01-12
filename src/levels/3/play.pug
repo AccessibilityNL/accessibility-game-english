@@ -8,8 +8,7 @@ title: Blind
 page1_intro_text: Welkom bij het Blind level, gebruik de Tab-toetsen om te beginnen
 page1_submit_text: Incorrect. Doordat de afbeeldingen geen label hebben is het onmogelijk om deze vraag te beantwoorden. We gaan door naar de volgende pagina.
 
-page2_intro_text: Pagina 2, vul het formulier in. Gebruik de Tab-toetsen om te beginnen
-page2_submit_text: Bedankt voor het invullen
+page2_submit_text: Formulier correct ingevuld
 page2_submit_incorrect_text: Vul alle invoervelden in.
 page2_clear_text: Alle invoervelden zijn gewist
 
@@ -17,7 +16,7 @@ page2_clear_text: Alle invoervelden zijn gewist
 level_score_win: Level behaald!
 level_score_fail: Level gefaald...
 level_score_bad: Helaas, probeer het nog een keer.
-level_score_good: Goed gedaan, maar het kan beter!
+level_score_good: Goed gedaan, maar probeer het nog sneller te doen!
 level_score_perfect: Perfect! Heel goed.
 
 level_score_retry: Probeer opnieuw
@@ -72,4 +71,9 @@ level_score_next: Ga verder
 
 #page3
     h1 Bedankt voor het spelen van het blind level
-    p(data-confirm="showScore(200)") Knop: Afronden
+    p Kies één van de volgende opties:
+
+    p(data-confirm="blind.page3.setRadio(true)") Keuzerondje: Level opnieuw proberen
+    p(data-confirm="blind.page3.setRadio(false)") Keuzerondje: Level afronden
+
+    p(data-confirm="blind.page3.confirm()") Knop: Verzenden
