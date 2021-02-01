@@ -5,13 +5,13 @@ title: Blind
 image: /assets/images/levels/blind_uitro.svg
 ---
 
-Zoals je gemerkt heb is niet makkelijk om door een pagina te navigeren zonder hem te kunnen zien. 
+As you have noticed, it is not easy to navigate through a page without seeing it.
 
-In de eerste pagina waren er 4 afbeeldingen zonder "Alt Text", zonder tekst alternatieven kan een blind persoon deze vraag niet beantwoorden.
+In the first page there were 4 images without "Alt Text", without text alternatives a blind person cannot answer this question.
 
-In de tweede pagina waren de invoervelden slecht gelabeld, hierdoor is het moeilijker om uit te vogelen waar je je info moet schrijven. Doordat de knoppen ook geen label hebben weet je niet wat de knoppen doen voor ze geactiveerd worden.
+In the second page the input fields were poorly labeled, making it more difficult to figure out where to write your info. Because the buttons also have no label, you do not know what the buttons do before they are activated. 
 
 ## Tips
 
-* Gebruik Alt teksten als alternatief voor afbeeldingen
-* Label je knoppen met duidelijke tekst (teksten als "Lees meer" of "Klik hier" zijn vaak niet duidelijk)
+* Use Alt texts as an alternative to images
+* Label your buttons with clear text (texts like "Read more" or "Click here" are often not clear) 

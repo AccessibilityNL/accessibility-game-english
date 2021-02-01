@@ -1,14 +1,14 @@
 ---
 layout: layouts/level-outro.pug
 index: 1
-title: Dyslexie
+title: Dyslexia
 image: /assets/images/levels/dyslexie_uitro.svg
 ---
 
-Wanneer je ontwerpt voor mensen met dyslexie is het belangrijk om de tekst zo simpel mogelijk te houden en een duidelijke structuur te hanteren. Dit maakt de tekst daarnaast prettiger leesbaar voor iedereen.
+When designing for people with dyslexia, it is important to keep the text as simple as possible and to use a clear structure. This also makes the text more pleasant to read for everyone. 
 
 ## Tips
 
-* Voeg afbeeldingen of diagrammen toe om de tekst te ondersteunen
-* Vermijd lange blokken tekst en zorg voor een simpele, duidelijke structuur
-* Biedt alternatieven in de vorm van video's of gesproken tekst
+* Add images or diagrams to support the text
+* Avoid long blocks of text and ensure a simple, clear structure
+* Offer alternatives in the form of videos or narration 

@@ -1,12 +1,12 @@
 doctype html
-html(lang=lang?lang:'nl')
+html(lang=lang?lang:'en')
     include _includes/layouts/head.pug
     include _includes/mixins/level-mixins.pug
     body
         main#swup.container.large.padding
             .columns
                 .level-image.animate-left
-                    img(src=image alt=`Illustratie over ${title}`)
+                    img(src=image alt=`Illustratie from ${title}`)
                 .level-container.animate-right
                     h3= 'Level ' + index
                     h1= title
@@ -19,6 +19,6 @@ html(lang=lang?lang:'nl')
                     .spacer
 
                     if collections.levels[index]
-                        a(href=`/levels/${index+1}/intro/`).button Volgend level
+                        a(href=`/levels/${index+1}/intro/`).button Next level
                     else
-                        a(href=`/einde/`).button Ga verder
+                        a(href=`/einde/`).button Continue

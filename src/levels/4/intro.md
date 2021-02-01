@@ -7,6 +7,6 @@ image: /assets/images/levels/adhd.svg
 icon: /assets/images/levels/icon_stars_blue.svg
 ---
 
-Mensen met ADHD hebben vaak moeite met concentreren en raken snel afgeleid.
+People with ADHD often have trouble concentrating and are easily distracted. 
 
-> In dit level ga je een bom ontmantelen! Ontcijfer de code en knip de draden door voor het te laat is.
+> In this level you are going to defuse a bomb! Decipher the code and cut the wires before it's too late. 

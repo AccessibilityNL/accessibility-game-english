@@ -9,7 +9,8 @@
     },
     "dependencies": {
         "@11ty/eleventy": "^0.5.4",
-        "eleventy-plugin-sass": "^1.0.0"
+        "eleventy-plugin-sass": "^1.0.0",
+        "pug": "^3.0.0"
     },
     "license": "MIT"
 }

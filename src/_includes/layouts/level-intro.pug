@@ -1,12 +1,12 @@
 doctype html
-html(lang=lang?lang:'nl')
+html(lang=lang?lang:'en')
     include _includes/layouts/head.pug
     include _includes/mixins/level-mixins.pug
     body
         main#swup.container.large.padding
             .columns
                 .level-image.animate-left
-                    img(src=image alt=`Illustratie over ${title}`)
+                    img(src=image alt=`Illustration from ${title}`)
                 .level-container.animate-right
                     if icon
                         .spacer

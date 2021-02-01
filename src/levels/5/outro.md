@@ -1,13 +1,13 @@
 ---
 layout: layouts/level-outro.pug
 index: 5
-title: Slechthorend
+title: Hearing Impaired
 image: /assets/images/levels/doof_uitro.svg
 ---
 
-Bij een auditieve beperking is het gehoor in enige mate beperkt. Onder meer slechthorendheid en doofheid zijn auditieve beperkingen. Sommige mensen met een auditieve beperking kunnen geluid horen, maar zij horen niet altijd genoeg om spraak te begrijpen. Vooral wanneer er (veel) achtergrondgeluid is, kan dit voor problemen zorgen. 
+Hearing with an auditory disability is limited. Some people with hearing impairment can hear sound, but they don't always hear enough to understand speech. Especially when there is (a lot of) background noise, this can cause problems.
 
-Hulpmiddelen als ondertiteling kunnen ook nuttig zijn voor mensen met een normaal gehoor, als je bijvoorbeeld in een drukke trein zit en de speaker van je telefoon niet kan horen.
+Tools like closed captioning can also be useful for people with normal hearing, such as when you're on a busy train and can't hear your phone's speaker.
 
-* Zorg altijd voor kloppende ondertiteling of transcriptie bij video of audio
-* Zorg dat video/audio spelers functies hebben om te pauzeren en om het volume harder of zachter te zetten
+* Always ensure correct subtitles or transcription for video or audio
+* Make sure that video / audio players have functions to pause and to turn the volume up or down

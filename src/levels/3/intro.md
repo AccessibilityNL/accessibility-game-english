@@ -7,7 +7,7 @@ image: /assets/images/levels/blind.svg
 icon: /assets/images/levels/icon_blind_blue.svg
 ---
 
-Mensen die blind of slechtziend zijn, moeten met een toetsenbord door een website navigeren. Een screenreader wordt gebruikt om voor te lezen wat op het scherm staat. Bij het maken van websites en apps kan hier rekening mee worden gehouden door tekst-alternatieven te bieden voor afbeeldingen en andere elementen.
+People who are blind or partially sighted need to navigate through a website with a keyboard. A screen reader is used to read what is on the screen. This can be taken into account when creating websites and apps by providing text alternatives to images and other elements. 
 
-> Je gaat je door een pagina navigeren met alleen toetsenbord.
-> Gebuik de Tab toets om door elementen te navigeren en de pijltjes om keuzes te selecteren
+> You are going to navigate through a page using only your keyboard.
+> Use the Tab key to navigate through elements and the arrows to select choices 

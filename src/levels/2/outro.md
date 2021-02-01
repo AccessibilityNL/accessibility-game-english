@@ -1,12 +1,12 @@
 ---
 layout: layouts/level-outro.pug
 index: 2
-title: Kleurenblind
+title: Colourblind
 image: /assets/images/levels/kleurenblind_uitro.svg
 ---
 
-Zoals je misschien gemerkt hebt, is het veel makkelijker om duidelijkheid te krijgen wanneer je op meer manieren het verschil kan zien. Wanneer je kleur wilt gebruiken om te verduidelijken, zorg dan dat je ook een alternatief hebt, zoals bijvoorbeeld een icoontje.
+As you may have noticed, it is much easier to distinguish the icons when you have more cues to work with. If you want to use colour to clarify, make sure you also have an alternative, such as an icon. 
 
-[Lees meer over kleurgebruik](https://www.accessibility.nl/blog/zorg-voor-voldoende-kleurcontrast)
+[Read more about colour usage (Dutch)](https://www.accessibility.nl/blog/zorg-voor-voldoende-kleurcontrast)
 
-* Het is belangrijk om te zorgen dat je genoeg contrast aanbrengt in je app of website, zodat alle gebruikers de tekst kunnen lezen en zonder probleem kunnen navigeren
+* It's important to make sure you add enough contrast in your app or website so that all users can read the text and navigate without problems

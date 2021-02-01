@@ -5,12 +5,12 @@ title: ADHD
 image: /assets/images/levels/adhd_uitro.svg
 ---
 
-Mensen met ADHD zijn makkelijk afgeleid. Drukke website designs en overvolle navigatiemogelijkheden zijn daarom heel vervelend.
+People with ADHD are easily distracted. Busy website designs and overflowing navigation options could be seen as very annoying.
 
-Deze verbeteringen zijn niet alleen prettig voor mensen met ADHD; gewone gebruikers profiteren hier ook van.
+These improvements are not only pleasant for people with ADHD; regular users also benefit from this.
 
 ## Tips
 
-* Vermijd complexe menu's en zorg voor een lineaire, logische vormgeving
-* Vermijd afleidende afbeeldingen en video's naast de inhoud van de pagina
-* Vermijd tijdslimieten, zorg dat iedereen genoeg tijd heeft om alles rustig in te vullen
+* Avoid complex menus and ensure a linear, logical design
+* Avoid distracting images and videos next to the page content
+* Avoid time limits, make sure everyone has enough time to fill in everything calmly 

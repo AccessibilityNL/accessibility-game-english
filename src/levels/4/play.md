@@ -3,12 +3,12 @@ layout: levels/level-adhd.pug
 index: 4
 title: ADHD
 
-note_title: super geheime code
-note_text:  adelaar = rood <br> buizerd = zwart <br> groot = gestreept <br> die groene is de kleinste
+note_title: super secret code
+note_text:  eagle = red <br> hawk = black <br> large = striped <br> the green one is the little one
 
-popup_intro: Je hebt nog maar
-popup_text: Wil je stoppen? Het kan nu nog. Loop gewoon weg en blijf gespaard.
-button_continue_text: Ga verder
+popup_intro: You've only got
+popup_text: Do you want to quit? You still can. Just walk away and go on with your life.
+button_continue_text: Continue
 button_stop_text: Stop level
 
 wires:
@@ -19,45 +19,45 @@ wires:
   - { color: 'rood',  style: 'gestreept',   image: 'wire5.png' }
 
 code:
-  rood: adelaar
-  zwart: buizerd
+  rood: eagle
+  zwart: hawk
   groen:  
   egaal:  
-  gestreept: grote
-  lichtgevend: kleinste
+  gestreept: large
+  lichtgevend: little one
 
-fail_title: Je hebt gefaald!
-fail_text: De bom is geëxplodeerd :(, probeer het nog een keer
-fail_button_text: Probeer opnieuw
+fail_title: You have failed!
+fail_text: The bomb is exploded :(, please try again
+fail_button_text: Try again
 
 # score popup tekst en knoppen
-level_score_win: Level behaald!
-level_score_fail: Level gefaald...
-level_score_bad: Helaas, probeer het nog een keer.
-level_score_good: Goed gedaan, maar het kan sneller!
-level_score_perfect: Perfect! Heel goed.
+level_score_win: Level passed!
+level_score_fail: Level failed...
+level_score_bad: Too bad, please try again.
+level_score_good: Well done, but you can do better!
+level_score_perfect: Perfect! Very good.
 
-level_score_retry: Probeer opnieuw
-level_score_next: Ga verder
+level_score_retry: Try again
+level_score_next: Continue
 ---
 
-### HAVEN 21:20
+### HARBOUR 21:20
 
-### BERICHT TUSSEN “BOZE BERTUS” EN “SNELLE HENKIE”:
+### MESSAGE BETWEEN “MAD MIKE” AND “STEADY STEVE”:
 
-Henk: "Hé Bertus, lang niet gezien"
-Bertus: "Henk, makker, hoe gaat het?"
+Steve: "Hey Mike, long time no see"
+Mike: "Steve, mate, how's it going with you?"
 
-Bertus: "Henk, voor de zekerheid, als er wat mis gaat, wat is ook al weer de volgorde om de bom te ontmantelen?"
+Steve: "Mike, just to be sure, before everything goes up into smoke, what was the code again to dismantle the bomb?"
 
-Henk: "Bertus, je klinkt als een informant, de code krijg je later te horen...maar vergeet niet A op uit te zetten en B op aan, tenzij je een poel van bloed wil worden."
+Mike: "Steve, you sound like an informant. You'll get the code later. But don't forget to turn off A and to turn on B. Unless you want to be blown up, of course"
 
-Bertus: "Ja ja Henk, laten we dit gewoon doen."
+Steve: "Yeah right Mike, let's just do this."
 
-### VRACHTWAGEN, A23 21:34
+### Truck, A23 - The Netherlands 21:34
 
-Telefoon: "Oke Bertus, maak de bom klaar. Verbind de kabels in de goede volgorde, om de bom te ontmantelen moet je de draden knippen in dezelfde volgorde."
+Telephone: "Okay Steve, arm the bomb. Connect the cables in the right order. To dismantle the bomb, cut the cables in the reverse order."
 
-Bertus: "Klaar!"
+Steve: "Ready!"
 
-Telefoon: "Oke! De volgorde: 
+Telephone: "Okay! The order is: 

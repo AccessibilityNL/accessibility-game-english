@@ -1,5 +1,5 @@
 doctype html
-html(lang=lang?lang:'nl')
+html(lang=lang?lang:'en')
     include _includes/layouts/head.pug
     include _includes/mixins/level-mixins.pug
     body
@@ -8,7 +8,7 @@ html(lang=lang?lang:'nl')
             header(aria-hidden="true")
                 a(href=`/levels/${index}/intro/` rel="prev" tabindex="-1").button.light.back Ga terug
                 a(href="/" tabindex="-1")#logo
-                    img(src='/assets/images/acc_logo.svg' alt='Logo van Stichting Accessibility')
+                    img(src='/assets/images/acc_logo.svg' alt='Logo Stichting Accessibility')
                     h2 Accessibility Game
 
             .spacer(style="height: 4.5rem") 

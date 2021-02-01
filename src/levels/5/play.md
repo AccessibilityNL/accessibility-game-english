@@ -2,35 +2,32 @@
 
 layout: levels/level-slechthorend.pug
 index: 5
-title: Slechthorend
+title: Hearing Impaired
 
 # score popup tekst en knoppen
-level_score_win: Level behaald!
-level_score_fail: Level gefaald...
-level_score_bad: Helaas, probeer het nog een keer.
-level_score_good: Goed gedaan, maar het kan beter!
-level_score_perfect: Perfect! Heel goed.
+level_score_win: Level passed!
+level_score_fail: Level failed...
+level_score_bad: Too bad, please try again.
+level_score_good: Well done, but you can do better!
+level_score_perfect: Perfect! Very good.
 
-level_score_retry: Probeer opnieuw
-level_score_next: Ga verder
+level_score_retry: Try again
+level_score_next: Continue
 
 questions:
-  - Q: Wat moet Marco doen om naar de apotheek te kunnen?
-    A: Zijn reis voorbereiden
-    choices: ['Zijn reis voorbereiden', 'De apotheek bellen', 'Een online afspraak maken']
-  - Q: Welke vervoersmiddelen gebruikt Marco om bij de apotheek te komen?
-    A: Lopen, Bus, Trein, Lopen
-    choices: ['Lopen, Bus, Trein, Lopen', 'Bus, Lopen, Trein, Lopen', 'Lopen, Trein, Bus, Lopen']
-  - Q: Hoeveel procent van zijn visie heeft Marco nog over?
-    A: 3%
-    choices: ['3%', '30%', '14%', '2%']
-  - Q: Waar gebruikt Marco zijn navigatie app voor terwijl hij in de trein zit?
-    A: Om te kijken op welk station hij is
-    choices: ['Om te kijken op welk station hij is', 'Om te zien aan welke kant van de trein hij moet uitstappen', 'Om zijn reis naar de apotheek te plannen', 'Om te kijken welke bus hij moet nemen']
+  - Q: Accessibility is an outcome, what is inclusive design?
+    A: A process
+    choices: ['A better outcome', 'A process', 'A way to make products that are usuable for all']
+  - Q: According to Microsoft, the definition of 'Accessibility' is?
+    A: The qualities that make an experience open to all
+    choices: ['The qualities that make an experience open to all.', 'A design methodology that enables and draws on the full range of human diversity', 'A methodology that is human centred']
+  - Q: What statement is true?
+    A: Accessibility is part of Inclusive Design
+    choices: ['Accessibility is an attribute of Inclusive Design', 'Inclusive Design is an attribute of Accessibility', 'Both Inclusive Design and Accessibility can be attributes of each other', 'Inclusive Design and Accessibiltiy are two different subjects']
 
-button_submit_questions: Ga verder
-button_give_up: Ik geef het op :(
+button_submit_questions: Continue
+button_give_up: I give up :-(
 
 ---
 
-Bekijk de video en beantwoord de vragen:
+Watch the video and answer the questions

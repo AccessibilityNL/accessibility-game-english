@@ -1,24 +1,24 @@
 ---
 layout: levels/level-kleurenblind.pug
 index: 2
-title: Kleurenblind
+title: Colourblind
 
-stage_1_title: Alleen kleuren
-stage_2_title: Met iconen
+stage_1_title: Only colours
+stage_2_title: With icons
 
-stage_2_intro_button: Begin
+stage_2_intro_button: Start
 
 # score popup tekst en knoppen
-level_score_win: Level behaald!
-level_score_fail: Level gefaald...
-level_score_bad: Helaas, probeer het nog een keer.
-level_score_good: Goed gedaan, maar het kan beter!
-level_score_perfect: Perfect! Heel goed.
+level_score_win: Level passed!
+level_score_fail: Level failed...
+level_score_bad: Too bad, please try again.
+level_score_good: Well done, but you can do better!
+level_score_perfect: Perfect! Very good.
 
-level_score_retry: Probeer opnieuw
-level_score_next: Ga verder
+level_score_retry: Try again
+level_score_next: Continue
 ---
 
-Je hebt vast gemerkt dat veel kleuren op elkaar leken. Kleurenblinden lopen hier vaak tegenaan omdat zij het verschil tussen kleuren niet goed kunnen zien. Dit valt op te lossen door kleuren te gebruiken die een groter contrast met elkaar hebben maar ook door het toevoegen van een icoon of een ander visueel kenmerk waardoor je op twee manieren kan zien wat bij elkaar hoort.
+You must have noticed that many colours looked very similar. Colourblind people often run into this because they cannot properly see the difference between colours. This can be solved by using coulors that have a greater contrast with each other, but also by adding an icon or other visual feature to help distinguish what belongs together and what not.
 
-Je gaat nu hetzelfde spel spelen met een set iconen op de plaatjes.
+You are now going to play the same game with a set of icons on the pictures. 

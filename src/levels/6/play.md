@@ -9,67 +9,67 @@ title: Kokervisie
 brand_title: Janssen Furniture
 brand_subtitle: Live in Luxury
 
-button_text_next: Lees meer
-button_text_back: Terug
+button_text_next: Read more
+button_text_back: Back
 
-order_text: Bestellen
-order_confirm_text: Plaats bestelling
+order_text: Order
+order_confirm_text: Place order
 
 # meubulair lijst:
 furniture:
   - title: Övrigt
-    subtitle: Verlichtend
+    subtitle: Shines bright
     image: lamp.jpg
     options:
-      - label: Kleur
+      - label: Colour
         choices: 
-          - label: Kiezel
+          - label: Cobblestone
             color: '#CECED7'
           - label: Basalt
             color: '#303038'
   - title: Störtade
-    subtitle: Ontspanning na een drukke dag
+    subtitle: Relaxation after a hard day
     image: leather-sofa.jpg
     options:
-      - label: Maat
+      - label: Size
         choices: 
-          - label: 'Groots: 1.75m'
-          - label: 'Royaal: 2.5m'
+          - label: 'Grande: 1.75m'
+          - label: 'Royal: 2.5m'
   - title: Fjorgen
-    subtitle: De active stoel voor elke eetkamer
+    subtitle: The active chair for every dining room
     image: interior.jpg
     options:
-      - label: Kleur
+      - label: Colour
         choices:
-          - label: Zee
+          - label: Ocean
             color: '#8FAEC2'
-          - label: Zand
+          - label: Sand
             color: '#D9D0CB'
-          - label: Lucht
+          - label: Air
             color: '#A8D6E3'
-          - label: Kiezel
+          - label: Cobblestone
             color: '#CECED7'
-      - label: Maat
+      - label: Size
         choices:
           - label: 'M: 35cm'
           - label: 'L: 45cm'
 
 #correct:
-correct_options: {Kleur: 'Lucht', Maat: 'M: 35cm'}
+correct_options: {Kleur: 'Air', Maat: 'M: 35cm'}
 
 #popup
-popup_title: 'Boodschappenlijstje:'
-popup_text: Een kleine, lichtblauwe stoel.
-popup_button_text: Begin
+popup_title: 'Shopping list:'
+popup_text: A small, light blue chair.
+popup_button_text: Start
 
 # score popup tekst en knoppen
-level_score_win: Level behaald!
-level_score_fail: Level gefaald...
-level_score_bad: Helaas, probeer het nog een keer.
-level_score_good: Goed gedaan, maar probeer het nog sneller te doen!
-level_score_perfect: Perfect! Heel goed.
+level_score_win: Level passed!
+level_score_fail: Level failed...
+level_score_bad: Too bad, please try again.
+level_score_good: Well done, but you can do better!
+level_score_perfect: Perfect! Very good.
 
-level_score_retry: Probeer opnieuw
-level_score_next: Ga verder
+level_score_retry: Try again
+level_score_next: Continue
 
 ---

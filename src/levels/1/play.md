@@ -2,40 +2,40 @@
 
 layout: levels/level-dyslexie.pug
 index: 1
-title: Dyslexie
+title: Dyslexia
 
 question:
-  title: Beantwoordt nu de vragen over dyslexie
-  button_text: Ga naar de vragen
-  button_back_text: Terug naar de tekst
-  button_send_text: Verzenden
+  title: Now answer the questions about dyslexia 
+  button_text: Go to the questions
+  button_back_text: Back to the tekst
+  button_send_text: Send
 
 questions:
-  - Q: Wanneer is de term dyslexie bedacht?
+  - Q: When was the term dyslexia first used? 
     A: 1887
-  - Q: Waar heeft dyslexie voornamelijk invloed op?
-    A: leesvaardigheid, spelling en woordenschat
-  - Q: 'Vul in: Dyslexie heeft een __ oorzaak.'
-    A: neurologische
+  - Q: What does dyslexia mainly affect? 
+    A: reading skills, spelling and vocabulary 
+  - Q: 'Fill in: dyslexia has a ___ cause'
+    A: neurological
 
 # score popup tekst en knoppen
-level_score_win: Level behaald!
-level_score_fail: Level gefaald...
-level_score_bad: Helaas, probeer het nog een keer.
-level_score_good: Goed gedaan, maar het kan beter!
-level_score_perfect: Perfect! Heel goed.
+level_score_win: Level passed!
+level_score_fail: Level failed...
+level_score_bad: Too bad, please try again.
+level_score_good: Well done, but you can do better!
+level_score_perfect: Perfect! Very good.
 
-level_score_retry: Probeer opnieuw
-level_score_next: Ga verder
+level_score_retry: Try again
+level_score_next: Continue
 
 ---
 
-# Dyslexie
+# Dyslexia
 
-Al in 1881 werd de aandoening door Oswald Berkhan beschreven, maar het was Rudolf Berlin die in 1887 hiervoor de term 'dyslexie' bedacht. De term werd gebruikt om het geval van een jongen te beschrijven die ernstige moeite had met het leren lezen en schrijven, terwijl hij buiten deze gebieden wel over een normale intelligentie leek te beschikken.
+The condition was described by Oswald Berkhan as early as 1881, but it was Rudolf Berlin who coined the term 'dyslexia' in 1887. The term was used to describe the case of a boy who had severe difficulty learning to read and write when he appeared to have normal intelligence outside these areas. 
 
-## Oorzaak
+## Cause
 
-Onderzoek heeft uitgewezen dat dyslexie een neurologische oorzaak heeft. Ook al zijn er talrijke varianten en oorzaken voor dyslexie, in veel gevallen zijn de hersenen niet goed in staat visuele of auditieve informatie te interpreteren. De hersenen kunnen dit op verschillende manieren deels, of in het geval van een milde vorm volledig compenseren door andere hersenfuncties te gebruiken. 
+Research has shown that dyslexia has a neurological cause. Although there are many variants and causes for dyslexia, in many cases the brain is unable to properly interpret visual or auditory information. The brain can partly compensate for this, or in the case of a mild form, completely by using other brain functions.
 
-Dit is afhankelijk van de omvang van de aandoening. Op jonge leeftijd kan stimulering en training van de hersenen tot betere compensatie leiden. Dyslexie heeft voornamelijk invloed op de leesvaardigheid, spelling en woordenschat.
+This depends on the extent of the condition. At a young age, stimulation and training of the brain can lead to better compensation. Dyslexia mainly affects reading skills, spelling and vocabulary. 

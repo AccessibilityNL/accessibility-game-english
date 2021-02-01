@@ -1,13 +1,13 @@
 ---
 layout: layouts/level-outro.pug
 index: 6
-title: Kokervisie
+title: Tunnel Vision
 image: /assets/images/levels/kokervisie_uitro.svg
 ---
 
-Wanneer je ontwerpt voor mensen met kokervisie is het belangrijk om te zorgen dat elementen niet te ver uit elkaar staan. Zorg er ook voor dat elementen niet tijdelijk op het scherm staan, het duurt voor iemand met kokervisie langer om een pagina te "scannen".
+When designing for people with tunnel vision, it is important to ensure that elements are not too far apart. Also make sure that elements are not temporarily on the screen, it takes longer for someone with tunnel vision to "scan" a page.
 
 
-* Zorg dat bijbehorende elementen dicht bij elkaar staan
-* Zet elementen op een voorspelbare plek, bijvoorbeeld het logo linksboven en navigatie rechtsbovenaan de pagina
-* Zorg voor voldoende contrast tussen tekst en achtergrond en tussen verschillende secties van de pagina
+* Make sure that associated elements are close to each other
+* Put elements in a predictable place, for example the logo at the top left and navigation at the top right of the page
+* Provide sufficient contrast between text and background and between different sections of the page

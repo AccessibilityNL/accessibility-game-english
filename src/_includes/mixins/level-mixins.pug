@@ -7,14 +7,14 @@ mixin level-bar(currentIndex)
     #level-bar(style=`margin-left: ${((nLevels/2) - (currentIndex+1)) * 4}rem`)
         each level, i in collections.levels
             if i < currentIndex
-                a(href=level.url title=`Ga naar het ${level.data.title} level`).level-number= i+1
+                a(href=level.url title=`Go to the ${level.data.title} level`).level-number= i+1
                 .level-dash
             else if i == currentIndex
                 .level-icon
-                    img(src=level.data.icon alt=`Icoon voor het ${level.data.title} level.`)
+                    img(src=level.data.icon alt=`Icoon for the ${level.data.title} level.`)
             else if i > currentIndex
                 .level-dash
-                a(href=level.url title=`Ga naar het ${level.data.title} level`).level-number= i+1
+                a(href=level.url title=`Ga to the ${level.data.title} level`).level-number= i+1
 
         
 
@@ -45,5 +45,5 @@ mixin level-score(score)
             h3#score-label score
 
             .container.buttons
-                button(onclick="reloadPage()").button.light.back= level_score_retry ? level_score_retry : 'Probeer Opnieuw'
-                button(onclick="loadNextPage()").button#score-next-button= level_score_next ? level_score_next : 'Ga verder'
+                button(onclick="reloadPage()").button.light.back= level_score_retry ? level_score_retry : 'Try again'
+                button(onclick="loadNextPage()").button#score-next-button= level_score_next ? level_score_next : 'Continue'
