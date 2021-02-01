@@ -1,6 +1,6 @@
 # Accessibility Game
 
-> Build by Bas de Bruin
+> Built by Bas de Bruin - translations by Veron Wormeester
 > for Stichting Accessibility
 
 
