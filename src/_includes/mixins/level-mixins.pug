@@ -11,10 +11,10 @@ mixin level-bar(currentIndex)
                 .level-dash
             else if i == currentIndex
                 .level-icon
-                    img(src=level.data.icon alt=`Icoon for the ${level.data.title} level.`)
+                    img(src=level.data.icon alt=`Icon for the ${level.data.title} level.`)
             else if i > currentIndex
                 .level-dash
-                a(href=level.url title=`Ga to the ${level.data.title} level`).level-number= i+1
+                a(href=level.url title=`Go to the ${level.data.title} level`).level-number= i+1
 
         
 

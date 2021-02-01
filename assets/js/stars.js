@@ -27,8 +27,8 @@ function showScore(score = 0) {
     $('#score-label').css( 'margin-left', score > 10 ? (score/maxScore)*100 + '%' : '1rem' );
 
     // hide next button if score too low
-    if (score < 100)
-        $('#score-next-button').css('display', 'none');
+    //if (score < 100)
+       // $('#score-next-button').css('display', 'none');
 
     // show it
     $('#score-background').css('display', 'flex');
