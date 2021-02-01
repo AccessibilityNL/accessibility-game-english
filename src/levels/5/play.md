@@ -18,12 +18,12 @@ questions:
   - Q: Accessibility is an outcome, what is inclusive design?
     A: A process
     choices: ['A better outcome', 'A process', 'A way to make products that are usuable for all']
-  - Q: According to Microsoft, the definition of 'Accessibility' is?
+  - Q: The definition of 'Accessibility' is, according to Microsoft
     A: The qualities that make an experience open to all
-    choices: ['The qualities that make an experience open to all.', 'A design methodology that enables and draws on the full range of human diversity', 'A methodology that is human centred']
+    choices: ['The qualities that make an experience open to all', 'A design methodology that enables and draws on the full range of human diversity', 'A methodology that is human centred']
   - Q: What statement is true?
-    A: Accessibility is part of Inclusive Design
-    choices: ['Accessibility is an attribute of Inclusive Design', 'Inclusive Design is an attribute of Accessibility', 'Both Inclusive Design and Accessibility can be attributes of each other', 'Inclusive Design and Accessibiltiy are two different subjects']
+    A: Accessibility is an attribute of Inclusive Design
+    choices: ['Accessibility is an attribute of Inclusive Design', 'Inclusive Design is an attribute of Accessibility', 'Both Inclusive Design and Accessibility can be attributes of each other', 'Inclusive Design and Accessibility are two different subjects']
 
 button_submit_questions: Continue
 button_give_up: I give up :-(

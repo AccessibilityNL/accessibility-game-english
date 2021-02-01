@@ -46,7 +46,7 @@ var blind = {
         // TODO: detect swipes on mobile
         // for now:
         if ($(window).width() < 400) {
-            if (confirm("Dit level werkt nog niet op mobiel, omdat een toetsenbord nodig is. \nWil je dit level overslaan?")) {
+            if (confirm("This level does not work on mobile because you need a keyboard. \nDo you want to skip this level?")) {
                 showScore('100');
             }
         }
@@ -153,10 +153,10 @@ var blind = {
         // speak
         let keyName = key.key;
         switch(keyName) {
-            case ' ': keyName = 'Spatie';    break
-            case '.': keyName = 'punt';      break
+            case ' ': keyName = 'space';    break
+            case '.': keyName = 'dot';      break
             case ',': keyName = 'comma';     break
-            case ';': keyName = 'puntcomma'; break
+            case ';': keyName = 'semicolon'; break
         }
         blind.speak(String(keyName));
 
@@ -169,6 +169,7 @@ var blind = {
     // Speaks string using SpeechSynthesis
     speak(str) {
         const utterance = new SpeechSynthesisUtterance(str);
+        utterance.lang = 'en-GB';
         speechSynthesis.speak(utterance);
     },
 
