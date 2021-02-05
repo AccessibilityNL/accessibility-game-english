@@ -21,7 +21,7 @@ If you want to know more about digital accessibility and how it can best be appl
 <hr>
 
 
-De Accessibility Game was developed through a collaboration between Stichting Accessibility and Hogeschool Windesheim and is further developed by Bas de Bruin from Hogeschool van de Kunsten Utrecht.
+De Accessibility Game was developed through a collaboration between the Accessibility Foundation and Windesheim University of Applied Sciences and is further developed by Bas de Bruin from HKU University of the Arts Utrecht.
 
 <a href="/index.html" class="button light back">Go back to home</a>
 

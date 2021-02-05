@@ -121,7 +121,7 @@ var kokervisie = {
         if (isCorrect) {
             showScore(this.calcScore());
         } else {
-            alert('Verkeerde order'); // TODO: make popup
+            alert('Wrong order'); // TODO: make popup
             this.score -= 50;
         }
     },

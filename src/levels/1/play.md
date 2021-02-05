@@ -7,7 +7,7 @@ title: Dyslexia
 question:
   title: Now answer the questions about dyslexia 
   button_text: Go to the questions
-  button_back_text: Back to the tekst
+  button_back_text: Back to the text
   button_send_text: Send
 
 questions:
