@@ -2,7 +2,7 @@
 
 layout: levels/level-kokervisie.pug
 index: 6
-title: Kokervisie
+title: Tunnel Vision
 
 # tekst
 
@@ -55,11 +55,11 @@ furniture:
           - label: 'L: 45cm'
 
 #correct:
-correct_options: {Kleur: 'Air', Maat: 'M: 35cm'}
+correct_options: {Colour: 'Cobblestone', Size: 'M: 35cm'}
 
 #popup
 popup_title: 'Shopping list:'
-popup_text: A small, light blue chair.
+popup_text: A small, light grey chair.
 popup_button_text: Start
 
 # score popup tekst en knoppen
